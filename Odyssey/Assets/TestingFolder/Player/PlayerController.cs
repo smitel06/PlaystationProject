@@ -18,13 +18,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         movePlayer();
+        
     }
 
     //move the player according to controller input
     void movePlayer()
     {
         // use this for animation velocity and blend tree
-        float maxVelocity = 5; 
+        float maxVelocity = 15; 
         
         //get inputs and magnitude
         Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -35,5 +36,11 @@ public class PlayerController : MonoBehaviour
         //set velocity of the rigidbody this is what moves the character
         rb.velocity = (input * velocity);
 
+        //rotate player in movement direction
+        if (inputMagnitude > 0)
+            rb.transform.rotation = Quaternion.LookRotation(input, rb.transform.up);
+
+        //update animator
+        GetComponent<Animator>().SetFloat("Blend", inputMagnitude);
     }
 }
