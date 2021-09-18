@@ -266,17 +266,17 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@8.2.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
+    <Reference Include="Substance.Game">
+      <HintPath>Assets\Allegorithmic\Plugins\Substance.Game.dll</HintPath>
     </Reference>
     <Reference Include="Substance.Editor">
       <HintPath>Assets\Allegorithmic\Plugins\Substance\Substance Engine\Editor\Substance.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Substance.Game">
-      <HintPath>Assets\Allegorithmic\Plugins\Substance.Game.dll</HintPath>
-    </Reference>
     <Reference Include="Alg.Link">
       <HintPath>Assets\Allegorithmic\Plugins\Substance\Substance Engine\Editor\SubstanceLink\Alg.Link.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@8.2.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\programs\Unity\2020.1.6f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

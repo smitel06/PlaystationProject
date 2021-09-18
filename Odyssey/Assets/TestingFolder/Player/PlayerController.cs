@@ -17,7 +17,18 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        movePlayer();
+        //if animation is not playing
+        if (!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        {
+            //if x is pressed
+            if (Input.GetButtonDown("Attack"))
+            {
+                rb.velocity = new Vector3(0, 0, 0);
+                GetComponent<Animator>().SetTrigger("Attack");
+            }
+            else
+                movePlayer();
+        }
         
     }
 
@@ -41,6 +52,9 @@ public class PlayerController : MonoBehaviour
             rb.transform.rotation = Quaternion.LookRotation(input, rb.transform.up);
 
         //update animator
-        GetComponent<Animator>().SetFloat("Blend", inputMagnitude);
+        if(velocity > 8.0f)
+            GetComponent<Animator>().SetFloat("Blend", inputMagnitude + 0.5f);
+        else
+            GetComponent<Animator>().SetFloat("Blend", 0);
     }
 }
