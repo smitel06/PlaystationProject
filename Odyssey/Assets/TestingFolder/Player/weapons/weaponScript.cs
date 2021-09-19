@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class weaponScript : MonoBehaviour
 {
-    public void OnCollisionEnter(Collision collision)
+    //special fx variables
+    public GameObject bloodsplat;
+    public Transform hitPoint;
+    //------------------------
+    public bool attackOn;
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+
+        if (collision.gameObject.tag == "Enemy" && attackOn)
         {
-            Debug.Log("Hit enemy");
+            Instantiate(bloodsplat, hitPoint.position, Quaternion.identity);
         }
         else
         {
