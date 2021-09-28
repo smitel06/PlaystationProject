@@ -48,8 +48,8 @@ public class PlayerController : MonoBehaviour
             currentWeapon.GetComponent<weaponScript>().attackOn = true;
 
         }
-        else
-            currentWeapon.GetComponent<weaponScript>().attackOn = false;
+        //else
+        //    currentWeapon.GetComponent<weaponScript>().attackOn = false;
 
     }
 
