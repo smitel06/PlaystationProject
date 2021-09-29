@@ -6,8 +6,6 @@ public class EnemySlots : MonoBehaviour
 {
     // Controls the slots enemies go to
 
-    bool isTaken;
-
     Transform target;
     void Start()
     {

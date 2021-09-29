@@ -13,6 +13,10 @@ public class AIMover : MonoBehaviour
     Vector3 randOffset;
     public float offsetDistanceMin;
     public float offsetDistanceMax;
+    //bool for slot placement
+    public bool inSlot;
+    //slot target
+    public GameObject slot;
 
     private void Start()
     {
@@ -28,6 +32,18 @@ public class AIMover : MonoBehaviour
 
     void Update()
     {
-        agent.destination = target.transform.position + randOffset;
+        UpdateDestination();
+    }
+
+    void UpdateDestination()
+    {
+        if(!inSlot)
+        {
+            agent.destination = target.transform.position + randOffset;
+        }
+        else
+        {
+            agent.destination = slot.transform.position;
+        }
     }
 }
