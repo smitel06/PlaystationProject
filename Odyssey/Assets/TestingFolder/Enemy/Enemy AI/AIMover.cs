@@ -5,40 +5,29 @@ using UnityEngine.AI;
 
 public class AIMover : MonoBehaviour
 {
+    //player
     GameObject target;
+    //navigation agent
     NavMeshAgent agent;
-    //how far apart each enemy should be
-    public float spaceBetween = 1.5f;
-    //array to hold all enemies currently on screen
-    GameObject[] enemies;
+    //random offset from target
+    Vector3 randOffset;
+    public float offsetDistanceMin;
+    public float offsetDistanceMax;
 
     private void Start()
     {
+        //easier to type
         target = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
+        //random vector so all enemies aren't crowding the destination
+        //use max and min to set radius near player
+        randOffset = new Vector3(Random.Range(offsetDistanceMin, offsetDistanceMax), Random.Range(offsetDistanceMin, offsetDistanceMax), Random.Range(offsetDistanceMin, offsetDistanceMax));
+
+
     }
 
     void Update()
     {
-        //check for enemies and add them to the array
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        foreach(GameObject enemy in enemies)
-        {
-            if(enemy != gameObject)
-            {
-                float distance = Vector3.Distance(enemy.transform.position, this.transform.position);
-
-                if(distance <= spaceBetween)
-                {
-                    agent.destination = this.transform.position;
-                }
-                else
-                {
-                    agent.destination = target.transform.position;
-                }
-            }
-        }
-        
+        agent.destination = target.transform.position + randOffset;
     }
 }

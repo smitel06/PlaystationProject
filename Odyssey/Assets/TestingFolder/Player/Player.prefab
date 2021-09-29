@@ -1352,6 +1352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6f9a3381341b6459bc45df107cee80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentWeapon: {fileID: 6202707261658094658}
 --- !u!95 &775063325
 Animator:
   serializedVersion: 3
@@ -1639,6 +1640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodsplat: {fileID: 1489431029902184, guid: 4430919f14c50f84085d287cbcb2c30e, type: 3}
   hitPoint: {fileID: 5330331491157797495}
+  attackOn: 0
 --- !u!1 &6439565504316643753
 GameObject:
   m_ObjectHideFlags: 0
