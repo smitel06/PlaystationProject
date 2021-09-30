@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     //attack slot variables
-	GameObject target = null;
+	public GameObject target = null; //clean this up later
 	float pathTime = 0f;
 	int slot = -1;
     
@@ -113,9 +113,10 @@ public class EnemyController : MonoBehaviour
         return navHit.position; 
     }
 
-    public void Attack()
+    public virtual void Attack()
     {
-        //use close distance attack method used in diablo games
+        //each enemy attack will be unique
+        //so we make it virtual and they can decide
     }
 }
 

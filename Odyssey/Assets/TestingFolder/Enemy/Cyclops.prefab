@@ -1545,7 +1545,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2921229707129345433}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 5.827, y: -2.6, z: 0.3289199}
   m_LocalScale: {x: 0.14612, y: 0.14612, z: 0.14612}
   m_Children:
@@ -1604,6 +1604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wanderRadius: 100
   wanderTimer: 5
+  swapDistance: 10
 --- !u!1 &2921229707165486172
 GameObject:
   m_ObjectHideFlags: 0
