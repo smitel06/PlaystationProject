@@ -8,8 +8,13 @@ public class SettingsMenu : MonoBehaviour
 
     public AudioMixer audioMixer;
 
-    public void SetVolume (float volume)
+    public void SetVolumeST (System.Single soundTrackVolume)
     {
-        audioMixer.SetFloat("volume", volume);
+        audioMixer.SetFloat("soundTrackVolumeMixer", soundTrackVolume);
+    }
+
+    public void SetVolumeSFX(System.Single soundFXVolume)
+    {
+        audioMixer.SetFloat("soundFXVolumeMixer", soundFXVolume);
     }
 }
