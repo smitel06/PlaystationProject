@@ -250,9 +250,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 1314134716}
+    m_SelectOnDown: {fileID: 1411163254}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -3577,6 +3577,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2cc362f9f9f2e447aa79a03901d42bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startMenuFirstButton: {fileID: 95894995}
+  optionsFirstButton: {fileID: 650458456}
+  optionsClosedButton: {fileID: 279966064}
 --- !u!1 &1181748131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3906,9 +3909,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 1411163254}
+    m_SelectOnDown: {fileID: 95894997}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -4452,9 +4455,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 95894997}
+    m_SelectOnDown: {fileID: 1314134716}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
