@@ -60,4 +60,11 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Quitting game...");
         Application.Quit();
     }
+
+    public void SettingsMenuOn()
+    {
+        Debug.Log("working");
+    }
+
+    
 }

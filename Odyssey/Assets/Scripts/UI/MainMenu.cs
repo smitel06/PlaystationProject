@@ -9,12 +9,14 @@ public class MainMenu : MonoBehaviour
     //buttons we want to start on when opening each menu
     public GameObject startMenuFirstButton, optionsFirstButton, optionsClosedButton;
 
-    private void Start()
+    private void OnEnable()
     {
         //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set a new selected object which will be the start button
         EventSystem.current.SetSelectedGameObject(startMenuFirstButton);
+        //playrain particle effect
+        FindObjectOfType<ParticleManager>().Play("FXRain");
     }
 
     private void Update()
@@ -32,7 +34,8 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-
+    //above this is controller
+    //-----------------------
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
