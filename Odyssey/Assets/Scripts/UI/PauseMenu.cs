@@ -23,6 +23,8 @@ public class PauseMenu : MonoBehaviour
             {
                 Pause();
             }
+
+            FindObjectOfType<AudioManager>().Play("UI_Pause");
         }
     }
 
