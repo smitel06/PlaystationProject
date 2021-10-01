@@ -21,7 +21,13 @@ public class PlayerController : MonoBehaviour
         attackTime = 0.5f;
     }
 
-    void Update()
+    void FixedUpdate()
+    {
+        Attack();
+
+    }
+
+    private void Attack()
     {
         //if animation is not playing
         if (!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Attack"))
@@ -43,14 +49,13 @@ public class PlayerController : MonoBehaviour
             attacking = true;
 
         //stop hits from happening unless we want them to 
-        if(attacking == true && waitTime < Time.time)
+        if (attacking == true && waitTime < Time.time)
         {
             currentWeapon.GetComponent<weaponScript>().attackOn = true;
 
         }
         //else
         //    currentWeapon.GetComponent<weaponScript>().attackOn = false;
-
     }
 
     //move the player according to controller input

@@ -15,4 +15,25 @@ public class MainMenu : MonoBehaviour
         Debug.Log("QUIT!");
         Application.Quit();
     }
+
+    private void Update()
+    {
+        checkForInput();
+    }
+
+    //Input with controller goes underneath here
+    void checkForInput()
+    {
+        
+        if (Input.GetButtonDown("Submit"))
+        {
+            //this is A or X button
+        }
+        else if (Input.GetButtonDown("Cancel"))
+        {
+            //this is A or X button
+        }
+
+    }
+
 }
