@@ -19,6 +19,7 @@ public class MenuButtonController : MonoBehaviour
     public MenuButton[] buttons;
     private void OnEnable()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         //collect all buttons 
         buttons = this.GetComponentsInChildren<MenuButton>();
         maxIndex = buttons.Length - 1;

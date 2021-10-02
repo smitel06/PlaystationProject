@@ -43,11 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce043b33cc89ac47871f65ea5984154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleEffects:
-  - name: FXRain
-    prefab: {fileID: 1255661323590072, guid: d976a4a07ac6f35448b5fd44e2c07e91, type: 3}
-    particleController: {fileID: 198399775017477976, guid: d976a4a07ac6f35448b5fd44e2c07e91, type: 3}
-    location: {fileID: 0}
-    duration: 0
-    loop: 1
-    maxParticles: 1000
+  particleEffects: []
