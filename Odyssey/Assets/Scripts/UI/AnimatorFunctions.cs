@@ -8,9 +8,13 @@ public class AnimatorFunctions : MonoBehaviour
 	public bool disableOnce;
 
 	void PlaySound(AudioClip whichSound){
-		if(!disableOnce){
+		if(!disableOnce)
+		{
+			//I think this needs to be in audiomanager otherwise it will not work
 			menuButtonController.audioSource.PlayOneShot (whichSound);
-		}else{
+		}
+		else
+		{
 			disableOnce = false;
 		}
 	}
