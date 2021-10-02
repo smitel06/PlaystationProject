@@ -1,0 +1,406 @@
+fileFormatVersion: 2
+guid: 5ff55e0310f9c294d95f550e2eceddc6
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Accessory_Leather
+    second: {fileID: 2100000, guid: 659ba30a64c533c4ab44c69eb235822e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Armour_Arm_L_Leather
+    second: {fileID: 2100000, guid: 3121f69318ff1b54b94a4ffe9d057874, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Armour_Arm_R_Leather
+    second: {fileID: 2100000, guid: eecef20167e8ecc439c26a8634767f91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Armour_Leg_L_Leather
+    second: {fileID: 2100000, guid: cbb100edbc80e834c9e9c76f82e83593, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Armour_Leg_L_Metal
+    second: {fileID: 2100000, guid: 93099e5e6db4fd54f8451e5c45c8cff1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Armour_Leg_R_Leather
+    second: {fileID: 2100000, guid: b128f7231daa1fc41b9df15612533d17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Armour_Leg_R_Metal
+    second: {fileID: 2100000, guid: e932460bfffc4f14eb101d7e5eeddfdb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Body_Beard
+    second: {fileID: 2100000, guid: 23decc64b6cdf3748b200eb57d176361, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Body_Leather
+    second: {fileID: 2100000, guid: 7f7a795cd8fb66f4fa23fe4bc3c5001e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Body_Skin
+    second: {fileID: 2100000, guid: 175dca95b95ccb84a923af6430ba401a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Cape_Leather
+    second: {fileID: 2100000, guid: 253016aa1c902394aa15656d8c7f8f02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Cape_Metal
+    second: {fileID: 2100000, guid: 79209adc921369b408722cf1d917d8d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Cape_Red
+    second: {fileID: 2100000, guid: 829b81f8457544446a05cfa84bbd9eb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Helmet_Metal
+    second: {fileID: 2100000, guid: 628c149ca8c15fc4b8170d1763e56a8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Helmet_Red
+    second: {fileID: 2100000, guid: 60c9ade02ee4ffa48be669e24689c3e3, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Accessory_Leather_BaseColor
+    second: {fileID: 2800000, guid: 983d40d8aeedf474eae60e30bfa6a431, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Accessory_Leather_Normal
+    second: {fileID: 2800000, guid: d77e1b9a3ecf5064c9b6b71f91f4cc82, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Accessory_Leather_Roughness
+    second: {fileID: 2800000, guid: a8ed8b84dd6ecb5419e80f87c4498151, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Arm_L_Leather_BaseColor
+    second: {fileID: 2800000, guid: 146a8d9723d40ae4f99c179737100727, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Arm_L_Leather_Normal
+    second: {fileID: 2800000, guid: 8f4e182ad7e7db04a8230f62867d54b2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Arm_L_Leather_Roughness
+    second: {fileID: 2800000, guid: 5d940caf13ae9f74fbbae6e84110de72, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Arm_R_Leather_BaseColor
+    second: {fileID: 2800000, guid: cad1705959ee8ae4ea8f5de8db79c586, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Arm_R_Leather_Normal
+    second: {fileID: 2800000, guid: e3d56e6ecbb8c21429d389c3ed41414a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Arm_R_Leather_Roughness
+    second: {fileID: 2800000, guid: 94b8ba64494ff774f97088483f8b05a7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_L_Leather_BaseColor
+    second: {fileID: 2800000, guid: 6565a09f5c430514886352d9c7ae5396, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_L_Leather_Normal
+    second: {fileID: 2800000, guid: b948dec8f1ff2e04d828f51c9cef7f24, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_L_Leather_Roughness
+    second: {fileID: 2800000, guid: 9ba93b7010f20f64fb8143ab1e7d0faf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_L_Metal_BaseColor
+    second: {fileID: 2800000, guid: 43ff11d9e02a13f4a8307092b1a135e6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_L_Metal_Metallic
+    second: {fileID: 2800000, guid: 2fd065ecd5abe6047a9f841db85fe94d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_L_Metal_Normal
+    second: {fileID: 2800000, guid: 9a7e1ff419ebfdf44a3b59e8a9674f8f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_L_Metal_Roughness
+    second: {fileID: 2800000, guid: d8138d40b991f034a9decbda7add7c66, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_R_Leather_BaseColor
+    second: {fileID: 2800000, guid: 6a657d866531a274db409a0a244856f1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_R_Leather_Normal
+    second: {fileID: 2800000, guid: 59d9f5b18dcf3a04da227419a021de02, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_R_Leather_Roughness
+    second: {fileID: 2800000, guid: 734bbdcf21c715f4fa426dac6cf2bfe8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_R_Metal_BaseColor
+    second: {fileID: 2800000, guid: abcac51592500844f9123e8db1938e68, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_R_Metal_Metallic
+    second: {fileID: 2800000, guid: ff12269f0c0c1a04498733c1b3512043, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_R_Metal_Normal
+    second: {fileID: 2800000, guid: 30ec19f091ea4bb488b762eac85c75ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Armour_Leg_R_Metal_Roughness
+    second: {fileID: 2800000, guid: 175a977d13b667f48bf20671e99a916f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Cape_Leather_BaseColor
+    second: {fileID: 2800000, guid: d2d63719b1b06b142b88f35fde031ae7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Cape_Leather_Normal
+    second: {fileID: 2800000, guid: 369e999bf07eb8f4d92f1c71d9e47a3c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Cape_Leather_Roughness
+    second: {fileID: 2800000, guid: 22d4c1651d49aec4ea934509d000ea2a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Cape_Metal_BaseColor
+    second: {fileID: 2800000, guid: dc0f13ab7117eda4faa2a1e119d0267e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Cape_Metal_Metallic
+    second: {fileID: 2800000, guid: c424dbe32bcea8c4eb2726ffdeaca6f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Cape_Metal_Normal
+    second: {fileID: 2800000, guid: 6e8570778c61d8f40b087cf3a0b1c2b2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Cape_Metal_Roughness
+    second: {fileID: 2800000, guid: 71e66506937fed745b29cce64370d824, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Helmet_Metal_BaseColor
+    second: {fileID: 2800000, guid: e4a0ee22e5fdc2f4b9dcc65665f8ced6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Helmet_Metal_Metallic
+    second: {fileID: 2800000, guid: 96928a3e15c38514bb7fa5530840f651, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Helmet_Metal_Normal
+    second: {fileID: 2800000, guid: 9a7e006a621bad3448a15b6a79803172, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Helmet_Metal_Roughness
+    second: {fileID: 2800000, guid: de628afb853fe794397332983ace6343, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Helmet_Red_BaseColor
+    second: {fileID: 2800000, guid: 23a0474274b542748a5183b5e6330adb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Helmet_Red_Normal
+    second: {fileID: 2800000, guid: da5dbf87be40eaf40a813c9b5de3645c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_UlyssesArmour_T_Helmet_Red_Roughness
+    second: {fileID: 2800000, guid: e7fa6a7e31a75be45b732f3de09f6481, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Ulysses_T_Body_Beard_BaseColor
+    second: {fileID: 2800000, guid: bd0b225b178748443a2f935c3f2baac0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Ulysses_T_Body_Beard_Normal
+    second: {fileID: 2800000, guid: 31c85c3f7cdf9a44e9c66107acd0dd61, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Ulysses_T_Body_Beard_Roughness
+    second: {fileID: 2800000, guid: 5d70a7a15189bd347870cf3ec4b03b0b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Ulysses_T_Body_Leather_BaseColor
+    second: {fileID: 2800000, guid: 18b2562556bf0e64db6cb158054ba6f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Ulysses_T_Body_Leather_Normal
+    second: {fileID: 2800000, guid: 1015ca02a05438144a939046c997c549, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Ulysses_T_Body_Leather_Roughness
+    second: {fileID: 2800000, guid: dc5a0758d46d8954d8a75c5fa3618ef3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Ulysses_T_Body_Skin_BaseColor
+    second: {fileID: 2800000, guid: 9d524a33b70f1414089bcd10b3800dba, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Ulysses_T_Body_Skin_Normal
+    second: {fileID: 2800000, guid: 2e9b62c7773ba99499ef315ef9037fe4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Ulysses_T_Body_Skin_Roughness
+    second: {fileID: 2800000, guid: a25c97d652cd2594d9431f69458644b5, type: 3}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
