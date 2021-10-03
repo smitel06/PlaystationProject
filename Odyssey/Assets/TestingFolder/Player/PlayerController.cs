@@ -15,15 +15,28 @@ public class PlayerController : MonoBehaviour
     float attackTime;
     float waitTime;
 
+    //animator things
+    Animator animator;
+    float idleTimer;
+    float idleSwitchWait;
+    //randomly set idle
+    [SerializeField] int randomIdle;
+
     private void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         attackTime = 0.5f;
+
+        idleSwitchWait = 10.0f;
     }
 
     void FixedUpdate()
     {
-        Attack();
+        
+        idleAnimation();
+        //movePlayer();
+        //Attack();
 
     }
 
@@ -61,11 +74,13 @@ public class PlayerController : MonoBehaviour
     //move the player according to controller input
     void movePlayer()
     {
+        
+
         // use this for animation velocity and blend tree
         float maxVelocity = 17; 
         
         //get inputs and magnitude
-        Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 input = new Vector3(Input.GetAxis("HorizontalMovement"), 0, Input.GetAxis("VerticalMovement"));
         float inputMagnitude = input.magnitude;
         //get velocity
         float velocity = inputMagnitude * maxVelocity;
@@ -79,8 +94,20 @@ public class PlayerController : MonoBehaviour
 
         //update animator
         if(velocity > 6.8f)
-            GetComponent<Animator>().SetFloat("Blend", inputMagnitude + 0.5f);
+            animator.SetFloat("Blend", inputMagnitude + 0.5f);
         else
-            GetComponent<Animator>().SetFloat("Blend", 0);
+            animator.SetFloat("Blend", 0);
+    }
+
+    void idleAnimation()
+    {
+        idleTimer += Time.deltaTime;
+        if (idleTimer > idleSwitchWait)
+        {
+            randomIdle = Random.Range(0, 5);
+            animator.SetInteger("RandomIdleNum", randomIdle);
+            idleTimer = 0;
+        }
+        
     }
 }
