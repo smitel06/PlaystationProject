@@ -33,9 +33,17 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(Input.GetAxis("HorizontalMovement") != 0 || Input.GetAxis("VerticalMovement") != 0)
+        {
+            movePlayer();
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+            idleAnimation();
+        }
         
-        idleAnimation();
-        //movePlayer();
+        //
         //Attack();
 
     }
@@ -74,10 +82,10 @@ public class PlayerController : MonoBehaviour
     //move the player according to controller input
     void movePlayer()
     {
-        
 
+        animator.SetBool("Moving", true);
         // use this for animation velocity and blend tree
-        float maxVelocity = 17; 
+        float maxVelocity = 10; 
         
         //get inputs and magnitude
         Vector3 input = new Vector3(Input.GetAxis("HorizontalMovement"), 0, Input.GetAxis("VerticalMovement"));
@@ -94,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
         //update animator
         if(velocity > 6.8f)
-            animator.SetFloat("Blend", inputMagnitude + 0.5f);
+            animator.SetFloat("Blend", inputMagnitude);
         else
             animator.SetFloat("Blend", 0);
     }
