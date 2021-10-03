@@ -33,15 +33,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(Input.GetAxis("HorizontalMovement") != 0 || Input.GetAxis("VerticalMovement") != 0)
-        {
-            movePlayer();
-        }
-        else
-        {
-            animator.SetBool("Moving", false);
-            idleAnimation();
-        }
+        movePlayer();
+
         
         //
         //Attack();
@@ -82,29 +75,38 @@ public class PlayerController : MonoBehaviour
     //move the player according to controller input
     void movePlayer()
     {
+        if (Input.GetAxis("HorizontalMovement") != 0 || Input.GetAxis("VerticalMovement") != 0)
+        {
+            animator.SetBool("Moving", true);
+            // use this for animation velocity and blend tree
+            float maxVelocity = 10;
 
-        animator.SetBool("Moving", true);
-        // use this for animation velocity and blend tree
-        float maxVelocity = 10; 
-        
-        //get inputs and magnitude
-        Vector3 input = new Vector3(Input.GetAxis("HorizontalMovement"), 0, Input.GetAxis("VerticalMovement"));
-        float inputMagnitude = input.magnitude;
-        //get velocity
-        float velocity = inputMagnitude * maxVelocity;
+            //get inputs and magnitude
+            Vector3 input = new Vector3(Input.GetAxis("HorizontalMovement"), 0, Input.GetAxis("VerticalMovement"));
+            float inputMagnitude = input.magnitude;
+            //get velocity
+            float velocity = inputMagnitude * maxVelocity;
 
-        //set velocity of the rigidbody this is what moves the character
-        rb.velocity = (input * velocity);
+            //set velocity of the rigidbody this is what moves the character
+            rb.velocity = (input * velocity);
 
-        //rotate player in movement direction
-        if (inputMagnitude > 0)
-            rb.transform.rotation = Quaternion.LookRotation(input, rb.transform.up);
+            //rotate player in movement direction
+            if (inputMagnitude > 0)
+                rb.transform.rotation = Quaternion.LookRotation(input, rb.transform.up);
 
-        //update animator
-        if(velocity > 6.8f)
-            animator.SetFloat("Blend", inputMagnitude);
+            //update animator
+            
+                animator.SetFloat("Blend", inputMagnitude);
+            //else
+            //    animator.SetFloat("Blend", 0);
+        }
         else
-            animator.SetFloat("Blend", 0);
+        {
+            animator.SetBool("Moving", false);
+            idleAnimation();
+        }
+
+        
     }
 
     void idleAnimation()
@@ -112,7 +114,7 @@ public class PlayerController : MonoBehaviour
         idleTimer += Time.deltaTime;
         if (idleTimer > idleSwitchWait)
         {
-            randomIdle = Random.Range(0, 5);
+            randomIdle = Random.Range(0, 3);
             animator.SetInteger("RandomIdleNum", randomIdle);
             idleTimer = 0;
         }
