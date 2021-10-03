@@ -609,8 +609,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530320040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 6.76, z: 0}
+  m_LocalScale: {x: 7.7021, y: 4.5639, z: 1}
   m_Children: []
   m_Father: {fileID: 502503241}
   m_RootOrder: 0
@@ -904,7 +904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1228640561098130758, guid: d9e5393ae11574f46889b0bb224f5052, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 9.42
       objectReference: {fileID: 0}
     - target: {fileID: 1228640561098130758, guid: d9e5393ae11574f46889b0bb224f5052, type: 3}
       propertyPath: m_LocalRotation.x
@@ -941,14 +941,6 @@ PrefabInstance:
     - target: {fileID: 1893432381916078076, guid: d9e5393ae11574f46889b0bb224f5052, type: 3}
       propertyPath: m_Name
       value: M_Ulysses_Model
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637306511302890244, guid: d9e5393ae11574f46889b0bb224f5052, type: 3}
-      propertyPath: distance
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637306511302890244, guid: d9e5393ae11574f46889b0bb224f5052, type: 3}
-      propertyPath: count
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9e5393ae11574f46889b0bb224f5052, type: 3}
