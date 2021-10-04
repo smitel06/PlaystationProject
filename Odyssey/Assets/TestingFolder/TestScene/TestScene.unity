@@ -942,6 +942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M_Ulysses_Model
       objectReference: {fileID: 0}
+    - target: {fileID: 8686544668105579987, guid: d9e5393ae11574f46889b0bb224f5052, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9e5393ae11574f46889b0bb224f5052, type: 3}
 --- !u!4 &6547554346098353029 stripped

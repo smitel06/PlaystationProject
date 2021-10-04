@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     //attack slot variables
-	public GameObject target = null; //clean this up later
+    public GameObject target; //clean this up later
 	float pathTime = 0f;
 	int slot = -1;
     

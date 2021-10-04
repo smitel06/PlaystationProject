@@ -17,37 +17,51 @@ public class PlayerController : MonoBehaviour
     float idleSwitchWait;
     //randomly set idle
     [SerializeField] int randomIdle;
+    bool isAttacking;
 
     
-
-   
-
     private void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-
         idleSwitchWait = 10.0f;
     }
 
     void Update()
     {
-        //get inputs and magnitude
-        input = new Vector3(Input.GetAxis("HorizontalMovement"), 0, Input.GetAxis("VerticalMovement"));
+        //if not attacking don't move
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("hit1") || this.animator.GetCurrentAnimatorStateInfo(0).IsName("hit2"))
+        {
+            rb.velocity = new Vector3(0, 0, 0);
+            rb.transform.rotation = Quaternion.LookRotation(input, rb.transform.up);
+        }
+        else
+        {
+            movePlayer();
+        }
+        Attack();
         dash();
-        movePlayer();
+        
     }
 
     private void Attack()
     {
-        
+        if (Input.GetButtonDown("Attack"))
+        {
+            
+            isAttacking = true;
+            animator.SetTrigger("Attack");
+        }
+
     }
 
     //move the player according to controller input
     void movePlayer()
     {
+        
         if (Input.GetAxis("HorizontalMovement") != 0 || Input.GetAxis("VerticalMovement") != 0)
         {
+            input = new Vector3(Input.GetAxis("HorizontalMovement"), 0, Input.GetAxis("VerticalMovement"));
             animator.SetBool("Moving", true);
             // use this for animation velocity and blend tree
             float maxVelocity = 10;
@@ -87,8 +101,10 @@ public class PlayerController : MonoBehaviour
 
     void dash()
     {
+        
         if (Input.GetButtonDown("Dash"))
         {
+            input = new Vector3(Input.GetAxis("HorizontalMovement"), 0, Input.GetAxis("VerticalMovement"));
             float dashDistance = 10f;
             if(!Physics.Raycast(transform.position, input, dashDistance))
             {
