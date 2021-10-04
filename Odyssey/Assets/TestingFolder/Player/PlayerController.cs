@@ -27,21 +27,26 @@ public class PlayerController : MonoBehaviour
         idleSwitchWait = 10.0f;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //if not attacking don't move
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("hit1") || this.animator.GetCurrentAnimatorStateInfo(0).IsName("hit2"))
         {
             rb.velocity = new Vector3(0, 0, 0);
-            rb.transform.rotation = Quaternion.LookRotation(input, rb.transform.up);
+
         }
         else
         {
             movePlayer();
         }
+        
+        
+    }
+
+    void Update()
+    {
         Attack();
         dash();
-        
     }
 
     private void Attack()
@@ -76,7 +81,7 @@ public class PlayerController : MonoBehaviour
             if (inputMagnitude > 0)
                 rb.transform.rotation = Quaternion.LookRotation(input, rb.transform.up);
 
-           animator.SetFloat("Blend", inputMagnitude);
+            animator.SetFloat("Blend", inputMagnitude);
             
         }
         else
@@ -93,7 +98,7 @@ public class PlayerController : MonoBehaviour
         idleTimer += Time.deltaTime;
         if (idleTimer > idleSwitchWait)
         {
-            randomIdle = Random.Range(0, 3);
+            randomIdle = Random.Range(0, 5);
             animator.SetInteger("RandomIdleNum", randomIdle);
             idleTimer = 0;
         }
