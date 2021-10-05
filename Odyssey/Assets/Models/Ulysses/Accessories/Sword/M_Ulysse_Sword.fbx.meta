@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: 38e4403547474cd4eb6bc76f6802f484
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Sword
+    second: {fileID: 2100000, guid: 2e5521113471aec41a0317432f1dabf6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Sword_FX1
+    second: {fileID: 2100000, guid: ea323b91592546b44bc5f8a6e7bfe2c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Sword_FX2
+    second: {fileID: 2100000, guid: e8865228b2944c5419a1bd05c178e4da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Sword_Handle
+    second: {fileID: 2100000, guid: d36c0c0a2f8f6a9469dc1bb385146a3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Sword_Handle_Metal
+    second: {fileID: 2100000, guid: fca2d7b6da413fe47bf3f34a71117853, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_BaseColor
+    second: {fileID: 2800000, guid: 10a436a8a74988a4d8fdfdeb02acc4f8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_FX1_Emissive
+    second: {fileID: 2800000, guid: ad24796f377b3674eb1499aed5e1fa7e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_FX2_BaseColor
+    second: {fileID: 2800000, guid: e7cba3bd0f728bb498e7c63617a70fea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_FX2_Emissive
+    second: {fileID: 2800000, guid: bd8692c21236f7148a1b846bb5920a29, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_FX2_Normal
+    second: {fileID: 2800000, guid: 8935d0e04a6da4d4aa4b2744f0551923, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_FX2_Roughness
+    second: {fileID: 2800000, guid: b5e73826911833d4c9e7cbe21a0cc92e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_Handle_BaseColor
+    second: {fileID: 2800000, guid: 97a930d0f30d9c1408e5eb62e082e885, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_Handle_Metal_BaseColor
+    second: {fileID: 2800000, guid: 1753621832a597445a48bda15337e7e7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_Handle_Metal_Metalness
+    second: {fileID: 2800000, guid: 6376cb4e2f98f874c8eed8e1de41a743, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_Handle_Metal_Normal
+    second: {fileID: 2800000, guid: cc40e5368cb13e245b2f3070206bcc8f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_Handle_Metal_Roughness
+    second: {fileID: 2800000, guid: fbebfa1810ade5241901f55a8d733046, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_Handle_Metalness
+    second: {fileID: 2800000, guid: 98a27e6c0bcba0943a56519355b4679c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_Handle_Normal
+    second: {fileID: 2800000, guid: 936d35056c88f9447accaff9dab40cd3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_Handle_Roughness
+    second: {fileID: 2800000, guid: 176d59688ec8f024195f1d9031008b5b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_Metalness
+    second: {fileID: 2800000, guid: 32c871593b02328468e6e6ab7006d200, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_Normal
+    second: {fileID: 2800000, guid: ab694b75e5366f14cbb354bd789bee78, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ulysse_Sword1_M_Sword_Roughness
+    second: {fileID: 2800000, guid: bdf0aebd8ca79ea4e9ece473383c40b0, type: 3}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
