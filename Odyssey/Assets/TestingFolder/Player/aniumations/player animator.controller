@@ -632,7 +632,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.06223023
   m_TransitionOffset: 0
-  m_ExitTime: 0.8499999
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -670,7 +670,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Upper
+  m_Name: Attack
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -6378453364385369865}
@@ -807,19 +807,19 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: Upper
+    m_Name: Attack
     m_StateMachine: {fileID: -1557954213725403697}
     m_Mask: {fileID: 31900000, guid: 8cd3fe8bfc1bad8418073baac90fc91b, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
-    m_DefaultWeight: 0
+    m_DefaultWeight: 1
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: Lower
+    m_Name: Movement
     m_StateMachine: {fileID: 8267178952072479896}
     m_Mask: {fileID: 31900000, guid: 396876984c3d5a34eb87d912501da98a, type: 2}
     m_Motions: []
@@ -1049,7 +1049,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1124,7 +1124,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.13227819
   m_TransitionOffset: 0
-  m_ExitTime: 0.5588236
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1822,7 +1822,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lower
+  m_Name: Movement
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 7615981425476219784}
@@ -1887,7 +1887,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
-  m_ExitTime: 0.85
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
