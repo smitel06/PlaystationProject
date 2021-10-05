@@ -29,16 +29,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        //if not attacking don't move
-        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("hit1") || this.animator.GetCurrentAnimatorStateInfo(0).IsName("hit2"))
-        {
-            rb.velocity = new Vector3(0, 0, 0);
-
-        }
-        else
-        {
-            movePlayer();
-        }
+        rb.velocity = new Vector3(0, 0, 0);
+        movePlayer();
+        
         
         
     }
