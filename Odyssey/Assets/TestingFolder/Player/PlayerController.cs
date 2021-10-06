@@ -32,19 +32,21 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector3(0, 0, 0);
         
         movePlayer();
+
         if (animator.GetCurrentAnimatorStateInfo(2).IsName("hit1") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit2"))
         {
-            animator.SetLayerWeight(0, 0);
+            animator.SetLayerWeight(animator.GetLayerIndex("Base"), 0);
             animator.SetLayerWeight(1, 1);
             animator.SetLayerWeight(2, 1);
+            float indexOfThing = animator.GetLayerWeight(0);
+            Debug.Log(indexOfThing);
         }
         else
         {
-            animator.SetLayerWeight(0, 1);
+            animator.SetLayerWeight(animator.GetLayerIndex("Base"), 1);
             animator.SetLayerWeight(1, 0);
             animator.SetLayerWeight(2, 0);
         }
-
 
     }
 
@@ -62,12 +64,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Attack"))
         {
             //layer weights control layers 
-            animator.SetLayerWeight(0, 0);
+            animator.SetLayerWeight(animator.GetLayerIndex("Base"), 0);
             animator.SetLayerWeight(1, 1);
             animator.SetLayerWeight(2, 1);
 
-
-            
             animator.SetTrigger("Attack");
         }
 
