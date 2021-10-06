@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     float idleSwitchWait;
     //randomly set idle
     [SerializeField] int randomIdle;
-    bool isAttacking;
+    
 
     
     private void Start()
@@ -30,24 +30,44 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector3(0, 0, 0);
+        
         movePlayer();
-        
-        
-        
+        if (animator.GetCurrentAnimatorStateInfo(2).IsName("hit1") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit2"))
+        {
+            animator.SetLayerWeight(0, 0);
+            animator.SetLayerWeight(1, 1);
+            animator.SetLayerWeight(2, 1);
+        }
+        else
+        {
+            animator.SetLayerWeight(0, 1);
+            animator.SetLayerWeight(1, 0);
+            animator.SetLayerWeight(2, 0);
+        }
+
+
     }
 
     void Update()
     {
+        
         Attack();
         dash();
+
+        
     }
 
     private void Attack()
     {
         if (Input.GetButtonDown("Attack"))
         {
+            //layer weights control layers 
+            animator.SetLayerWeight(0, 0);
+            animator.SetLayerWeight(1, 1);
+            animator.SetLayerWeight(2, 1);
+
+
             
-            isAttacking = true;
             animator.SetTrigger("Attack");
         }
 
@@ -57,12 +77,12 @@ public class PlayerController : MonoBehaviour
     void movePlayer()
     {
         
-        if (Input.GetAxis("HorizontalMovement") != 0 || Input.GetAxis("VerticalMovement") != 0)
+        if (Input.GetAxisRaw("HorizontalMovement") > 0.1 || Input.GetAxisRaw("VerticalMovement") != 0.1)
         {
-            input = new Vector3(Input.GetAxis("HorizontalMovement"), 0, Input.GetAxis("VerticalMovement"));
+            input = new Vector3(Input.GetAxisRaw("HorizontalMovement"), 0, Input.GetAxisRaw("VerticalMovement"));
             animator.SetBool("Moving", true);
             // use this for animation velocity and blend tree
-            float maxVelocity = 10;
+            float maxVelocity = 5.737815f;
             float inputMagnitude = input.magnitude;
             //get velocity
             float velocity = inputMagnitude * maxVelocity;
@@ -71,12 +91,18 @@ public class PlayerController : MonoBehaviour
             rb.velocity = (input * velocity);
 
             //rotate player in movement direction
-            if (inputMagnitude > 0)
+            if (inputMagnitude > 0.1)
+            {
                 rb.transform.rotation = Quaternion.LookRotation(input, rb.transform.up);
+                animator.SetFloat("Blend", maxVelocity * inputMagnitude);
+            }
+            else
+            {
+                animator.SetFloat("Blend", 0);
+            }
 
-            animator.SetFloat("Blend", inputMagnitude);
-            
-        }
+
+            }
         else
         {
             animator.SetBool("Moving", false);
@@ -110,5 +136,11 @@ public class PlayerController : MonoBehaviour
                 transform.position += input * dashDistance;
             }
         }   
+    }
+
+    void Hit()
+    {
+        //check for enemies 
+        Debug.Log("hit");
     }
 }
