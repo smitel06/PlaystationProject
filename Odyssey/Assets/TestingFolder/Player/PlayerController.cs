@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         
         movePlayer();
 
-        if (animator.GetCurrentAnimatorStateInfo(2).IsName("hit1") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit2"))
+        if (animator.GetCurrentAnimatorStateInfo(2).IsName("hit1") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit2") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit1_continued"))
         {
             animator.SetLayerWeight(animator.GetLayerIndex("Base"), 0);
             animator.SetLayerWeight(1, 1);

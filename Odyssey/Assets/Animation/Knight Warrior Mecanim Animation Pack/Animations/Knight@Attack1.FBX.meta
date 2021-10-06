@@ -463,7 +463,8 @@ ModelImporter:
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'B_Spine1' has translation animation that
       will be discarded.\n"
-    animationRetargetingWarnings: 
+    animationRetargetingWarnings: "\nRetargeting quality report for clip 'Take 001':\n\tRetargeting
+      quality is good. No significant differences with original animation were found.\n"
     animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     importConstraints: 0
@@ -479,7 +480,7 @@ ModelImporter:
       name: Attack1
       takeName: Take 001
       internalID: 7400000
-      firstFrame: 0
+      firstFrame: 12
       lastFrame: 25
       wrapMode: 0
       orientationOffsetY: 0
