@@ -11,6 +11,8 @@ public class CyclopsController : MonoBehaviour
 
     //attack variables
     [SerializeField] float attackRange;
+    [SerializeField] int attackCount;
+
     
     void OnEnable()
     {
@@ -54,11 +56,27 @@ public class CyclopsController : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, target.transform.position) <= attackRange)
         {
-            animator.SetTrigger("Attack");
+            animator.SetBool("canAttack", true);
+            //check for previous attacks so we can do a periodic spin attack every third attack
+            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1"))
+            {
+                attackCount++;
+            }
+            
+            if (attackCount < 3)
+            {
+                animator.SetBool("Attack1", true);
+                animator.SetBool("spinAttack", false);
+            }
+            else
+            {
+                animator.SetBool("Attack1", false);
+                animator.SetBool("spinAttack", true);
+                attackCount = 0;
+            }
         }
         else
-        {
-            animator.SetTrigger("Moving");
-        }
+            animator.SetBool("canAttack", false);
+
     }
 }
