@@ -48,8 +48,7 @@ public class CyclopsController : MonoBehaviour
         Vector3 velocity = agent.velocity;
         Vector3 localVelocity = transform.InverseTransformDirection(velocity);
         float speed = localVelocity.z;
-        animator.SetFloat("Blend", speed);
-
+        animator.SetFloat("Blend", speed);  
     }
 
     void UpdateAttacking()
@@ -57,13 +56,14 @@ public class CyclopsController : MonoBehaviour
         if (Vector3.Distance(transform.position, target.transform.position) <= attackRange)
         {
             animator.SetBool("canAttack", true);
+            
             //check for previous attacks so we can do a periodic spin attack every third attack
-            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1"))
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1"))
             {
                 attackCount++;
             }
             
-            if (attackCount < 3)
+            if (attackCount <= 3)
             {
                 animator.SetBool("Attack1", true);
                 animator.SetBool("spinAttack", false);
@@ -77,6 +77,11 @@ public class CyclopsController : MonoBehaviour
         }
         else
             animator.SetBool("canAttack", false);
+            
+
+
 
     }
+
+    
 }

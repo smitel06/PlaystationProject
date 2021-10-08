@@ -5492,7 +5492,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 1569264223b9ef24d8db2c33d07528b8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -5505,7 +5505,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096805497}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 4.245843
@@ -5532,7 +5532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c61772d6d19d146b833a07a5b57d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 2.3
+  attackRange: 3
   attackCount: 0
 --- !u!1001 &2921229707206213329
 PrefabInstance:
