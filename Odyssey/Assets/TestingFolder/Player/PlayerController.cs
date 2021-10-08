@@ -17,7 +17,9 @@ public class PlayerController : MonoBehaviour
     float idleSwitchWait;
     //randomly set idle
     [SerializeField] int randomIdle;
-    
+
+    //bool
+    public bool recievingForce;
 
     
     private void Start()
@@ -29,7 +31,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector3(0, 0, 0);
+        //if(!recievingForce)
+        //    rb.velocity = new Vector3(0, 0, 0);
         
         movePlayer();
 
@@ -80,7 +83,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxisRaw("HorizontalMovement") > 0.1 || Input.GetAxisRaw("VerticalMovement") != 0.1)
         {
             input = new Vector3(Input.GetAxisRaw("HorizontalMovement"), 0, Input.GetAxisRaw("VerticalMovement"));
-            animator.SetBool("Moving", true);
             // use this for animation velocity and blend tree
             float maxVelocity = 5.737815f;
             float inputMagnitude = input.magnitude;
@@ -142,5 +144,15 @@ public class PlayerController : MonoBehaviour
     {
         //check for enemies 
         Debug.Log("hit");
+    }
+
+    public void FootL()
+    {
+        //footsteps???
+    }
+
+    public void FootR()
+    {
+        //footsteps???
     }
 }
