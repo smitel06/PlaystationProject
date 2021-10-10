@@ -5,16 +5,13 @@ using UnityEngine.AI;
 
 public class CyclopsController : MonoBehaviour
 {
+    //things for navmesh agent
     GameObject target;
     NavMeshAgent agent;
     Animator animator;
 
     //attack variables
     [SerializeField] float attackRange;
-    [SerializeField] int attackCount;
-
-    //movement variables
-    bool isMoving;
 
     //common variables
     [SerializeField] float maxDistanceFromPlayer;
@@ -37,8 +34,6 @@ public class CyclopsController : MonoBehaviour
 
         //weapon collider
         weaponCollider = GetComponentInChildren<Collider>();
-        
-        
     }
 
     // Update is called once per frame
@@ -47,7 +42,6 @@ public class CyclopsController : MonoBehaviour
         //distance from player will be used in a few ways
         currentDistanceFromPlayer = Vector3.Distance(transform.position, target.transform.position);
         
-
         UpdateAgent();
         UpdateAnimator();
         UpdateAttacking();
@@ -92,18 +86,6 @@ public class CyclopsController : MonoBehaviour
         if (currentDistanceFromPlayer <= attackRange)
         {
             animator.SetBool("canAttack", true);
-
-            if (attackCount < 3)
-            {
-                animator.SetBool("Attack1", true);
-                animator.SetBool("spinAttack", false);
-            }
-            else
-            {
-                animator.SetBool("Attack1", false);
-                animator.SetBool("spinAttack", true);
-                
-            }
         }
         else
         {
@@ -117,17 +99,7 @@ public class CyclopsController : MonoBehaviour
     public void Hit(string attackName)
     {
         weaponCollider.enabled = true;
-        //cycle attacks every three
-        if (attackName == "basic")
-        {
-            attackCount++;
-        }
 
-        if (attackName == "special")
-        {
-            attackCount = 0;
-        }
-        
     }
 
     public void FootL()
