@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: dcb5882ec1f674c40a5299d7503d3025
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trap_Face
+    second: {fileID: 2100000, guid: 643c92805db45904292c7182a1ad0dd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trap_Face_Border
+    second: {fileID: 2100000, guid: 6e399d8a362d5cc48beb92860c72c0c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trap_Face_Eyes
+    second: {fileID: 2100000, guid: 77f730386ae3b004090d1b69a854020d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trap_Face_Mouth
+    second: {fileID: 2100000, guid: 8bc9704fae705c740aa652144c2bfd51, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_BaseColor
+    second: {fileID: 2800000, guid: 60261d89308061a4bbbc1953852bf441, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Border_BaseColor
+    second: {fileID: 2800000, guid: 9ad8de5e1bad0354888441c8b448daea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Border_Normal
+    second: {fileID: 2800000, guid: 6c23ed269c9906d4294d9650e960a6ee, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Border_Roughness
+    second: {fileID: 2800000, guid: 39134ba84f4484f4995090afcb66a9e1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Eyes_BaseColor
+    second: {fileID: 2800000, guid: 81c1abfc25e75b9409724d1865ec9774, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Eyes_Normal
+    second: {fileID: 2800000, guid: 3b0556ccf02291642af39ef4aa7a8c36, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Eyes_Roughness
+    second: {fileID: 2800000, guid: 7a487e9a29a3ed74a8aa5da4c6777004, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Mouth_BaseColor
+    second: {fileID: 2800000, guid: 10a3a4bb2cda3b141ae810cc12ce9e89, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Mouth_Emissive
+    second: {fileID: 2800000, guid: d7c78fc54e165b549a0446c60ba82725, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Mouth_Metallic
+    second: {fileID: 2800000, guid: e8b44c2d27d7041479a4b654df130d88, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Mouth_Normal
+    second: {fileID: 2800000, guid: 88ef7c88831f05f4486c5983cf92c166, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Mouth_Roughness
+    second: {fileID: 2800000, guid: 24e8a354770c629419c066145e0666f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Normal
+    second: {fileID: 2800000, guid: b44c9d23d86ed6e4ea086623b9ed1b6c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_Trap_Face1_T_Trap_Face_Roughness
+    second: {fileID: 2800000, guid: 1f7c0d7f9b2b7a045bd4c240d7345d3b, type: 3}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
