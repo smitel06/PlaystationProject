@@ -9,22 +9,37 @@ public class SorcerorController : MonoBehaviour
     public float wanderRadius;
     public float wanderTimer;
     float timer;
+    [SerializeField]bool attacking;
 
-    //navmesh 
+    //things for navmesh agent
+    GameObject target;
     NavMeshAgent agent;
+    Animator animator;
+
+    //projectile
+    [SerializeField] private Transform projectile;
+    [SerializeField] private GameObject staffEndPoint;
+    [SerializeField] private Transform aimSpot;
 
     private void OnEnable()
     {
         //set wander timer
         timer = wanderTimer;
 
-        //set navmesh agent
+        //navmesh
+        target = GameObject.Find("Player");
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        Wander();
+        if (attacking)
+        {
+            Attack();
+        }
+        else
+            Wander();
     }
 
     private void Wander()
@@ -59,4 +74,30 @@ public class SorcerorController : MonoBehaviour
         //return the position for wander to use
         return navHit.position;
     }
+
+    private void Attack()
+    {
+        agent.destination = target.transform.position;
+        
+        
+        if(Vector3.Distance(target.transform.position, transform.position) <= 15)
+        {
+            agent.enabled = false;
+            transform.LookAt(target.transform);
+            animator.SetTrigger("Attack");
+            agent.enabled = true;
+            //attacking = false;
+        }
+    }
+
+    //event to be called on mage attack animation
+    //shoots projectiles at player
+    private void ShootProjectile()
+    {
+        Transform projectile_transform = Instantiate(projectile, staffEndPoint.transform.position, Quaternion.identity);
+        Vector3 shootDirection = (aimSpot.position - staffEndPoint.transform.position).normalized;
+        projectile_transform.GetComponent<Projectile>().Setup(shootDirection, staffEndPoint.transform.position);
+    }
+
+    
 }

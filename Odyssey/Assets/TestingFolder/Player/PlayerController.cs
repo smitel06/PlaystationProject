@@ -18,9 +18,7 @@ public class PlayerController : MonoBehaviour
     //randomly set idle
     [SerializeField] int randomIdle;
 
-    //bool
-    public bool recievingForce;
-
+    
     
     private void Start()
     {
