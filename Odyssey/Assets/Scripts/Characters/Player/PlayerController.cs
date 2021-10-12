@@ -14,20 +14,12 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     //common Variables
     Vector3 input;
-    //animator things
-
-    float idleTimer;
-    float idleSwitchWait;
-    //randomly set idle
-    [SerializeField] int randomIdle;
-
-    
     
     private void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        idleSwitchWait = 10.0f;
+        
     }
 
     void FixedUpdate()

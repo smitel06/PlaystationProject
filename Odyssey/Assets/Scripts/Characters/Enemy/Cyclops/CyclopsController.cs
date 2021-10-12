@@ -20,7 +20,13 @@ public class CyclopsController : MonoBehaviour
 
     //weapon controls
     [SerializeField]Collider weaponCollider;
-    
+
+    //wandering function 
+    [SerializeField] float wanderRadius;
+    [SerializeField] float wanderTimer;
+    float timer;
+    [SerializeField] bool isAttacking;
+
 
     void OnEnable()
     {
@@ -31,6 +37,9 @@ public class CyclopsController : MonoBehaviour
         //let root motion take control
         agent.updatePosition = false;
         agent.updateRotation = true;
+
+        //set wander timer
+        timer = wanderTimer;
 
     }
 
@@ -43,12 +52,12 @@ public class CyclopsController : MonoBehaviour
         UpdateAgent();
         UpdateAnimator();
         UpdateAttacking();
+        
     }
 
     private void UpdateAgent()
     {
-        //stuff for root motion control
-        agent.nextPosition = transform.position;
+        
 
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1") || animator.GetCurrentAnimatorStateInfo(0).IsName("SpinAttack"))
         {
@@ -59,8 +68,30 @@ public class CyclopsController : MonoBehaviour
             agent.enabled = true;
         }
 
-        if(agent.isActiveAndEnabled)
-            agent.destination = target.transform.position;
+        if (isAttacking)
+        {
+            //stuff for root motion control
+            agent.nextPosition = transform.position;
+
+            if (agent.isActiveAndEnabled)
+                agent.destination = target.transform.position;
+        }
+        else
+        {
+            timer += Time.deltaTime;
+            //check to see how long we have been wandering for
+            if (timer >= wanderTimer)
+            {
+                //find a new spot to wander to
+                Vector3 newPosition = RandomNavSphere(transform.position, wanderRadius, -1);
+                if (agent.isActiveAndEnabled)
+                {
+                    agent.SetDestination(newPosition);
+                    timer = 0;
+                }
+            }
+            
+        }
     }
 
     void UpdateAnimator()
@@ -69,19 +100,25 @@ public class CyclopsController : MonoBehaviour
         //multiply that by max velocity of the last animation in blend tree
         //add value to blend to change root motion speed
         float maxVelocity = 4.245843f;
-        percentageOfMaxDistance = currentDistanceFromPlayer / maxDistanceFromPlayer;
-        float blend = maxVelocity * percentageOfMaxDistance;
-        if(blend > maxVelocity)
+        float blend = 1.638454f;
+
+        if (isAttacking)
         {
-            blend = maxVelocity;
+            percentageOfMaxDistance = currentDistanceFromPlayer / maxDistanceFromPlayer;
+            blend = maxVelocity * percentageOfMaxDistance;
+            if (blend > maxVelocity)
+            {
+                blend = maxVelocity;
+            }
         }
+
         animator.SetFloat("Blend", blend);  
     }
 
     //update attacks
     void UpdateAttacking()
     {
-        if (currentDistanceFromPlayer <= attackRange && currentDistanceFromPlayer > 2.5)
+        if (currentDistanceFromPlayer <= attackRange && currentDistanceFromPlayer > 2.5 && isAttacking)
         {
             agent.enabled = false;
             transform.LookAt(target.transform);
@@ -117,6 +154,22 @@ public class CyclopsController : MonoBehaviour
     void FinishedAttacking()
     {
         weaponCollider.enabled = false;
+    }
+
+    private static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    {
+        //create random direction
+        Vector3 randDirection = Random.insideUnitSphere * dist;
+        randDirection += origin;
+
+        //check where we hit
+        NavMeshHit navHit;
+
+        //is this point on the navmesh
+        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
+
+        //return the position for wander to use
+        return navHit.position;
     }
 
 

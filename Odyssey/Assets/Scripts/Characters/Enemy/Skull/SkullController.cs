@@ -9,7 +9,7 @@ public class SkullController : MonoBehaviour
     public float wanderRadius;
     public float wanderTimer;
     float timer;
-    [SerializeField] bool isAttacking;
+    
 
     //things for navmesh agent
     GameObject target;
@@ -19,7 +19,11 @@ public class SkullController : MonoBehaviour
     //attacking
     [SerializeField] private Transform aimSpot;
     [SerializeField] float moveSpeed = 0;
-    
+    [SerializeField] bool isAttacking;
+    [SerializeField] bool cooldown;
+    Vector3 moveDirection;
+    float cooldownTimer;
+
 
     private void OnEnable()
     {
@@ -29,21 +33,36 @@ public class SkullController : MonoBehaviour
         //navmesh
         target = GameObject.Find("Player");
         agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
-        if(isAttacking)
+        if (isAttacking)
         {
             Attacking();
         }
-        else
+        else if (!cooldown)
         {
             Wander();
         }
 
-        
+        CooldownAttack();
+    }
+
+    private void CooldownAttack()
+    {
+        if (cooldown && cooldownTimer <= 0.25f)
+        {
+            cooldownTimer += Time.deltaTime;
+            transform.position += moveDirection * moveSpeed * Time.deltaTime;
+        }
+        else
+        {
+            cooldown = false;
+            agent.enabled = true;
+            GetComponent<Collider>().enabled = true;
+        }
     }
 
     private void Wander()
@@ -79,8 +98,37 @@ public class SkullController : MonoBehaviour
 
     private void Attacking()
     {
-        transform.LookAt(target.transform);
-        Vector3 shootDirection = (aimSpot.position - transform.position).normalized;
-        transform.position += shootDirection * moveSpeed * Time.deltaTime;
+        if(Vector3.Distance(target.transform.position, transform.position) < 6 && !cooldown)
+        {
+            
+            agent.enabled = false;
+            transform.LookAt(target.transform);
+            Vector3 shootDirection = (aimSpot.position - transform.position).normalized;
+            animator.SetTrigger("Attack");
+            transform.position += shootDirection * moveSpeed * Time.deltaTime;
+        }
+        else
+        {
+            agent.enabled = true;
+            agent.destination = target.transform.position;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (isAttacking)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                GetComponent<Collider>().enabled = false;
+                cooldownTimer = 0;
+                other.GetComponent<Health>().TakeDamage(GetComponent<Damage>().currentDamage);
+                moveDirection = (transform.position - other.transform.position).normalized;
+                cooldown = true;
+                isAttacking = false;
+            }
+        }
+
+
     }
 }
