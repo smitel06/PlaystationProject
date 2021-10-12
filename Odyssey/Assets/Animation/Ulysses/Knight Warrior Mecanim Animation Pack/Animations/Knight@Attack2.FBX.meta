@@ -500,7 +500,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.34782606
+      - time: 0.26305786
         functionName: Hit
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -516,6 +516,13 @@ ModelImporter:
         messageOptions: 0
       - time: 0.42608693
         functionName: FootL
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5098575
+        functionName: FinishedAttacking
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -632,7 +639,7 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 14
     isReadable: 1
   meshes:
     lODScreenPercentages: []

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4674523636573136759}
   m_Layer: 0
   m_Name: M_Sorcerer_Model
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,6 +31,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2436900749420914158
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3146801496237962336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.06
+  m_Height: 0.26
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.10516951, z: 0}
 --- !u!95 &99539676
 Animator:
   serializedVersion: 3
@@ -90,6 +104,34 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3244053544544252206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3146801496237962336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb73841938ec994a87b3ee82302239b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 15
+  currentDamage: 0
+--- !u!114 &5889524537352934868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3146801496237962336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5ebecb9f7cf0244a1642cd4a2be26b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
 --- !u!1 &6053265381969294171
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +1024,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e68725a85136d194f95e3e9823f93628, type: 3}
       propertyPath: m_Name
       value: M_Sorcerer_Model_Top
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e68725a85136d194f95e3e9823f93628, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: e68725a85136d194f95e3e9823f93628, type: 3}
       propertyPath: m_Controller
