@@ -62,6 +62,7 @@ public class SkullController : MonoBehaviour
             cooldown = false;
             agent.enabled = true;
             GetComponent<Collider>().enabled = true;
+            
         }
     }
 
