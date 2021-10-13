@@ -25,7 +25,7 @@ public class CyclopsController : MonoBehaviour
     [SerializeField] float wanderRadius;
     [SerializeField] float wanderTimer;
     float timer;
-    [SerializeField] bool isAttacking;
+    [SerializeField] bool AttackMode;
 
 
     void OnEnable()
@@ -68,7 +68,7 @@ public class CyclopsController : MonoBehaviour
             agent.enabled = true;
         }
 
-        if (isAttacking)
+        if (AttackMode)
         {
             //stuff for root motion control
             agent.nextPosition = transform.position;
@@ -102,7 +102,7 @@ public class CyclopsController : MonoBehaviour
         float maxVelocity = 4.245843f;
         float blend = 1.638454f;
 
-        if (isAttacking)
+        if (AttackMode)
         {
             percentageOfMaxDistance = currentDistanceFromPlayer / maxDistanceFromPlayer;
             blend = maxVelocity * percentageOfMaxDistance;
@@ -118,7 +118,7 @@ public class CyclopsController : MonoBehaviour
     //update attacks
     void UpdateAttacking()
     {
-        if (currentDistanceFromPlayer <= attackRange && currentDistanceFromPlayer > 2.5 && isAttacking)
+        if (currentDistanceFromPlayer <= attackRange && currentDistanceFromPlayer > 2.5 && AttackMode)
         {
             agent.enabled = false;
             transform.LookAt(target.transform);

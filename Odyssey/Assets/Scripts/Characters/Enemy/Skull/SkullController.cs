@@ -9,21 +9,22 @@ public class SkullController : MonoBehaviour
     public float wanderRadius;
     public float wanderTimer;
     float timer;
-    
+
 
     //things for navmesh agent
     GameObject target;
     NavMeshAgent agent;
-    Animator animator;
+    [SerializeField] Animator animator;
 
     //attacking
     [SerializeField] private Transform aimSpot;
     [SerializeField] float moveSpeed = 0;
-    [SerializeField] bool isAttacking;
+    [SerializeField] bool attackMode;
     [SerializeField] bool cooldown;
     Vector3 moveDirection;
     float cooldownTimer;
-
+    Vector3 shootDirection;
+    bool canAttack;
 
     private void OnEnable()
     {
@@ -33,21 +34,29 @@ public class SkullController : MonoBehaviour
         //navmesh
         target = GameObject.Find("Player");
         agent = GetComponent<NavMeshAgent>();
-        animator = GetComponentInChildren<Animator>();
+        
     }
 
     void Update()
     {
-        if (isAttacking)
+        if (attackMode)
         {
-            Attacking();
+            StartCoroutine("Attacking");
+            
         }
-        else if (!cooldown)
+        else if (!cooldown && !attackMode)
         {
             Wander();
         }
 
         CooldownAttack();
+
+        //can now attack after waitingf for pre attack animation
+        if(canAttack)
+        {
+            shootDirection = (aimSpot.position - transform.position).normalized;
+            transform.position += shootDirection * moveSpeed * Time.deltaTime;
+        }
     }
 
     private void CooldownAttack()
@@ -97,19 +106,22 @@ public class SkullController : MonoBehaviour
         return navHit.position;
     }
 
-    private void Attacking()
+    IEnumerator Attacking()
     {
         if(Vector3.Distance(target.transform.position, transform.position) < 6 && !cooldown)
         {
-            
             agent.enabled = false;
             transform.LookAt(target.transform);
-            Vector3 shootDirection = (aimSpot.position - transform.position).normalized;
             animator.SetTrigger("Attack");
-            transform.position += shootDirection * moveSpeed * Time.deltaTime;
+            attackMode = false;
+            
+            yield return new WaitForSeconds(1);
+            canAttack = true;
+            
         }
         else
         {
+            attackMode = true;
             agent.enabled = true;
             agent.destination = target.transform.position;
         }
@@ -117,7 +129,7 @@ public class SkullController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isAttacking)
+        if (canAttack)
         {
             if (other.gameObject.tag == "Player")
             {
@@ -126,7 +138,7 @@ public class SkullController : MonoBehaviour
                 other.GetComponent<Health>().TakeDamage(GetComponent<Damage>().currentDamage);
                 moveDirection = (transform.position - other.transform.position).normalized;
                 cooldown = true;
-                isAttacking = false;
+                canAttack = false;
             }
         }
 

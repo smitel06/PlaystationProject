@@ -9,7 +9,7 @@ public class SorcerorController : MonoBehaviour
     public float wanderRadius;
     public float wanderTimer;
     float timer;
-    [SerializeField]bool attacking;
+    [SerializeField]bool attackMode;
 
     //things for navmesh agent
     GameObject target;
@@ -34,7 +34,7 @@ public class SorcerorController : MonoBehaviour
 
     private void Update()
     {
-        if (attacking)
+        if (attackMode)
         {
             Attack();
         }
