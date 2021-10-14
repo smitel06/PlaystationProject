@@ -13,7 +13,9 @@ public class Health : MonoBehaviour
     private void OnEnable()
     {
         currentHealth = maxHealth;
-        healthBar.maxValue = maxHealth;
+
+        if (healthBar != null)
+            healthBar.maxValue = maxHealth;
     }
     public void TakeDamage(float damage)
     {
@@ -23,7 +25,8 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        healthBar.value = currentHealth;
+        if(healthBar != null)
+            healthBar.value = currentHealth;
     }
 
     
