@@ -121,7 +121,6 @@ public class CyclopsController : MonoBehaviour
         if (currentDistanceFromPlayer <= attackRange && currentDistanceFromPlayer > 2.5 && AttackMode)
         {
             agent.enabled = false;
-            transform.LookAt(target.transform);
             
             animator.SetBool("canAttack", true);
         }

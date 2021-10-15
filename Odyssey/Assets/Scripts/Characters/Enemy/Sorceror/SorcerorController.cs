@@ -5,10 +5,7 @@ using UnityEngine.AI;
 
 public class SorcerorController : MonoBehaviour
 {
-    //wandering function 
-    public float wanderRadius;
-    public float wanderTimer;
-    float timer;
+    
     [SerializeField]bool attackMode;
 
     //things for navmesh agent
@@ -21,15 +18,25 @@ public class SorcerorController : MonoBehaviour
     [SerializeField] private GameObject staffEndPoint;
     [SerializeField] private Transform aimSpot;
 
+    //slots for sorceror
+    [SerializeField]  GameObject[] attackSlots;
+    [SerializeField]  Transform sorcerorSlot;
+    
+    
+
     private void OnEnable()
     {
-        //set wander timer
-        timer = wanderTimer;
-
+        
         //navmesh
         target = GameObject.Find("Player");
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+
+        //get all slots into list
+        attackSlots = GameObject.FindGameObjectsWithTag("SorcerorSlot");
+
+        
+        
     }
 
     private void Update()
@@ -39,54 +46,31 @@ public class SorcerorController : MonoBehaviour
             Attack();
         }
         else
-            Wander();
-    }
-
-    private void Wander()
-    {
-        //this will be our first state used to make enemies randomly move around
-        timer += Time.deltaTime;
-        //check to see how long we have been wandering for
-        if (timer >= wanderTimer)
         {
-            //find a new spot to wander to
-            Vector3 newPosition = RandomNavSphere(transform.position, wanderRadius, -1);
-            agent.SetDestination(newPosition);
-            timer = 0;
+            agent.destination = sorcerorSlot.position;
         }
+        
 
+        
     }
 
-    //find a location on the navmesh within a randomised sphere
-    //this will decide where to wander to
-    private static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
-    {
-        //create random direction
-        Vector3 randDirection = Random.insideUnitSphere * dist;
-        randDirection += origin;
-
-        //check where we hit
-        NavMeshHit navHit;
-
-        //is this point on the navmesh
-        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
-
-        //return the position for wander to use
-        return navHit.position;
-    }
 
     private void Attack()
     {
-        agent.destination = target.transform.position;
         
         
-        if(Vector3.Distance(target.transform.position, transform.position) <= 15)
+        //check for distances and test to see where the player is 
+        if(Vector3.Distance(target.transform.position, transform.position) <= 25 && Vector3.Distance(target.transform.position, transform.position) >= 10)
         {
-            agent.enabled = false;
+            
             transform.LookAt(target.transform);
             animator.SetTrigger("Attack");
+            
+        }
+        else if(Vector3.Distance(target.transform.position, transform.position) <= 10)
+        {
             agent.enabled = true;
-            //attacking = false;
+            attackMode = false;
         }
     }
 
@@ -99,6 +83,6 @@ public class SorcerorController : MonoBehaviour
         projectile_transform.GetComponent<Projectile>().Setup(shootDirection, staffEndPoint.transform.position, this.gameObject);
     }
 
-     
+    
     
 }

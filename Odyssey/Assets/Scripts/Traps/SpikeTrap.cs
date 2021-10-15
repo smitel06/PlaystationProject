@@ -36,5 +36,9 @@ public class SpikeTrap : MonoBehaviour
         cooldown = false;
     }    
 
+    void SpikeOut()
+    {
+        AudioManager.instance.Play("Trap_Spike");
+    }
 
 }

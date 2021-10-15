@@ -84,8 +84,9 @@ MonoBehaviour:
   animator: {fileID: 982754783769855437}
   aimSpot: {fileID: 0}
   moveSpeed: 30
-  attackMode: 0
+  attackMode: 1
   cooldown: 0
+  timeBetweenAttacks: 1
 --- !u!195 &2218520066643872973
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -95,7 +96,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2218520066643872978}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.4
+  m_Radius: 0.6
   m_Speed: 5
   m_Acceleration: 1000
   avoidancePriority: 50
@@ -167,6 +168,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2218520066643872969}
     m_Modifications:
+    - target: {fileID: 1332880695277412666, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15776743
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332880695277412666, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3709003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332880695277412666, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332880695277412666, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332880695277412666, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.9
+      objectReference: {fileID: 0}
     - target: {fileID: 6002078721750306316, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -189,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7952714392120856802, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.182
       objectReference: {fileID: 0}
     - target: {fileID: 7952714392120856802, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
       propertyPath: m_LocalRotation.x
@@ -225,7 +246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7952714392120856802, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.081
       objectReference: {fileID: 0}
     - target: {fileID: 7952714392120856802, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
       propertyPath: m_AnchoredPosition.y

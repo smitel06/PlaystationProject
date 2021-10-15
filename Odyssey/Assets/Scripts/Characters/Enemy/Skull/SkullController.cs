@@ -26,6 +26,10 @@ public class SkullController : MonoBehaviour
     Vector3 shootDirection;
     bool canAttack;
 
+    float timeCanAttack;
+    [SerializeField] float timeBetweenAttacks;
+
+
     private void OnEnable()
     {
         //set wander timer
@@ -44,18 +48,24 @@ public class SkullController : MonoBehaviour
             StartCoroutine("Attacking");
             
         }
-        else if (!cooldown && !attackMode)
-        {
-            Wander();
-        }
+        
 
         CooldownAttack();
 
         //can now attack after waitingf for pre attack animation
-        if(canAttack)
+        if(canAttack && timeCanAttack <= 0.4f)
         {
-            shootDirection = (aimSpot.position - transform.position).normalized;
             transform.position += shootDirection * moveSpeed * Time.deltaTime;
+            timeCanAttack += Time.deltaTime;
+        }
+        else if(canAttack && timeCanAttack >= 0.4f)
+        {
+            GetComponent<Collider>().enabled = false;
+            cooldownTimer = 0;
+            timeCanAttack = 0;
+            
+            canAttack = false;
+            attackMode = false;
         }
     }
 
@@ -68,10 +78,11 @@ public class SkullController : MonoBehaviour
         }
         else
         {
+
             cooldown = false;
             agent.enabled = true;
             GetComponent<Collider>().enabled = true;
-            
+
         }
     }
 
@@ -114,10 +125,12 @@ public class SkullController : MonoBehaviour
             transform.LookAt(target.transform);
             animator.SetTrigger("Attack");
             attackMode = false;
-            
+            shootDirection = (aimSpot.position - transform.position).normalized;
             yield return new WaitForSeconds(1);
             canAttack = true;
-            
+
+            yield return new WaitForSeconds(timeBetweenAttacks);
+            attackMode = true;
         }
         else
         {
@@ -135,6 +148,7 @@ public class SkullController : MonoBehaviour
             {
                 GetComponent<Collider>().enabled = false;
                 cooldownTimer = 0;
+                timeCanAttack = 0;
                 other.GetComponent<Health>().TakeDamage(GetComponent<Damage>().currentDamage);
                 moveDirection = (transform.position - other.transform.position).normalized;
                 cooldown = true;

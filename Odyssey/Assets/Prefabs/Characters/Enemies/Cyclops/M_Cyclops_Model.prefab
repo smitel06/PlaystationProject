@@ -317,7 +317,7 @@ MonoBehaviour:
   weaponCollider: {fileID: 1097115417}
   wanderRadius: 100
   wanderTimer: 50
-  AttackMode: 0
+  AttackMode: 1
 --- !u!114 &2190400259377783458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1852,15 +1852,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1332880695277412666, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2250174
+      value: 0.12955827
       objectReference: {fileID: 0}
     - target: {fileID: 1332880695277412666, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2250174
+      value: 0.20125581
       objectReference: {fileID: 0}
     - target: {fileID: 1332880695277412666, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2250174
+      value: 0.12955827
       objectReference: {fileID: 0}
     - target: {fileID: 6002078721750306316, guid: eafe5cda6e4b2d7439f9da667d769fcc, type: 3}
       propertyPath: m_AnchorMax.x

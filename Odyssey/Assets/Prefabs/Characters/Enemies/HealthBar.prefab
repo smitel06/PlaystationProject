@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1332880695277412666}
   - component: {fileID: 5144087266712304204}
+  - component: {fileID: 4001771127933133394}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -26,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 375046078197228221}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.16}
-  m_LocalScale: {x: 0.3206655, y: 0.3206655, z: 0.3206655}
+  m_LocalScale: {x: 0.17656164, y: 0.43726528, z: 0.3206655}
   m_Children:
   - {fileID: 2548251135719430943}
   - {fileID: 5958481054437921935}
@@ -88,6 +89,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4001771127933133394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375046078197228221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e46b9a861e1eff40951dc24e2583b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &6269740472241693084
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,7 +114,6 @@ GameObject:
   - component: {fileID: 2702908225374594770}
   - component: {fileID: 789208930039385953}
   - component: {fileID: 5195433799020845422}
-  - component: {fileID: 6618149579630872875}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -117,7 +130,7 @@ RectTransform:
   m_GameObject: {fileID: 6269740472241693084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.043998923, y: 0.043998923, z: 0.043998923}
+  m_LocalScale: {x: 0.003030704, y: 0.003030704, z: 0.003030704}
   m_Children:
   - {fileID: 1332880695277412666}
   m_Father: {fileID: 0}
@@ -188,19 +201,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6618149579630872875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6269740472241693084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e46b9a861e1eff40951dc24e2583b46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
 --- !u!1 &7406353116924614600
 GameObject:
   m_ObjectHideFlags: 0

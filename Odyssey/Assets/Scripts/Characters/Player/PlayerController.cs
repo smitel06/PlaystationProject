@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Dash"))
         {
             input = new Vector3(Input.GetAxis("HorizontalMovement"), 0, Input.GetAxis("VerticalMovement"));
-            float dashDistance = 10f;
+            float dashDistance = 4f;
             if(!Physics.Raycast(transform.position, input, dashDistance))
             {
                 Vector3 beforeDashPosition = transform.position;
