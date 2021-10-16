@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Characters\Shared\Damage.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Sorceror\Location\Sorceror_Slot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsController.cs" />
@@ -116,7 +117,6 @@
     <Compile Include="Assets\Scripts\Characters\Enemy\Sorceror\Projectile.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
-    <Compile Include="Assets\Prefabs\Characters\Enemies\Sorceror\Location\Sorceror_Slot.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

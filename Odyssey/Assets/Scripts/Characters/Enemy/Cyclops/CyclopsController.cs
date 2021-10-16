@@ -34,10 +34,6 @@ public class CyclopsController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
-        //let root motion take control
-        agent.updatePosition = false;
-        agent.updateRotation = true;
-
         //set wander timer
         timer = wanderTimer;
 
@@ -58,60 +54,30 @@ public class CyclopsController : MonoBehaviour
     private void UpdateAgent()
     {
         
-
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1") || animator.GetCurrentAnimatorStateInfo(0).IsName("SpinAttack"))
+        //check animator for attack animation
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1"))
         {
             agent.enabled = false;
+            animator.applyRootMotion = true;
         }
         else
         {
             agent.enabled = true;
+            animator.applyRootMotion = false;
         }
 
         if (AttackMode)
         {
-            //stuff for root motion control
-            agent.nextPosition = transform.position;
 
-            if (agent.isActiveAndEnabled)
-                agent.destination = target.transform.position;
+            UpdateAttacking();
         }
-        else
-        {
-            timer += Time.deltaTime;
-            //check to see how long we have been wandering for
-            if (timer >= wanderTimer)
-            {
-                //find a new spot to wander to
-                Vector3 newPosition = RandomNavSphere(transform.position, wanderRadius, -1);
-                if (agent.isActiveAndEnabled)
-                {
-                    agent.SetDestination(newPosition);
-                    timer = 0;
-                }
-            }
-            
-        }
+        
+        
     }
 
     void UpdateAnimator()
     {
-        //work out decimal percentage of distance
-        //multiply that by max velocity of the last animation in blend tree
-        //add value to blend to change root motion speed
-        float maxVelocity = 4.245843f;
         float blend = 1.638454f;
-
-        if (AttackMode)
-        {
-            percentageOfMaxDistance = currentDistanceFromPlayer / maxDistanceFromPlayer;
-            blend = maxVelocity * percentageOfMaxDistance;
-            if (blend > maxVelocity)
-            {
-                blend = maxVelocity;
-            }
-        }
-
         animator.SetFloat("Blend", blend);  
     }
 
@@ -126,7 +92,9 @@ public class CyclopsController : MonoBehaviour
         }
         else
         {
+            agent.enabled = true;
             animator.SetBool("canAttack", false);
+            agent.destination = target.transform.position;
         }
 
         
@@ -155,20 +123,9 @@ public class CyclopsController : MonoBehaviour
         weaponCollider.enabled = false;
     }
 
-    private static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    public void TakeDamage()
     {
-        //create random direction
-        Vector3 randDirection = Random.insideUnitSphere * dist;
-        randDirection += origin;
-
-        //check where we hit
-        NavMeshHit navHit;
-
-        //is this point on the navmesh
-        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
-
-        //return the position for wander to use
-        return navHit.position;
+        GetComponent<Animator>().SetTrigger("Damaged");
     }
 
 

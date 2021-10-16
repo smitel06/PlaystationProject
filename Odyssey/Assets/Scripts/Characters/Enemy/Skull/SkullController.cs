@@ -155,7 +155,10 @@ public class SkullController : MonoBehaviour
                 canAttack = false;
             }
         }
+    }
 
-
+    public void TakeDamage()
+    {
+        GetComponent<Animator>().SetTrigger("Damaged");
     }
 }

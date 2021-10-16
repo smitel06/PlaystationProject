@@ -270,7 +270,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 1569264223b9ef24d8db2c33d07528b8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -285,10 +285,10 @@ NavMeshAgent:
   m_GameObject: {fileID: 1402499187725953193}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.02
-  m_Speed: 4.245843
+  m_Radius: 0.015
+  m_Speed: 1.638454
   m_Acceleration: 500
-  avoidancePriority: 50
+  avoidancePriority: 48
   m_AngularSpeed: 1000
   m_StoppingDistance: 4
   m_AutoTraverseOffMeshLink: 1
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 4.5
-  maxDistanceFromPlayer: 15
+  maxDistanceFromPlayer: 100
   currentDistanceFromPlayer: 0
   percentageOfMaxDistance: 0
   weaponCollider: {fileID: 1097115417}

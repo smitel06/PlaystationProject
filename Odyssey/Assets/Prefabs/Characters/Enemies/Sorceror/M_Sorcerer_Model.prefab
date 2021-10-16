@@ -93,7 +93,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.065
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 2000
@@ -977,7 +977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e68725a85136d194f95e3e9823f93628, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.82042575
+      value: 1.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e68725a85136d194f95e3e9823f93628, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1030,6 +1030,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e68725a85136d194f95e3e9823f93628, type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e68725a85136d194f95e3e9823f93628, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: e68725a85136d194f95e3e9823f93628, type: 3}
       propertyPath: m_Controller

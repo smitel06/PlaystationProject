@@ -146,4 +146,9 @@ public class PlayerController : MonoBehaviour
     {
         //footsteps???
     }
+
+    public void TakeDamage()
+    {
+        GetComponent<Animator>().SetTrigger("Damaged");
+    }
 }
