@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.sidefx.vat": {
+      "version": "file:C:/Users/pc/Documents/houdini18.5/SideFXLabs/18.5.732/SideFXLabs18.5/unity/shaders/URP",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.render-pipelines.universal": "7.1.7"
+      }
+    },
     "com.unity.cinemachine": {
       "version": "2.6.10",
       "depth": 0,
