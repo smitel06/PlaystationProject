@@ -3,7 +3,17 @@ guid: d6cb86e597af87e4780a8b4c7b9fd4d0
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Cyclops_Body
+    second: {fileID: 2100000, guid: 08fd8e2e13ba02541b39f3db0c1bc0a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Cyclops_Details
+    second: {fileID: 2100000, guid: 17fb25ae45ce15b4aa684ef3748c2b1d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -3,7 +3,17 @@ guid: 229bdae50078fcb4fb3edcae8fc286cf
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Sorcerer_Black
+    second: {fileID: 2100000, guid: 38c74b41e0ff7a44fa5a64213bfd77da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Sorcerer_Red
+    second: {fileID: 2100000, guid: c9c86eee6eece9a498d6169ec05e9b69, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
