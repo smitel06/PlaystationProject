@@ -3,7 +3,22 @@ guid: 646a250a1a9f2714e8a1c6eec12537ed
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Horse
+    second: {fileID: 2100000, guid: 2115af1d866726f4c890911d83f08355, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Horse_Platform
+    second: {fileID: 2100000, guid: 67756cd81fb63eb4bb2a17d9f339e635, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Horse_Wheel
+    second: {fileID: 2100000, guid: 90d259a088f566f4bb9409c956e54343, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -3,7 +3,22 @@ guid: 06dda596d26dc304eb77d4410b8d077a
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Trident
+    second: {fileID: 2100000, guid: e8c5adb2c6b81b440bfc2e9275d3d6eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Trident_Detail
+    second: {fileID: 2100000, guid: 115868ba7ae137d44b8df8ddc0a71f5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Trident_Handle
+    second: {fileID: 2100000, guid: 161d2d384cc6fb0448f5d610bd21a6f3, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

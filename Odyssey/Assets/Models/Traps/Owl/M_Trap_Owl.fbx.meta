@@ -3,7 +3,17 @@ guid: 3231ce8f6598e734397347ecdabe8186
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trap_Owl
+    second: {fileID: 2100000, guid: 471e6b710300c68458d709f1c7b0556a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trap_Owl_Eyes
+    second: {fileID: 2100000, guid: a1f6a00a74e2fcc4d8aed01466d357cb, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

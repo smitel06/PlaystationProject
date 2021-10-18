@@ -3,7 +3,17 @@ guid: 99b7e663ea370ab46800652b890665a1
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Arrow
+    second: {fileID: 2100000, guid: bf50ed5d42697e24c9815607624369b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Arrow_Blue
+    second: {fileID: 2100000, guid: d4f80abbc1e78584487b83756eaa4926, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

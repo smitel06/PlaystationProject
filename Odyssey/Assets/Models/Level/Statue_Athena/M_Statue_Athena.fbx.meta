@@ -3,7 +3,12 @@ guid: ebc307e364329f24790816a09930261e
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Statue_Athena
+    second: {fileID: 2100000, guid: 02db55aef17cfff46975cc83ff7a0cc4, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

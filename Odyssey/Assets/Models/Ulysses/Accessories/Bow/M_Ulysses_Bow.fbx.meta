@@ -3,7 +3,32 @@ guid: f228ecc3a90d6b64c9c2dc81e31046af
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Bow
+    second: {fileID: 2100000, guid: 68efe3dac38e0ce4ea3039919dc4e94c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Bow_Handle
+    second: {fileID: 2100000, guid: 123c13900347db747aab7bf391abc4c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Bow_Metal
+    second: {fileID: 2100000, guid: 984e233983a48cb43a65f76cc17d765b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Bow_String
+    second: {fileID: 2100000, guid: 2580c52fa72deed478aa13599de29d21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Bow_Tip
+    second: {fileID: 2100000, guid: de4822881b2acfa42bfc65b955f2b986, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

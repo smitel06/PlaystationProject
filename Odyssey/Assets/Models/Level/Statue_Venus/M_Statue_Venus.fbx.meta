@@ -3,7 +3,12 @@ guid: 86bf06561acbf2b45b5751a85344a037
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Statue_Venus
+    second: {fileID: 2100000, guid: 7dd3c71c96bab804baf97e589b691f89, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

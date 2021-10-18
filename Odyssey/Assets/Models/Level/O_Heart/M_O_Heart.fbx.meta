@@ -3,7 +3,17 @@ guid: 1c42ab42d176b4446a147569fdb86353
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_O_Heart
+    second: {fileID: 2100000, guid: 7750ddec10da28c419a9065ed7610b36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_O_Leaf
+    second: {fileID: 2100000, guid: 2af87cceaf8a58e47bf56e357881c0b6, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

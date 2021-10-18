@@ -3,7 +3,27 @@ guid: d7c0d7b59dc81bc47b05866ed5249322
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Statue_Poseidon
+    second: {fileID: 2100000, guid: 53235b9aae4c602469b8199990e30926, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Trident
+    second: {fileID: 2100000, guid: 6332fc3e6f5ebbf4e93ce166bddcb564, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Trident_Detail
+    second: {fileID: 2100000, guid: d4ac7f5591f5411458dfb728637f4280, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Trident_Handle
+    second: {fileID: 2100000, guid: e31ef4e1cc620c44eb5b20d126d68d26, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

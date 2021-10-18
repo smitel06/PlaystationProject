@@ -213,6 +213,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2934974693615279638}
   - component: {fileID: 4460214578995658934}
+  - component: {fileID: 253224682}
+  - component: {fileID: 253224681}
   m_Layer: 0
   m_Name: M_Trap_Spikes
   m_TagString: Untagged
@@ -245,7 +247,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2589797675075585196}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d35a3fe76e088a94ab0af7ca50ba77d1, type: 2}
   m_CullingMode: 0
@@ -256,6 +258,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &253224682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2589797675075585196}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07, y: 0.02, z: 0.07}
+  m_Center: {x: 0.0007111669, y: 0, z: -0.0006562889}
+--- !u!114 &253224681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2589797675075585196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ce6bf984b45334f92e06febbb56d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3268154586802977867
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,12 @@ guid: a39270d6e327940408797b16c65a262c
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Statue_Ephebe
+    second: {fileID: 2100000, guid: 0605d0c932fadc04d983c812a9a799c7, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
