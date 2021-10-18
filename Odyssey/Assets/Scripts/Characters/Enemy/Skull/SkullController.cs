@@ -29,7 +29,12 @@ public class SkullController : MonoBehaviour
     float timeCanAttack;
     [SerializeField] float timeBetweenAttacks;
 
-
+    //death animation stuff
+    Health health;
+    [SerializeField] GameObject fragmented_skull;
+    [SerializeField] GameObject skull;
+    [SerializeField] GameObject healthbar;
+    
     private void OnEnable()
     {
         //set wander timer
@@ -38,11 +43,26 @@ public class SkullController : MonoBehaviour
         //navmesh
         target = GameObject.Find("Player");
         agent = GetComponent<NavMeshAgent>();
+        health = GetComponent<Health>();
         
     }
 
     void Update()
     {
+        if (health.currentHealth <= 0)
+        {
+            //turn off all bools
+            attackMode = false;
+            canAttack = false;
+            cooldown = false;
+            //swap models
+            fragmented_skull.SetActive(true);
+            healthbar.SetActive(false);
+            skull.SetActive(false);
+            Destroy(gameObject, 3);
+        }
+
+
         if (attackMode)
         {
             StartCoroutine("Attacking");
@@ -53,12 +73,12 @@ public class SkullController : MonoBehaviour
         CooldownAttack();
 
         //can now attack after waitingf for pre attack animation
-        if(canAttack && timeCanAttack <= 0.4f)
+        if(canAttack && timeCanAttack <= 0.3f)
         {
             transform.position += shootDirection * moveSpeed * Time.deltaTime;
             timeCanAttack += Time.deltaTime;
         }
-        else if(canAttack && timeCanAttack >= 0.4f)
+        else if(canAttack && timeCanAttack >= 0.3f)
         {
             GetComponent<Collider>().enabled = false;
             cooldownTimer = 0;
@@ -67,6 +87,8 @@ public class SkullController : MonoBehaviour
             canAttack = false;
             attackMode = false;
         }
+
+
     }
 
     private void CooldownAttack()

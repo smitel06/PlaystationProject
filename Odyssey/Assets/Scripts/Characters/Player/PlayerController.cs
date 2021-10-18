@@ -14,12 +14,24 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     //common Variables
     Vector3 input;
-    
+
+    //stuff for iso control
+    Vector3 forward, right;
+
+
     private void Start()
     {
+        //setup the components we need
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        
+
+        //set forward vector to camera
+        forward = Camera.main.transform.forward;
+        forward.y = 0;
+        forward = Vector3.Normalize(forward);
+
+        //set right vector
+        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
     }
 
     void FixedUpdate()
@@ -77,21 +89,30 @@ public class PlayerController : MonoBehaviour
         
         if (Input.GetAxisRaw("HorizontalMovement") > 0.1 || Input.GetAxisRaw("VerticalMovement") != 0.1)
         {
+            //get input for magnitude
             input = new Vector3(Input.GetAxisRaw("HorizontalMovement"), 0, Input.GetAxisRaw("VerticalMovement"));
+            
             // use this for animation velocity and blend tree
             float maxVelocity = 5.737815f;
             float inputMagnitude = input.magnitude;
             //get velocity
             float velocity = inputMagnitude * maxVelocity;
 
+            //things for iso movement
+            Vector3 rightMovement = right * velocity * Time.deltaTime * Input.GetAxisRaw("HorizontalMovement");
+            Vector3 upMovement = forward * velocity * Time.deltaTime * Input.GetAxisRaw("VerticalMovement");
+            Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+
+            
+
             //set velocity of the rigidbody this is what moves the character
-            rb.velocity = (input * velocity);
+            rb.velocity = (heading * velocity);
 
             //rotate player in movement direction
             if (inputMagnitude > 0.1)
             {
                 animator.SetTrigger("Moving");
-                rb.transform.rotation = Quaternion.LookRotation(input, rb.transform.up);
+                rb.transform.rotation = Quaternion.LookRotation(heading, rb.transform.up);
                 animator.SetFloat("Blend", maxVelocity * inputMagnitude);
             }
             else
@@ -147,8 +168,5 @@ public class PlayerController : MonoBehaviour
         //footsteps???
     }
 
-    public void TakeDamage()
-    {
-        GetComponent<Animator>().SetTrigger("Damaged");
-    }
+    
 }
