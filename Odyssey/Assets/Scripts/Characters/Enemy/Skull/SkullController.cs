@@ -49,6 +49,38 @@ public class SkullController : MonoBehaviour
 
     void Update()
     {
+        CheckForDeath();
+
+        if (attackMode)
+        {
+            StartCoroutine("Attacking");
+
+        }
+
+
+        CooldownAttack();
+
+        //can now attack after waitingf for pre attack animation
+        if (canAttack && timeCanAttack <= 0.3f)
+        {
+            transform.position += shootDirection * moveSpeed * Time.deltaTime;
+            timeCanAttack += Time.deltaTime;
+        }
+        else if (canAttack && timeCanAttack >= 0.3f)
+        {
+            GetComponent<Collider>().enabled = false;
+            cooldownTimer = 0;
+            timeCanAttack = 0;
+
+            canAttack = false;
+            attackMode = false;
+        }
+
+
+    }
+
+    private void CheckForDeath()
+    {
         if (health.currentHealth <= 0)
         {
             //turn off all bools
@@ -61,34 +93,6 @@ public class SkullController : MonoBehaviour
             skull.SetActive(false);
             Destroy(gameObject, 3);
         }
-
-
-        if (attackMode)
-        {
-            StartCoroutine("Attacking");
-            
-        }
-        
-
-        CooldownAttack();
-
-        //can now attack after waitingf for pre attack animation
-        if(canAttack && timeCanAttack <= 0.3f)
-        {
-            transform.position += shootDirection * moveSpeed * Time.deltaTime;
-            timeCanAttack += Time.deltaTime;
-        }
-        else if(canAttack && timeCanAttack >= 0.3f)
-        {
-            GetComponent<Collider>().enabled = false;
-            cooldownTimer = 0;
-            timeCanAttack = 0;
-            
-            canAttack = false;
-            attackMode = false;
-        }
-
-
     }
 
     private void CooldownAttack()

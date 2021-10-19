@@ -55,11 +55,6 @@ public class SorcerorController : MonoBehaviour
         {
             GoToSlot();
         }
-
-
-
-
-
     }
 
     private void GoToSlot()

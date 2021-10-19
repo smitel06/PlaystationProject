@@ -18,6 +18,14 @@ public class PlayerController : MonoBehaviour
     //stuff for iso control
     Vector3 forward, right;
 
+    //health and death stuff
+    Health health;
+    bool dead;
+    int randomDeath;
+
+    //references for other scripts
+    public Transform aimspot;
+
 
     private void Start()
     {
@@ -32,19 +40,56 @@ public class PlayerController : MonoBehaviour
 
         //set right vector
         right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+
+        //collect health component from player
+        health = GetComponent<Health>();
+
+        //each number corrosponds to a death animation
+        randomDeath = Random.Range(0, 4);
+        
     }
 
     void FixedUpdate()
     {
+        if (!dead)
+        {
+            movePlayer();
+            checkAnimatorStates();
+        }
 
-        movePlayer();
-        checkAnimatorStates();
+    }
 
+    
+
+    void Update()
+    {
+        if(health.currentHealth <= 0)
+        {
+            //check health if below zero you die
+            dead = true;
+
+            //stop moving you are dead
+            rb.velocity = new Vector3(0, 0, 0);
+            animator.SetInteger("RandomDeath", randomDeath);
+            animator.SetTrigger("Dead");
+            animator.applyRootMotion = true;
+        }
+
+        if (!dead)
+        {
+            Attack();
+            dash();
+            BlockAttack();
+        }
+        
+        
     }
 
     private void checkAnimatorStates()
     {
-        if (animator.GetCurrentAnimatorStateInfo(2).IsName("hit1") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit2") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit1_continued"))
+        //checks what is currently playing on animator controller
+        if (animator.GetCurrentAnimatorStateInfo(2).IsName("hit1") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit2") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit1_continued")
+            || this.animator.GetCurrentAnimatorStateInfo(2).IsName("Block"))
         {
             animator.SetLayerWeight(animator.GetLayerIndex("Base"), 0);
             animator.SetLayerWeight(1, 1);
@@ -58,15 +103,6 @@ public class PlayerController : MonoBehaviour
             animator.SetLayerWeight(1, 0);
             animator.SetLayerWeight(2, 0);
         }
-    }
-
-    void Update()
-    {
-        
-        Attack();
-        dash();
-
-        
     }
 
     private void Attack()
@@ -156,8 +192,6 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
-
     public void FootL()
     {
         //footsteps???
@@ -168,5 +202,12 @@ public class PlayerController : MonoBehaviour
         //footsteps???
     }
 
-    
+    void BlockAttack()
+    {
+        if (Input.GetButtonDown("Block"))
+        {
+            Debug.Log("blocking");
+            animator.SetTrigger("Block");
+        }
+    }
 }
