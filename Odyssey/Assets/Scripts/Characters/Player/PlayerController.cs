@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     //health and death stuff
     Health health;
-    bool dead;
+    public bool dead;
     int randomDeath;
 
     //references for other scripts
@@ -44,8 +44,7 @@ public class PlayerController : MonoBehaviour
         //collect health component from player
         health = GetComponent<Health>();
 
-        //each number corrosponds to a death animation
-        randomDeath = Random.Range(0, 4);
+        
         
     }
 
@@ -63,26 +62,38 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(health.currentHealth <= 0)
-        {
-            //check health if below zero you die
-            dead = true;
-
-            //stop moving you are dead
-            rb.velocity = new Vector3(0, 0, 0);
-            animator.SetInteger("RandomDeath", randomDeath);
-            animator.SetTrigger("Dead");
-            animator.applyRootMotion = true;
-        }
+        IsPlayerDead();
 
         if (!dead)
         {
             Attack();
             dash();
-            BlockAttack();
+
         }
-        
-        
+
+
+    }
+
+    private void IsPlayerDead()
+    {
+        if (health.currentHealth <= 0)
+        {
+            //check health if below zero you die
+            dead = true;
+
+            //turn on root transform for deaths
+            animator.applyRootMotion = true;
+
+            //stop moving you are dead
+            rb.velocity = new Vector3(0, 0, 0);
+            //each number corrosponds to a death animation
+            randomDeath = Random.Range(0, 4);
+            animator.SetInteger("RandomDeath", randomDeath);
+            
+
+            animator.SetTrigger("Dead");
+            
+        }
     }
 
     private void checkAnimatorStates()
@@ -202,6 +213,7 @@ public class PlayerController : MonoBehaviour
         //footsteps???
     }
 
+    //shield bash??
     void BlockAttack()
     {
         if (Input.GetButtonDown("Block"))

@@ -38,35 +38,47 @@ public class SorcerorController : MonoBehaviour
         attackSlots = GameObject.FindGameObjectsWithTag("SorcerorSlot");
         FindSlot();
 
-
+        //turn off navmesh rotation instead sorceror will track player
+        agent.updateRotation = false;
     }
 
     private void Update()
     {
-        if (attackMode)
+        //check for player death
+        if(target.GetComponent<PlayerController>().dead == false)
         {
-            Attack();
-        }
-        else if(flee)
-        {
-            Flee();
+            if (attackMode)
+            {
+                Attack();
+            }
+            
+            if (flee)
+            {
+                Flee();
+            }
+            else
+            {
+                GoToSlot();
+            }
+
+            //look at player
+            transform.LookAt(target.transform);
         }
         else
         {
-            GoToSlot();
+            animator.SetTrigger("Idle");
         }
+        
     }
 
     private void GoToSlot()
     {
-        if (Vector3.Distance(target.transform.position, transform.position) <= 3)
+        if (Vector3.Distance(target.transform.position, transform.position) <= 4)
         {
             flee = true;
-
-
         }
         agent.destination = sorcerorSlot.position;
-        if (Vector3.Distance(sorcerorSlot.position, transform.position) < 1)
+        if (Vector3.Distance(target.transform.position, transform.position) <= 20 && Vector3.Distance(target.transform.position, transform.position) >= 2)
         {
             attackMode = true;
         }
@@ -74,23 +86,18 @@ public class SorcerorController : MonoBehaviour
 
     private void Attack()
     {
-        //disable agent we dont want him to move right now
-        agent.enabled = false;
-
-        //track player across chamber
-        transform.LookAt(target.transform);
 
         //check for distances and test to see where the player is 
-        if (Vector3.Distance(target.transform.position, transform.position) <= 30 && Vector3.Distance(target.transform.position, transform.position) >= 2)
+        if (Vector3.Distance(target.transform.position, transform.position) <= 20 && Vector3.Distance(target.transform.position, transform.position) >= 2)
         {
             Debug.Log("sorcerorAttack");
             animator.SetTrigger("Attack");
         }
-        else if(Vector3.Distance(target.transform.position, transform.position) <= 3)
+        
+        if(Vector3.Distance(target.transform.position, transform.position) <= 4)
         {
             flee = true;
-            attackMode = false;
-            agent.enabled = true;
+            
         }
     }
 
@@ -163,6 +170,8 @@ public class SorcerorController : MonoBehaviour
 
             //set the destination for the navmesh agent
             agent.SetDestination(newPos);
+
+            
         }
     }
     

@@ -42,12 +42,19 @@ public class CyclopsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //distance from player will be used in a few ways
-        currentDistanceFromPlayer = Vector3.Distance(transform.position, target.transform.position);
-        
-        UpdateAgent();
-        UpdateAnimator();
-        UpdateAttacking();
+        if (target.GetComponent<PlayerController>().dead == false)
+        {
+            //distance from player will be used in a few ways
+            currentDistanceFromPlayer = Vector3.Distance(transform.position, target.transform.position);
+
+            UpdateAgent();
+            UpdateAnimator();
+            UpdateAttacking();
+        }
+        else
+        {
+            animator.SetTrigger("Idle");
+        }
         
     }
 

@@ -49,17 +49,24 @@ public class SkullController : MonoBehaviour
 
     void Update()
     {
-        CheckForDeath();
-
-        if (attackMode)
+        if (target.GetComponent<PlayerController>().dead == false)
         {
-            StartCoroutine("Attacking");
+            CheckForDeath();
 
+            if (attackMode)
+            {
+                StartCoroutine("Attacking");
+
+            }
+
+
+            CooldownAttack();
+            CanAttack();
         }
+    }
 
-
-        CooldownAttack();
-
+    private void CanAttack()
+    {
         //can now attack after waitingf for pre attack animation
         if (canAttack && timeCanAttack <= 0.3f)
         {
@@ -75,8 +82,6 @@ public class SkullController : MonoBehaviour
             canAttack = false;
             attackMode = false;
         }
-
-
     }
 
     private void CheckForDeath()
