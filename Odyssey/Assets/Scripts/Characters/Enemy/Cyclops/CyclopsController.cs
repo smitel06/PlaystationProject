@@ -21,9 +21,7 @@ public class CyclopsController : MonoBehaviour
     //weapon controls
     [SerializeField]Collider weaponCollider;
 
-    //wandering function 
-    [SerializeField] float wanderRadius;
-    [SerializeField] float wanderTimer;
+    
     float timer;
     [SerializeField] bool AttackMode;
 
@@ -33,8 +31,9 @@ public class CyclopsController : MonoBehaviour
     [SerializeField] GameObject healthbar;
     [SerializeField] GameObject shardBody;
     [SerializeField] GameObject Body;
+    
     float deathTimer;
-
+    bool deathDone;
 
     void OnEnable()
     {
@@ -42,8 +41,7 @@ public class CyclopsController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
-        //set wander timer
-        timer = wanderTimer;
+        
 
         //set health
         health = GetComponent<Health>();
@@ -69,17 +67,19 @@ public class CyclopsController : MonoBehaviour
 
         if(health.currentHealth <= 0 && dead == false)
         {
-            dead = true;
             animator.SetTrigger("Dead");
-
+            dead = true;
         }
-        if (dead && deathTimer >= 2.0f)
+
+        if (dead && deathTimer >= 2.0f && !deathDone)
         {
             healthbar.SetActive(false);
             shardBody.SetActive(true);
             Body.SetActive(false);
+            Destroy(gameObject, 2.0f);
+            deathDone = true;
         }
-        else
+        else if(dead && !deathDone)
             deathTimer += Time.deltaTime;
         
     }

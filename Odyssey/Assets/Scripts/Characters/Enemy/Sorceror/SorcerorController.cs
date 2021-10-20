@@ -24,7 +24,17 @@ public class SorcerorController : MonoBehaviour
     [SerializeField] Transform nextSlot;
     float BestSlot;
     bool flee;
-    
+
+    //death functions
+    bool dead;
+    Health health;
+    [SerializeField] GameObject healthbar;
+    [SerializeField] GameObject shardBody;
+    [SerializeField] GameObject Body;
+    [SerializeField] GameObject Hood;
+    float deathTimer;
+    bool deathDone;
+
 
     private void OnEnable()
     {
@@ -43,12 +53,15 @@ public class SorcerorController : MonoBehaviour
 
         //get aimspot
         aimSpot = target.GetComponent<PlayerController>().aimspot;
+
+        //set health
+        health = GetComponent<Health>();
     }
 
     private void Update()
     {
         //check for player death
-        if(target.GetComponent<PlayerController>().dead == false)
+        if(target.GetComponent<PlayerController>().dead == false && !dead)
         {
             if (attackMode)
             {
@@ -67,11 +80,29 @@ public class SorcerorController : MonoBehaviour
             //look at player
             transform.LookAt(target.transform);
         }
-        else
+        else if(!dead)
         {
             animator.SetTrigger("Idle");
         }
-        
+
+        if (health.currentHealth <= 0 && dead == false)
+        {
+            animator.SetTrigger("Dead");
+            dead = true;
+        }
+
+        if (dead && deathTimer >= 2.0f && !deathDone)
+        {
+            Hood.SetActive(false);
+            healthbar.SetActive(false);
+            shardBody.SetActive(true);
+            Body.SetActive(false);
+            Destroy(gameObject, 2.0f);
+            deathDone = true;
+        }
+        else if (dead && !deathDone)
+            deathTimer += Time.deltaTime;
+
     }
 
     private void GoToSlot()
