@@ -93,6 +93,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\UI\HUD\HealthValue.cs" />
     <Compile Include="Assets\Scripts\FX\Shaders\Dissolve.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\Health.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerWeapon.cs" />
@@ -118,7 +119,8 @@
     <Compile Include="Assets\Scripts\Characters\Enemy\Sorceror\Projectile.cs" />
     <Compile Include="Assets\Scripts\UI\Menus\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
-    <Compile Include="Assets\Scripts\UI\HUD\HealthValue.cs" />
+    <Compile Include="Assets\Scripts\Characters\Shared\ShardExplosion.cs" />
+    <Compile Include="Assets\Scripts\Characters\Shared\Shard.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

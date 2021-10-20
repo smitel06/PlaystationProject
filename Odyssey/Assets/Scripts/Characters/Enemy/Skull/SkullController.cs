@@ -44,7 +44,9 @@ public class SkullController : MonoBehaviour
         target = GameObject.Find("Player");
         agent = GetComponent<NavMeshAgent>();
         health = GetComponent<Health>();
-        
+
+        //get aimspot
+        aimSpot = target.GetComponent<PlayerController>().aimspot;
     }
 
     void Update()

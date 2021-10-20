@@ -3385,7 +3385,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponCollider: {fileID: 2356534597464884185}
-  randomIdle: 10
+  dead: 0
+  aimspot: {fileID: 2339349517696372312}
 --- !u!114 &6226256385056342680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3412,8 +3413,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5ebecb9f7cf0244a1642cd4a2be26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 50
   currentHealth: 0
+  healthBar: {fileID: 0}
 --- !u!1 &8800981891546126952
 GameObject:
   m_ObjectHideFlags: 0

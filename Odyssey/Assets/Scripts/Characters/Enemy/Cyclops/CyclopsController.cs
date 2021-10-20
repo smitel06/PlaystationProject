@@ -27,6 +27,14 @@ public class CyclopsController : MonoBehaviour
     float timer;
     [SerializeField] bool AttackMode;
 
+    //death functions
+    bool dead;
+    Health health;
+    [SerializeField] GameObject healthbar;
+    [SerializeField] GameObject shardBody;
+    [SerializeField] GameObject Body;
+    float deathTimer;
+
 
     void OnEnable()
     {
@@ -37,12 +45,15 @@ public class CyclopsController : MonoBehaviour
         //set wander timer
         timer = wanderTimer;
 
+        //set health
+        health = GetComponent<Health>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (target.GetComponent<PlayerController>().dead == false)
+        if (target.GetComponent<PlayerController>().dead == false && !dead)
         {
             //distance from player will be used in a few ways
             currentDistanceFromPlayer = Vector3.Distance(transform.position, target.transform.position);
@@ -51,10 +62,25 @@ public class CyclopsController : MonoBehaviour
             UpdateAnimator();
             UpdateAttacking();
         }
-        else
+        else if(!dead)
         {
             animator.SetTrigger("Idle");
         }
+
+        if(health.currentHealth <= 0 && dead == false)
+        {
+            dead = true;
+            animator.SetTrigger("Dead");
+
+        }
+        if (dead && deathTimer >= 2.0f)
+        {
+            healthbar.SetActive(false);
+            shardBody.SetActive(true);
+            Body.SetActive(false);
+        }
+        else
+            deathTimer += Time.deltaTime;
         
     }
 

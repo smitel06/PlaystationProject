@@ -40,6 +40,9 @@ public class SorcerorController : MonoBehaviour
 
         //turn off navmesh rotation instead sorceror will track player
         agent.updateRotation = false;
+
+        //get aimspot
+        aimSpot = target.GetComponent<PlayerController>().aimspot;
     }
 
     private void Update()
