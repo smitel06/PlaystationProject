@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5ebecb9f7cf0244a1642cd4a2be26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10000
+  maxHealth: 1000
   currentHealth: 0
   healthBar: {fileID: 4211355298304305923}
 --- !u!65 &7980993663582343396
@@ -410,7 +410,7 @@ Animator:
   m_GameObject: {fileID: 4474222164792165234}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d32129bb80b6a5488493f460cecae76, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

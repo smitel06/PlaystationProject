@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     //references for other scripts
     public Transform aimspot;
 
+    [SerializeField] GameObject bloodSplatter;
 
     private void Start()
     {
@@ -220,5 +221,17 @@ public class PlayerController : MonoBehaviour
             Debug.Log("blocking");
             animator.SetTrigger("Block");
         }
+    }
+
+    void BloodOn()
+    {
+        //blood particle effect show when hit
+        bloodSplatter.SetActive(true);
+    }
+
+    void BloodOff()
+    {
+        //blood particle effect show when hit
+        bloodSplatter.SetActive(false);
     }
 }
