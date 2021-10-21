@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class Billboarding : MonoBehaviour
 {
-    [SerializeField]GameObject cam;
-    
-    void OnEnable()
+    private void Update()
     {
-        cam = GameObject.FindGameObjectWithTag("MainCamera");
-    }
-    void Update()
-    {
-        transform.LookAt(cam.transform);
+        Quaternion lookRotation = Camera.main.transform.rotation;
+        transform.rotation = lookRotation;
     }
 }
