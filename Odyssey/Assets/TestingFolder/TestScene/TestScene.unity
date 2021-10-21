@@ -954,6 +954,30 @@ PrefabInstance:
       propertyPath: aimSpot
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.7249009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0.027288646
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.72438115
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.4219089
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.29143208
+      objectReference: {fileID: 0}
     - target: {fileID: 2092604780480016203, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
       propertyPath: m_Name
       value: M_Sorcerer_Model (2)
@@ -1031,6 +1055,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.9349361
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.19239591
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.39285097
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.6178344
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.06343149
+      objectReference: {fileID: 0}
     - target: {fileID: 1579548986295838576, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: healthBar
       value: 
@@ -6735,13 +6783,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 309798925}
     m_Modifications:
-    - target: {fileID: 99539675, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
-      propertyPath: m_Speed
-      value: 3
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.7249009
       objectReference: {fileID: 0}
-    - target: {fileID: 99539675, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
-      propertyPath: m_AngularSpeed
-      value: 1500
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0.027288646
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.72438115
       objectReference: {fileID: 0}
     - target: {fileID: 2092604780480016203, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
       propertyPath: m_Name
@@ -6749,7 +6801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4674523636573136759, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.3656054
+      value: -10.67
       objectReference: {fileID: 0}
     - target: {fileID: 4674523636573136759, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7600,6 +7652,30 @@ PrefabInstance:
       propertyPath: aimSpot
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.7249009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0.027288646
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.72438115
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.4219089
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048073229, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.29143208
+      objectReference: {fileID: 0}
     - target: {fileID: 2092604780480016203, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
       propertyPath: m_Name
       value: M_Sorcerer_Model (1)
@@ -8329,7 +8405,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9117153927881346137, guid: 5732aceca9790454f834ca387c69592e, type: 3}
       propertyPath: near clip plane
-      value: -500
+      value: -1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117153927881346137, guid: 5732aceca9790454f834ca387c69592e, type: 3}
+      propertyPath: orthographic size
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5732aceca9790454f834ca387c69592e, type: 3}

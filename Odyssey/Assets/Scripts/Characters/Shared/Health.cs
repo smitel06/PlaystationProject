@@ -21,6 +21,7 @@ public class Health : MonoBehaviour
     {
         GetComponent<Animator>().SetTrigger("Damaged");
         currentHealth -= damage;
+        DamagePopUp.Create(this.transform.position, damage);
     }
 
     void Update()

@@ -316,12 +316,11 @@ MonoBehaviour:
   currentDistanceFromPlayer: 0
   percentageOfMaxDistance: 0
   weaponCollider: {fileID: 1097115417}
-  wanderRadius: 100
-  wanderTimer: 50
   AttackMode: 1
   healthbar: {fileID: 8133826352918947290}
   shardBody: {fileID: 2477995022852557082}
   Body: {fileID: 8528041175080052364}
+  weapon: {fileID: 3623213350835952131}
 --- !u!114 &2190400259377783458
 MonoBehaviour:
   m_ObjectHideFlags: 0

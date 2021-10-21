@@ -30,8 +30,10 @@ public class SorcerorController : MonoBehaviour
     Health health;
     [SerializeField] GameObject healthbar;
     [SerializeField] GameObject shardBody;
-    [SerializeField] GameObject Body;
-    [SerializeField] GameObject Hood;
+    [SerializeField] GameObject body;
+    [SerializeField] GameObject hood;
+    [SerializeField] GameObject cloak;
+    [SerializeField] GameObject weapon;
     float deathTimer;
     bool deathDone;
 
@@ -93,10 +95,12 @@ public class SorcerorController : MonoBehaviour
 
         if (dead && deathTimer >= 2.0f && !deathDone)
         {
-            Hood.SetActive(false);
+            weapon.SetActive(false);
+            hood.SetActive(false);
+            cloak.SetActive(false);
             healthbar.SetActive(false);
             shardBody.SetActive(true);
-            Body.SetActive(false);
+            body.SetActive(false);
             Destroy(gameObject, 2.0f);
             deathDone = true;
         }
