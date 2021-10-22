@@ -3,7 +3,52 @@ guid: 9dbfe811237073c47b712442d7cd5d34
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trireme
+    second: {fileID: 2100000, guid: 16b5bb1fa3253ca4b93bbda388937024, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trireme_Cord
+    second: {fileID: 2100000, guid: d18a5500a1b17ba4ca403549508a05ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trireme_Eye
+    second: {fileID: 2100000, guid: 0579c4381743d2344b91b888e1c6d789, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trireme_Mat
+    second: {fileID: 2100000, guid: 4bdcdde826c15f644a97769c9942e561, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trireme_Metal
+    second: {fileID: 2100000, guid: dfac763d0df03dd469ff661ff7dc5b6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trireme_Rame
+    second: {fileID: 2100000, guid: 9720893a7f8a29541b5bddfaf218a442, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trireme_Shield
+    second: {fileID: 2100000, guid: 4aebb12b21e57f14692d2afee4d252a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trireme_Shield_Detail
+    second: {fileID: 2100000, guid: f2f6cb2a5b0e3a04892f31c2f5fab9a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Trireme_Voile
+    second: {fileID: 2100000, guid: c3e31efedb2fcfc43be0221391f8c36d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
