@@ -137,6 +137,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Trident_Handle_Stone
+    second: {fileID: 2100000, guid: b3a90d880cf171f49862bbf94e10bfe6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Ulysses_Trident_Stone
+    second: {fileID: 2100000, guid: f581ae0d2c061ff4a85876560fd61428, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: T_Wall_Low1
     second: {fileID: 2100000, guid: 17d52b74069c3a84f8c1acc41df5684d, type: 2}
   materials:

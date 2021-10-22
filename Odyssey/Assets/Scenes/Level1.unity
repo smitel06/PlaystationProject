@@ -1367,7 +1367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5102500823260069643, guid: 0437df02d859fee40917c7404d499d46, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5102500823260069643, guid: 0437df02d859fee40917c7404d499d46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4146,7 +4146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3834569634889914419, guid: 4c8fa2b8271069244860b55568cec9d3, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3834569634889914419, guid: 4c8fa2b8271069244860b55568cec9d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5332,7 +5332,7 @@ RectTransform:
   - {fileID: 839492593}
   - {fileID: 2001249586}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5502,7 +5502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1468425378
 Light:
   m_ObjectHideFlags: 0
@@ -5576,7 +5576,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 56.433, y: -144.46, z: -125.379}
 --- !u!1 &1477870578
 GameObject:
@@ -6147,7 +6147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8342788439766586614, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8342788439766586614, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7488,7 +7488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6760139050248267470, guid: 5732aceca9790454f834ca387c69592e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6760139050248267470, guid: 5732aceca9790454f834ca387c69592e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7509,10 +7509,6 @@ PrefabInstance:
     - target: {fileID: 7989071483304144036, guid: 5732aceca9790454f834ca387c69592e, type: 3}
       propertyPath: m_Name
       value: FollowCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 9117153927881346137, guid: 5732aceca9790454f834ca387c69592e, type: 3}
-      propertyPath: orthographic size
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5732aceca9790454f834ca387c69592e, type: 3}
@@ -8158,6 +8154,22 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.0000000012874568
       objectReference: {fileID: 0}
+    - target: {fileID: 7722632503584569810, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 011fe60e43c9c494da2f77a57233249c, type: 2}
+    - target: {fileID: 7722632503584569810, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ecf652454187ca46b4b198281cf28a4, type: 2}
+    - target: {fileID: 7849865037036640496, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a90d880cf171f49862bbf94e10bfe6, type: 2}
+    - target: {fileID: 7849865037036640496, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: f581ae0d2c061ff4a85876560fd61428, type: 2}
     - target: {fileID: 8436004581188878457, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.861828
