@@ -688,6 +688,26 @@
       <Project>{A2BE3B09-562D-C6D4-C440-AAE1D9264AFC}</Project>
       <Name>Substance.Platform</Name>
     </ProjectReference>
+    <ProjectReference Include="sc.fae.runtime.csproj">
+      <Project>{76703386-DAE9-7484-4AFE-265989AA2561}</Project>
+      <Name>sc.fae.runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.fae.editor.csproj">
+      <Project>{2DC6C96D-7179-7B58-A290-760B026354C9}</Project>
+      <Name>sc.fae.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{7DB26058-81C1-24ED-D095-2BC74ABDD37B}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
+      <Project>{EC6086B9-010D-6DB2-564C-C277CD8239CE}</Project>
+      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{9FF0F4BA-75E3-B20B-E4B4-64BBBBAE7E4A}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

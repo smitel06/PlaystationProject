@@ -127,30 +127,52 @@
      <Compile Include="Assets\Scripts\UI\Menus\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Core\GameAssets.cs" />
      <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\VS_InstancedIndirect.cginc" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\FAE_Sunshaft.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Allegorithmic\Plugins\EULA.txt" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\PigmentMapComposite.shader" />
+     <None Include="Assets\Import\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Changelog.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\FAE_Foliage.shader" />
+     <None Include="Assets\Import\Fantasy Skybox FREE\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\FAE_TreeTrunk.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\FAE_FogSheet.shader" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\FAE_Cliff_Coverage.shader" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\FAE_TreeBranch.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\_DemoScenes\Source\_These assets are not officially included, only produced for the demo scene.txt" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\_DemoScenes\Source\FAE_WaterfallFoam.shader" />
+     <None Include="Assets\Import\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Blend.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\Skybox\Skybox Gradient.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\FAE_Water.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Allegorithmic\Plugins\engine_build_info.txt" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\FAE_TreeBillboard.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\PostProcessingAssets\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\FAE_Grass.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\FAE_Cliff.shader" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\_DemoScenes\Source\FAE_Waterfall.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\FAE_SunshaftParticle.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
  <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
@@ -756,6 +778,26 @@
     <ProjectReference Include="Substance.Platform.csproj">
       <Project>{A2BE3B09-562D-C6D4-C440-AAE1D9264AFC}</Project>
       <Name>Substance.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.fae.runtime.csproj">
+      <Project>{76703386-DAE9-7484-4AFE-265989AA2561}</Project>
+      <Name>sc.fae.runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.fae.editor.csproj">
+      <Project>{2DC6C96D-7179-7B58-A290-760B026354C9}</Project>
+      <Name>sc.fae.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{7DB26058-81C1-24ED-D095-2BC74ABDD37B}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
+      <Project>{EC6086B9-010D-6DB2-564C-C277CD8239CE}</Project>
+      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{9FF0F4BA-75E3-B20B-E4B4-64BBBBAE7E4A}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
