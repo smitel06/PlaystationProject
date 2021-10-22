@@ -126,6 +126,7 @@
     <Compile Include="Assets\Scripts\UI\Menus\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Core\GameAssets.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
+    <Compile Include="Assets\Scripts\Characters\Player\PlayerRestart.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

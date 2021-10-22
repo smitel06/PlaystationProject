@@ -1234,8 +1234,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.022104353, y: 0.92506605, z: -0.21411315}
-    m_Extent: {x: 0.28045878, y: 0.62770444, z: 0.08514872}
+    m_Center: {x: 0, y: 0.9349361, z: -0.19239591}
+    m_Extent: {x: 0.39285097, y: 0.6178344, z: 0.06343149}
   m_DirtyAABB: 0
 --- !u!1 &1013952919499720350
 GameObject:
@@ -3301,6 +3301,7 @@ GameObject:
   - component: {fileID: 636792057}
   - component: {fileID: 6226256385056342680}
   - component: {fileID: 1579548986295838576}
+  - component: {fileID: 6993084362485635847}
   m_Layer: 8
   m_Name: M_Ulysses_Model
   m_TagString: Player
@@ -3369,7 +3370,14 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+    'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
+    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
+    'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftHandMiddle3'\n\tand
+    more ...\n\tFrom animation clip 'Falling Flat Impact'\n\tFrom animation clip
+    'Getting Up'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -3380,7 +3388,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8686415976426999372}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc6f9a3381341b6459bc45df107cee80, type: 3}
   m_Name: 
@@ -3418,6 +3426,18 @@ MonoBehaviour:
   maxHealth: 50
   currentHealth: 0
   healthBar: {fileID: 0}
+--- !u!114 &6993084362485635847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8686415976426999372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a51b148459796b4ca5edfe02e382e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8800981891546126952
 GameObject:
   m_ObjectHideFlags: 0
