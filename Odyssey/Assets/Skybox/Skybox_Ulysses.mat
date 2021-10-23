@@ -22,7 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Skybox_Ulysses
   m_Shader: {fileID: 4800000, guid: b8cc65e84216d2b47af68d577d361930, type: 3}
-  m_ShaderKeywords: _SCREENSPACE_ON _SUNDISK_HIGH_QUALITY
+  m_ShaderKeywords: _SUNDISK_HIGH_QUALITY
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -77,7 +77,7 @@ Material:
     - _OcclusionStrength: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Screenspace: 1
+    - _Screenspace: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
