@@ -28,6 +28,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 21cbc816b57948b196ced72a3c33a909, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: e7ee2ee1e448437e8de9a957ccc37298, type: 3}
         m_Scale: {x: 80, y: 80}
@@ -140,6 +144,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: dd148cda80391e24ab09fc059044a69a, type: 3}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _WaveNormals:
         m_Texture: {fileID: 2800000, guid: 072631bffdf560c429f23de4caae0c28, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -153,12 +161,15 @@ Material:
     - _Albedo2Tiling: 0.9
     - _AlbedoContrast: 1.1
     - _AlbedoIntensity: 1.25
+    - _AlphaClip: 0
+    - _Blend: 0
     - _Brightness: 1
     - _BumpReflectionStr: 0.5
     - _BumpScale: 1
     - _Contrast: 1
     - _ContrastMt: 1.4
     - _ContrastRef: 1.1
+    - _Cull: 2
     - _Cutoff: 0.52
     - _Cycle: 3
     - _Depth: 2.2
@@ -170,6 +181,7 @@ Material:
     - _Distance: 0.1
     - _DistortStrength: 15.11
     - _DstBlend: 0
+    - _EnvironmentReflections: 1
     - _ExtraHeight: 0
     - _FPOW: 10
     - _Factor: 202
@@ -229,8 +241,10 @@ Material:
     - _ParallaxNoiseScale: 1.5
     - _ParallaxNormal2Offset: -1
     - _ParallaxScale: 0.35
+    - _QueueOffset: 0
     - _R0: 0.1
     - _Radius: 1
+    - _ReceiveShadows: 1
     - _ReflToRefrExponent: 1
     - _Reflect: 1
     - _ReflectionContrast: 1.66
@@ -243,6 +257,7 @@ Material:
     - _Saturation: 1
     - _SaturationRef: 0.5
     - _Shininess: 0.15
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SoftFactor: 0.09
     - _SpecularHighlights: 1
@@ -250,15 +265,18 @@ Material:
     - _SpeedX: 0.1
     - _SpeedY: 5
     - _SrcBlend: 1
+    - _Surface: 0
     - _Transparency: 1
     - _UVSec: 0
     - _WaveAmp: 0.1
     - _WaveIntensity: -0.47
     - _WaveScrollSpeed: 0.1
     - _WaveSpeed: 20
+    - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _AlbedoColor: {r: 0.1254902, g: 0.15461197, b: 0.1882353, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BlendColor: {r: 0.29411763, g: 0.29411763, b: 0.29411763, a: 1}
     - _Color: {r: 0.035, g: 0.054999992, b: 0.07, a: 1}
     - _DepthColor: {r: 0, g: 0, b: 0, a: 0.5}
@@ -274,3 +292,4 @@ Material:
     - _ReflectionColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _SpecColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
     - _SpecularColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 1}
+  m_BuildTextureStacks: []
