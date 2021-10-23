@@ -1434,7 +1434,7 @@ Transform:
   m_GameObject: {fileID: 2092604780480016203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.82201207, y: 1.0476255, z: 0.82042575}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children:
   - {fileID: 2369034026785582810}
   m_Father: {fileID: 0}
@@ -2031,6 +2031,7 @@ MonoBehaviour:
   hood: {fileID: 6623921997113105639}
   cloak: {fileID: 7027216680924422610}
   weapon: {fileID: 6053265381969294171}
+  attackFrequency: 3
 --- !u!195 &99539675
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5335,8 +5336,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0.7249009, z: 0.027288646}
-    m_Extent: {x: 0.4219089, y: 0.72438115, z: 0.29143208}
+    m_Center: {x: 0, y: 0.021747028, z: 0.00081865955}
+    m_Extent: {x: 0.012657266, y: 0.021731434, z: 0.008742962}
   m_DirtyAABB: 0
 --- !u!54 &610874591
 Rigidbody:

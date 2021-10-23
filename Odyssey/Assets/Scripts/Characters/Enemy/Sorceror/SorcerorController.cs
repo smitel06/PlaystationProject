@@ -36,11 +36,13 @@ public class SorcerorController : MonoBehaviour
     [SerializeField] GameObject weapon;
     float deathTimer;
     bool deathDone;
-
+    [SerializeField] float attackFrequency;
+    float attackSpeed;
 
     private void OnEnable()
     {
-        
+        attackSpeed = attackFrequency;
+
         //navmesh
         target = GameObject.Find("Player");
         agent = GetComponent<NavMeshAgent>();
@@ -124,13 +126,21 @@ public class SorcerorController : MonoBehaviour
 
     private void Attack()
     {
-
-        //check for distances and test to see where the player is 
-        if (Vector3.Distance(target.transform.position, transform.position) <= 20 && Vector3.Distance(target.transform.position, transform.position) >= 2)
+        if (attackFrequency <= 0)
         {
-            Debug.Log("sorcerorAttack");
-            animator.SetTrigger("Attack");
+            //check for distances and test to see where the player is 
+            if (Vector3.Distance(target.transform.position, transform.position) <= 10 && Vector3.Distance(target.transform.position, transform.position) >= 2)
+            {
+                Debug.Log("sorcerorAttack");
+                animator.SetTrigger("Attack");
+                attackFrequency = attackSpeed;
+            }
         }
+        else
+        {
+            attackFrequency -= Time.deltaTime;
+        }
+        
         
         if(Vector3.Distance(target.transform.position, transform.position) <= 4)
         {
