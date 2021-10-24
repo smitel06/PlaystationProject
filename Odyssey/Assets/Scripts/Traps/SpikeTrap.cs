@@ -38,7 +38,12 @@ public class SpikeTrap : MonoBehaviour
 
     void SpikeOut()
     {
-        AudioManager.instance.Play("Trap_Spike");
+        AudioManager.instance.Play("Trap_Spike_Metal");
+    }
+
+    void SpikePlate()
+    {
+        AudioManager.instance.Play("Trap_Spike_Trigger_Plate");
     }
 
 }
