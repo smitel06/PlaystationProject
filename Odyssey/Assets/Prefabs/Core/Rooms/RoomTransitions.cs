@@ -74,7 +74,7 @@ public class RoomTransitions : MonoBehaviour
     private void ScreenTransitionIn()
     {
         player.position = rooms[currentRoomIndex].entry.position;
-        player.rotation = rooms[currentRoomIndex].entry.rotation;
+        player.rotation = rooms[currentRoomIndex].entry.localRotation;
 
         imageColor.a -= transitionSpeed * Time.deltaTime;
         screenBlocker.color = imageColor;

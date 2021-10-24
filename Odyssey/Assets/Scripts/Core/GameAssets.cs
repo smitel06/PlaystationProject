@@ -18,5 +18,11 @@ public class GameAssets : MonoBehaviour
         }
     }
 
+    //asset for damage popup
     public Transform damagePopUpPrefab;
+
+    //enemy assets to use
+    public GameObject enemySkull;
+    public GameObject enemyCyclops;
+    public GameObject enemySorceror;
 }

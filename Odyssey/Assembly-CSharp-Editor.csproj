@@ -711,6 +711,10 @@
       <Project>{A75BBD33-517A-BA8E-4FF4-7FF8708A33F9}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="sc.stylizedwater2.editor.csproj">
+      <Project>{CB0DEBEE-2DF1-4A3F-0B86-3AAFACFEC397}</Project>
+      <Name>sc.stylizedwater2.editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
       <Project>{17F574B8-4991-16C5-B3ED-89B721323CC3}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
@@ -727,6 +731,10 @@
       <Project>{EE68C448-1EB0-C2B9-0A39-CADBC6C4E8CB}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="sc.stylizedwater2.runtime.csproj">
+      <Project>{829BA5C4-E351-9C39-C18B-E5F28EE437C6}</Project>
+      <Name>sc.stylizedwater2.runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Substance.EditorHelper.csproj">
       <Project>{4A4BC229-8873-C060-D63C-8A4F3556E1CF}</Project>
       <Name>Substance.EditorHelper</Name>
@@ -738,14 +746,6 @@
     <ProjectReference Include="Substance.Platform.csproj">
       <Project>{B7A23DB7-3621-A233-1822-12FB75E03EDE}</Project>
       <Name>Substance.Platform</Name>
-    </ProjectReference>
-    <ProjectReference Include="sc.stylizedwater2.editor.csproj">
-      <Project>{CB0DEBEE-2DF1-4A3F-0B86-3AAFACFEC397}</Project>
-      <Name>sc.stylizedwater2.editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="sc.stylizedwater2.runtime.csproj">
-      <Project>{829BA5C4-E351-9C39-C18B-E5F28EE437C6}</Project>
-      <Name>sc.stylizedwater2.runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
