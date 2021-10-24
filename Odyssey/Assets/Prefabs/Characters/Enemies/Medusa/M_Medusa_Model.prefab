@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5755662127158199812}
   - component: {fileID: 822204038720163081}
   - component: {fileID: 6982553994352482103}
+  - component: {fileID: -8158128050357546642}
   m_Layer: 0
   m_Name: M_Medusa_Model
   m_TagString: Enemy
@@ -62,6 +63,25 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   healthBar: {fileID: 0}
+--- !u!95 &-8158128050357546642
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755936810298137612}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f285ca0209db99c4bbbef9709bb5018a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2492208560405365386
 PrefabInstance:
   m_ObjectHideFlags: 0

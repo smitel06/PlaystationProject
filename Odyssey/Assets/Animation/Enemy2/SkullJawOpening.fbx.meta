@@ -6,7 +6,22 @@ ModelImporter:
   - first:
       74: -4202696042818983147
     second: JawOpening
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Skull_Bone
+    second: {fileID: 2100000, guid: 9a5dc2d988ff72a4c999cc3598cf3578, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Skull_Eyes
+    second: {fileID: 2100000, guid: 45544a375903e72468f23a3a75833085, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Skull_Teeth
+    second: {fileID: 2100000, guid: fb76dc2fb4e0d024c88b7b5caadfd311, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
