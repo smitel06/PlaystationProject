@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 1007
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -154,7 +154,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 1007
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 16
+  controlID: 28
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 17
+  controlID: 29
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -712,21 +712,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Models/Level/Architecture/Wall/Wall_Low3_Corner/Materials
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Models/Level/Architecture/Wall/Wall_Low3_Corner/Materials
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\pc\Documents\Torrens\GDP204\PlaystationProject\Odyssey
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 120}
-    m_SelectedIDs: 96930100
-    m_LastClickedID: 103318
-    m_ExpandedIDs: 00000000d0920100d2920100d4920100d6920100d8920100da920100dc920100de920100e0920100e2920100e4920100e6920100e8920100ea920100ee920100f0920100f2920100f4920100f6920100f8920100fa920100fc920100fe92010000930100029301000493010006930100089301000a9301000e93010010930100129301001493010016930100189301001a9301001c9301001e93010020930100229301002493010026930100289301002a9301002c9301002e93010030930100329301003493010036930100389301003a9301003c9301003e93010044930100469301004c9301004e93010078930100d09a0100cca00100d4a00100dca00100e4a00100eca00100f4a0010022a1010062a10100
+    scrollPos: {x: 0, y: 322}
+    m_SelectedIDs: c0950100
+    m_LastClickedID: 103872
+    m_ExpandedIDs: 000000008e93010090930100929301009493010096930100989301009a9301009c9301009e930100a0930100a2930100a4930100a6930100a8930100aa930100ac930100ae930100b0930100b2930100b4930100b6930100b8930100ba930100bc930100be930100c0930100c2930100c4930100c6930100c8930100ca930100cc930100ce930100d0930100d2930100d4930100d6930100d8930100da930100dc930100de930100e0930100e2930100e4930100e6930100e8930100ea930100ec930100ee930100f0930100f2930100f4930100f6930100f8930100fa930100fc930100fe93010000940100049401000c9401000e940100109401001294010014940100269401006ea1010070a10100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -754,7 +754,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d0920100d2920100d4920100d6920100d8920100da920100dc920100de920100e0920100e2920100e4920100e6920100e8920100ea920100ec920100ee920100f0920100f2920100f4920100f6920100f8920100fa920100fc920100fe92010000930100029301000493010006930100089301000a9301000c9301000e93010010930100129301001493010016930100189301001a9301001c9301001e93010020930100229301002493010026930100289301002a9301002c9301002e93010030930100329301003493010036930100389301003a9301003c9301003e93010040930100429301004493010046930100489301004a9301004c9301004e930100
+    m_ExpandedIDs: 000000008e93010090930100929301009493010096930100989301009a9301009c9301009e930100a0930100a2930100a4930100a6930100a8930100aa930100ac930100ae930100b0930100b2930100b4930100b6930100b8930100ba930100bc930100be930100c0930100c2930100c4930100c6930100c8930100ca930100cc930100ce930100d0930100d2930100d4930100d6930100d8930100da930100dc930100de930100e0930100e2930100e4930100e6930100e8930100ea930100ec930100ee930100f0930100f2930100f4930100f6930100f8930100fa930100fc930100fe93010000940100029401000494010006940100089401000a9401000c9401000e940100109401001294010014940100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -785,15 +785,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c623000026bf00008e460100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Level1
-      m_OriginalName: Level1
+      m_Name: Materials
+      m_OriginalName: Materials
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 109066
+      m_UserData: 103872
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -876,23 +876,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: b4d5f9ff
       m_LastClickedID: 0
-      m_ExpandedIDs: 26ceefff7a82f1ffdc83faff6084faff
+      m_ExpandedIDs: 4884faff66790100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: FX_Heal_01
-        m_OriginalName: FX_Heal_01
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -682744
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -989,11 +989,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.1289082, y: -0.54679537, z: 0.085665725, w: 0.82286525}
     speed: 2
-    m_Value: {x: 0.12903343, y: -0.5455473, z: 0.0854702, w: 0.8236646}
+    m_Value: {x: -0.12890819, y: 0.54679537, z: -0.085665725, w: -0.82286525}
   m_Size:
     m_Target: 34.73023
     speed: 2
-    m_Value: 36.36673
+    m_Value: 34.73023
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1084,23 +1084,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1204
-      height: 644
-    m_Scale: {x: 0.5962963, y: 0.5962963}
-    m_Translation: {x: 602, y: 322}
+      height: 665
+    m_Scale: {x: 0.6157407, y: 0.6157407}
+    m_Translation: {x: 602, y: 332.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1009.5652
+      x: -977.68427
       y: -540
-      width: 2019.1304
+      width: 1955.3685
       height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 0.5962963
+  m_defaultScale: 0.6157407
   m_LastWindowPixelSize: {x: 1204, y: 665}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
