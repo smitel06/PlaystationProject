@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.fae.runtime", "sc.fae.runtime.csproj", "{3691AB28-BF31-560A-BEDD-4271C5E0C507}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.stylizedwater2.runtime", "sc.stylizedwater2.runtime.csproj", "{829BA5C4-E351-9C39-C18B-E5F28EE437C6}"
@@ -14,8 +14,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substance.EditorHelper", "Substance.EditorHelper.csproj", "{4A4BC229-8873-C060-D63C-8A4F3556E1CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substance.Platform", "Substance.Platform.csproj", "{B7A23DB7-3621-A233-1822-12FB75E03EDE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{3B241CE0-F1FB-43DD-2332-4D2FFE9E5762}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +49,6 @@ Global
 		{B7A23DB7-3621-A233-1822-12FB75E03EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A23DB7-3621-A233-1822-12FB75E03EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A23DB7-3621-A233-1822-12FB75E03EDE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B241CE0-F1FB-43DD-2332-4D2FFE9E5762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B241CE0-F1FB-43DD-2332-4D2FFE9E5762}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B241CE0-F1FB-43DD-2332-4D2FFE9E5762}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B241CE0-F1FB-43DD-2332-4D2FFE9E5762}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

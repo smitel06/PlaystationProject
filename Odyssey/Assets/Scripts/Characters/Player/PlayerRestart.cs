@@ -36,6 +36,7 @@ public class PlayerRestart : MonoBehaviour
         }
         else if(timer <= 0)
         {
+            animator.applyRootMotion = false;
             GetComponent<PlayerController>().enabled = true;
             GetComponent<PlayerRestart>().enabled = false;
         }

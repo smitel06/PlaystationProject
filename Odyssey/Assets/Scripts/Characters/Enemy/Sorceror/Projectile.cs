@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     private Vector3 shootDirection;
     [SerializeField] float moveSpeed = 0;
     [SerializeField] GameObject explosion_fx;
+    [SerializeField] GameObject darkOrbParticle;
     bool moveParticle = true;
     [SerializeField] GameObject sorceror;
     public void Setup(Vector3 shootDirection, Vector3 position, GameObject summoner)
@@ -40,13 +41,12 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             other.GetComponent<Health>().TakeDamage(sorceror.GetComponent<Damage>().currentDamage);
-            
-        
         }
 
+        darkOrbParticle.SetActive(false);
         //destroy after stopped moving
         explosion_fx.SetActive(true);
         moveParticle = false;
-        Destroy(gameObject, 1.5f);
+        
     }
 }
