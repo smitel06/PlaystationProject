@@ -35,6 +35,7 @@ public class SkullController : MonoBehaviour
     [SerializeField] GameObject skull;
     [SerializeField] GameObject healthbar;
     
+    
     private void OnEnable()
     {
         //set wander timer
@@ -90,6 +91,7 @@ public class SkullController : MonoBehaviour
     {
         if (health.currentHealth <= 0)
         {
+            
             //turn off all bools
             attackMode = false;
             canAttack = false;

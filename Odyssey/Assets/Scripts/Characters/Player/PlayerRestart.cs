@@ -21,7 +21,7 @@ public class PlayerRestart : MonoBehaviour
 
     private void Update()
     {
-        if(transform.position.y <= 0.444)
+        if(transform.position.y <= 0.52)
         {
             animator.SetTrigger("HitGround");
             startTimer = true;

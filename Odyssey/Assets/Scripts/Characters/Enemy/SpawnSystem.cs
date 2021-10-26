@@ -6,9 +6,8 @@ public class SpawnSystem : MonoBehaviour
 {
     [SerializeField] SpawnPoint[] spawnPoints;
     [SerializeField] Room room;
-    [SerializeField] GameObject[] enemyWave;
-    int waveCount;
-    [SerializeField]int waveIndex;
+    
+    
     int enemyTypes;
     int spawnPointIndex;
     int randomEnemyType;
@@ -21,8 +20,7 @@ public class SpawnSystem : MonoBehaviour
         //fill the array with spawn points, enemies will be spawned here
         spawnPoints = this.GetComponentsInChildren<SpawnPoint>();
 
-        //set wave index to 0
-        waveIndex = 0;
+        
         spawnPointIndex = 0;
 
         //spawn some enemies
@@ -44,12 +42,12 @@ public class SpawnSystem : MonoBehaviour
         if(room.roomIndex == 1)
         {
             enemyTypes = 1;
-            waveCount = 2;
-            SpawnEnemies(enemyTypes, waveCount);
+            
+            SpawnEnemies(enemyTypes);
         }
     }
 
-    void SpawnEnemies(int enemyTypes, int numberOfWaves)
+    void SpawnEnemies(int enemyTypes)
     {
         for(int i = 0; i < enemyTypes; i++)
         {
@@ -59,36 +57,37 @@ public class SpawnSystem : MonoBehaviour
             if(randomEnemyType == 1)
             {
                 //push in two cyclops to wave
-                enemyWave[waveIndex] = Instantiate(cyclops, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
-                waveIndex++;
+                Instantiate(cyclops, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
+                
                 spawnPointIndex++;
 
-                enemyWave[waveIndex] = Instantiate(cyclops, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
-                waveIndex++;
+                Instantiate(cyclops, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
+                
                 spawnPointIndex++;
             }
             
             if (randomEnemyType == 2)
             {
                 //push in 5 skulls to wave
-                enemyWave[waveIndex] = Instantiate(skull, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
-                waveIndex++;
+                //will do for loop later
+                Instantiate(skull, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
+                
                 spawnPointIndex++;
 
-                enemyWave[waveIndex] = Instantiate(skull, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
-                waveIndex++;
+                Instantiate(skull, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
+                
                 spawnPointIndex++;
 
-                enemyWave[waveIndex] = Instantiate(skull, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
-                waveIndex++;
+                Instantiate(skull, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
+                
                 spawnPointIndex++;
 
-                enemyWave[waveIndex] = Instantiate(skull, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
-                waveIndex++;
+                Instantiate(skull, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
+                
                 spawnPointIndex++;
 
-                enemyWave[waveIndex] = Instantiate(skull, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
-                waveIndex++;
+                Instantiate(skull, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
+                
                 spawnPointIndex++;
 
             }
@@ -97,16 +96,16 @@ public class SpawnSystem : MonoBehaviour
             if (randomEnemyType == 3)
             {
                 //push in three sorcerors to wave
-                enemyWave[waveIndex] = Instantiate(sorceror, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
-                waveIndex++;
+                Instantiate(sorceror, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
+                
                 spawnPointIndex++;
 
-                enemyWave[waveIndex] = Instantiate(sorceror, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
-                waveIndex++;
+                Instantiate(sorceror, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
+                
                 spawnPointIndex++;
 
-                enemyWave[waveIndex] = Instantiate(sorceror, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
-                waveIndex++;
+                Instantiate(sorceror, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation);
+                
                 spawnPointIndex++;
             }
         }

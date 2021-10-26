@@ -7,7 +7,8 @@ public class SorcerorController : MonoBehaviour
 {
     
     [SerializeField]bool attackMode;
-
+    [SerializeField] GameObject sorcerorRoot;
+    [SerializeField] ParticleSystem explosion_fx;
     //things for navmesh agent
     GameObject target;
     NavMeshAgent agent;
@@ -97,14 +98,15 @@ public class SorcerorController : MonoBehaviour
 
         if (dead && deathTimer >= 2.0f && !deathDone)
         {
+            explosion_fx.Play();
             weapon.SetActive(false);
             hood.SetActive(false);
             cloak.SetActive(false);
             healthbar.SetActive(false);
             shardBody.SetActive(true);
             body.SetActive(false);
-            Destroy(gameObject, 2.0f);
             deathDone = true;
+            Destroy(sorcerorRoot, 2.0f);
         }
         else if (dead && !deathDone)
             deathTimer += Time.deltaTime;

@@ -6,12 +6,14 @@ public class Projectile : MonoBehaviour
 {
     private Vector3 shootDirection;
     [SerializeField] float moveSpeed = 0;
-    [SerializeField] GameObject explosion_fx;
-    [SerializeField] GameObject darkOrbParticle;
+    float timer;
+    
+    [SerializeField] ParticleSystem darkOrbParticle;
     bool moveParticle = true;
     [SerializeField] GameObject sorceror;
     public void Setup(Vector3 shootDirection, Vector3 position, GameObject summoner)
     {
+        timer = 3.5f;
         sorceror = summoner;
         transform.position = position;
         this.shootDirection = shootDirection;
@@ -25,6 +27,13 @@ public class Projectile : MonoBehaviour
         {
             transform.position += shootDirection * moveSpeed * Time.deltaTime;
         }
+
+        if (timer <= 0)
+        {
+            darkOrbParticle.Stop();
+        }
+        else
+            timer -= Time.deltaTime;
     }
 
     public static float GetAngleFromVectorFloat(Vector3 direction)
@@ -40,12 +49,13 @@ public class Projectile : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            
             other.GetComponent<Health>().TakeDamage(sorceror.GetComponent<Damage>().currentDamage);
+            GetComponent<Collider>().enabled = false;
         }
 
-        darkOrbParticle.SetActive(false);
-        //destroy after stopped moving
-        explosion_fx.SetActive(true);
+        darkOrbParticle.Stop();
+        
         moveParticle = false;
         
     }

@@ -32,6 +32,7 @@ public class CyclopsController : MonoBehaviour
     [SerializeField] GameObject shardBody;
     [SerializeField] GameObject Body;
     [SerializeField] GameObject weapon;
+    [SerializeField] ParticleSystem deathExplosion;
 
     float deathTimer;
     bool deathDone;
@@ -74,6 +75,7 @@ public class CyclopsController : MonoBehaviour
 
         if (dead && deathTimer >= 2.0f && !deathDone)
         {
+            deathExplosion.Play();
             healthbar.SetActive(false);
             weapon.SetActive(false);
             shardBody.SetActive(true);

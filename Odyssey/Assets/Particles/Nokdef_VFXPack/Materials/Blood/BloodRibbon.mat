@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: BloodRibbon
   m_Shader: {fileID: 4800000, guid: 56e1615ffd6ce5e4a9783c6e90eed86b, type: 3}
-  m_ShaderKeywords: _ADD_PRECOMPUTED_VELOCITY _BLENDMODE_ALPHA _DISABLE_SSR _DOUBLESIDED_ON
-    _SURFACE_TYPE_TRANSPARENT
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA _ADD_PRECOMPUTED_VELOCITY _BLENDMODE_ALPHA
+    _DISABLE_SSR _DOUBLESIDED_ON _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1

@@ -1,14 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class PlayerController : MonoBehaviour
 {
     //use this script to control the player through input
 
+    //death transition stuff
+    [SerializeField] Image screenBlocker;
+    Color imageColor;
+    public float transitionSpeed;
+
     //weapon things
     [SerializeField] Collider weaponCollider;
-
+    
     //components
     Rigidbody rb;
     Animator animator;
@@ -26,7 +34,8 @@ public class PlayerController : MonoBehaviour
     //references for other scripts
     public Transform aimspot;
 
-    [SerializeField] GameObject bloodSplatter;
+    [SerializeField] ParticleSystem bloodSplatter;
+    [SerializeField] ParticleSystem deathExplosion;
 
     private void Start()
     {
@@ -78,6 +87,7 @@ public class PlayerController : MonoBehaviour
     {
         if (health.currentHealth <= 0)
         {
+            deathExplosion.Play();
             //check health if below zero you die
             dead = true;
 
@@ -92,7 +102,7 @@ public class PlayerController : MonoBehaviour
             
 
             animator.SetTrigger("Dead");
-            
+            ScreenTransitionDeath();
         }
     }
 
@@ -126,7 +136,9 @@ public class PlayerController : MonoBehaviour
             animator.SetLayerWeight(2, 1);
 
             animator.SetTrigger("Attack");
+            
         }
+        
 
     }
 
@@ -183,7 +195,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Dash"))
         {
             input = new Vector3(Input.GetAxis("HorizontalMovement"), 0, Input.GetAxis("VerticalMovement"));
-            float dashDistance = 4f;
+            float dashDistance = 3f;
             if(!Physics.Raycast(transform.position, input, dashDistance))
             {
                 Vector3 beforeDashPosition = transform.position;
@@ -226,12 +238,30 @@ public class PlayerController : MonoBehaviour
     void BloodOn()
     {
         //blood particle effect show when hit
-        bloodSplatter.SetActive(true);
+        bloodSplatter.Play();
     }
 
     void BloodOff()
     {
         //blood particle effect show when hit
-        bloodSplatter.SetActive(false);
+        bloodSplatter.Stop();
+    }
+
+    //on death
+    private void ScreenTransitionDeath()
+    {
+        //will save what we need here before death using character skills save
+
+
+        imageColor.a += transitionSpeed * Time.deltaTime;
+        screenBlocker.color = imageColor;
+
+        if (screenBlocker.color.a >= 1)
+        {
+            //restart game
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
+        }
     }
 }
