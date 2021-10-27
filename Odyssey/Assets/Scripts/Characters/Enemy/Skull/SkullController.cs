@@ -36,7 +36,7 @@ public class SkullController : MonoBehaviour
     [SerializeField] GameObject healthbar;
     
     
-    private void OnEnable()
+    private void Awake()
     {
         //set wander timer
         timer = wanderTimer;

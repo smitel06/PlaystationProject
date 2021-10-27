@@ -1433,7 +1433,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092604780480016203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.82201207, y: 1.0476255, z: 0.82042575}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2369034026785582810}
@@ -2033,7 +2033,7 @@ MonoBehaviour:
   hood: {fileID: 6623921997113105639}
   cloak: {fileID: 7027216680924422610}
   weapon: {fileID: 6053265381969294171}
-  attackFrequency: 3
+  attackFrequency: 1.5
 --- !u!195 &99539675
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2044,7 +2044,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.065
-  m_Speed: 3
+  m_Speed: 5
   m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 1500
@@ -5338,8 +5338,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.0028406978, y: 0.723181, z: 0.02412051}
-    m_Extent: {x: 0.4211595, y: 0.72610104, z: 0.27862564}
+    m_Center: {x: 0, y: 0.7249009, z: 0.027288646}
+    m_Extent: {x: 0.4219089, y: 0.72438115, z: 0.29143208}
   m_DirtyAABB: 0
 --- !u!54 &610874591
 Rigidbody:

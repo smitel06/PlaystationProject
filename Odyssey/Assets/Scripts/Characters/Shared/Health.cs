@@ -19,7 +19,10 @@ public class Health : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        GetComponent<Animator>().SetTrigger("Damaged");
+        if(GetComponent<Animator>() != null)
+        {
+            GetComponent<Animator>().SetTrigger("Damaged");
+        }
         currentHealth -= damage;
         DamagePopUp.Create(this.transform.position, damage);
     }

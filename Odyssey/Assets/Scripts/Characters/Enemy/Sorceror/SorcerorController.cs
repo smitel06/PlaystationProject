@@ -40,7 +40,8 @@ public class SorcerorController : MonoBehaviour
     [SerializeField] float attackFrequency;
     float attackSpeed;
 
-    private void OnEnable()
+    
+    private void Start()
     {
         attackSpeed = attackFrequency;
 
@@ -92,6 +93,8 @@ public class SorcerorController : MonoBehaviour
 
         if (health.currentHealth <= 0 && dead == false)
         {
+            //must turn this off for next wave
+            sorcerorSlot.GetComponent<Sorceror_Slot>().isTaken = false;
             animator.SetTrigger("Dead");
             dead = true;
         }
@@ -218,8 +221,14 @@ public class SorcerorController : MonoBehaviour
             //set a new position for navmesh to go to
             Vector3 newPos = transform.position + dirToPlayer;
 
-            //set the destination for the navmesh agent
-            agent.SetDestination(newPos);
+            //check if it is on navmesh
+            NavMeshHit hit;
+            if(NavMesh.SamplePosition(newPos, out hit, 5f, NavMesh.AllAreas))
+            {
+                //set the destination for the navmesh agent
+                agent.SetDestination(hit.position);
+            }
+            
 
             
         }
