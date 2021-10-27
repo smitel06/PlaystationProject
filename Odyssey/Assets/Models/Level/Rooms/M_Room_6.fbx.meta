@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: 0decd276729d2744d8b2e6656a9d96e2
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Brazier_T1
+    second: {fileID: 2100000, guid: 5629cecc06ca2764fac65065d32ad6ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Brazier_T2
+    second: {fileID: 2100000, guid: a9a63557d1e3b4b449abb1268dc5688b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Column_Base
+    second: {fileID: 2100000, guid: 676e53aeff0cd8c4c948611cd4e912d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Column_Block
+    second: {fileID: 2100000, guid: 18f6ced135352f042b29c79c9b407958, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Column_Square
+    second: {fileID: 2100000, guid: 23e26b1e8984f5d4fa63e1bad5245ef7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Column_Top
+    second: {fileID: 2100000, guid: 8b3ff7bf818a03e4baed3858c573d71c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Crown_Leaves
+    second: {fileID: 2100000, guid: b63abb259bc68ce4e84a1e05f2273ac5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Floor_Tile
+    second: {fileID: 2100000, guid: 7c5536e79d8397843ab303631b8c8af3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Floor_Tile_Corner
+    second: {fileID: 2100000, guid: 21b1c9356093c8246a8671d1cf11e27b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Floor_Tile_Side
+    second: {fileID: 2100000, guid: daf322cfcaee3174394ca27da7709f1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Gate_Base
+    second: {fileID: 2100000, guid: e7abb2a0ae127d946828e1e5f9ca151e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Gate_Column
+    second: {fileID: 2100000, guid: bd2e33c3697195b459ef7192ab895434, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Gate_Door
+    second: {fileID: 2100000, guid: 49d65f18b41114a45b52c479460cbbf3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Gate_Roof
+    second: {fileID: 2100000, guid: bf8beea740ac30344ba5e6bd847cfa4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Gate_Wall
+    second: {fileID: 2100000, guid: d4da24c521190604d97c895a1ed4c6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Gate_Wall_Detail
+    second: {fileID: 2100000, guid: 2cdf06c7430ab7b43b5551434a5a9bfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Lotus
+    second: {fileID: 2100000, guid: a82fe8e551fbaaa4db2ae311373df95e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Lotus_Petals
+    second: {fileID: 2100000, guid: 8852f8362e089194c8e527664a383cad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_O_Vase_A
+    second: {fileID: 2100000, guid: 7e16100715dc6544e877027238ab5941, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_O_Vase_H
+    second: {fileID: 2100000, guid: 709dd798bddea1341930f3cf3d8bd0a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_O_Vase_L
+    second: {fileID: 2100000, guid: 34907b6a487dbca419441cbcc6c8071f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_O_Vase_O
+    second: {fileID: 2100000, guid: 35b08f568929b8f46bf55eb632698565, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_O_Vase_P
+    second: {fileID: 2100000, guid: 7ff112f354658924c8fda9f0d0d63ab9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_O_Vase_V
+    second: {fileID: 2100000, guid: 151d4eb30e5ff194e98acc9c5e0d0ce7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Pedestal
+    second: {fileID: 2100000, guid: 7a6190b9af87919469071753029c65c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Tree
+    second: {fileID: 2100000, guid: 7767b60eeaae643419a973de0e2e5c6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Wall_Corner_T1
+    second: {fileID: 2100000, guid: f8391ff6c5ecf9b4297446e625ceacfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Wall_Corner_T2
+    second: {fileID: 2100000, guid: ab0f3d29254a79e43b43bfda8204d8b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Wall_Low1
+    second: {fileID: 2100000, guid: 17d52b74069c3a84f8c1acc41df5684d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Wall_Low3
+    second: {fileID: 2100000, guid: 27c1ff57d95482e4494e5f4ce90bcd72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Wall_Low3_Corner
+    second: {fileID: 2100000, guid: 95e5df7cceb93db46a140999aed7c6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Wall_Low4
+    second: {fileID: 2100000, guid: b3804bb0365292c42b50dda105ce9c70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Wall_Low4_Corner
+    second: {fileID: 2100000, guid: 665538d111697ac4b806558fc85fea7d, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
