@@ -10,11 +10,12 @@ public class PlayerRestart : MonoBehaviour
     Vector3 move;
     bool startTimer;
     float timer;
+    [SerializeField] float movementSpeed;
     private void Start()
     {
         animator = GetComponent<Animator>();
 
-        move = new Vector3(0, -0.5f) * 15f;
+        move = new Vector3(0, -0.5f) * movementSpeed;
 
         timer = 3.5f;
     }

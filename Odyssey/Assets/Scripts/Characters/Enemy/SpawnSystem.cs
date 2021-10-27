@@ -29,7 +29,7 @@ public class SpawnSystem : MonoBehaviour
 
         if(room.roomIndex == 1)
         {
-            randomEnemyType = 3; //Random.Range(1, 4);
+            randomEnemyType = Random.Range(1, 4);
         }
 
     }
