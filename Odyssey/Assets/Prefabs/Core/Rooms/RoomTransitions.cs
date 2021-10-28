@@ -25,7 +25,6 @@ public class RoomTransitions : MonoBehaviour
 
         //set color to image color
         imageColor = screenBlocker.color;
-        
 
     }
 
