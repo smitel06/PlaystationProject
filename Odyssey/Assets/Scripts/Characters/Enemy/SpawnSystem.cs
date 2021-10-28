@@ -7,6 +7,7 @@ public class SpawnSystem : MonoBehaviour
     [SerializeField] SpawnPoint[] spawnPoints;
     [SerializeField] Room room;
     [SerializeField] List<GameObject> enemies = new List<GameObject>();
+    public bool finished;
 
     int waveCounter;
     int spawnPointIndex;
@@ -29,6 +30,7 @@ public class SpawnSystem : MonoBehaviour
 
         if(room.roomIndex == 1)
         {
+            numberOfWaves = 2;
             randomEnemyType = Random.Range(1, 4);
         }
 
@@ -51,16 +53,16 @@ public class SpawnSystem : MonoBehaviour
 
     void CalculateWave()
     {
-        //Setup room depending on index
-        if(room.roomIndex == 1)
+        if (waveCounter != numberOfWaves && enemies.Count == 0)
         {
-            if (waveCounter != 2 && enemies.Count == 0)
-            {
-                spawnPointIndex = 0;
-                
-                SpawnEnemies();
-            }
+            spawnPointIndex = 0;   
+            SpawnEnemies();
         }
+        else if(waveCounter == numberOfWaves)
+        {
+            finished = true;
+        }
+       
     }
 
     void SpawnEnemies()

@@ -33,6 +33,13 @@ public class Health : MonoBehaviour
             healthBar.value = currentHealth;
     }
 
+    public void changeMaxValue(int amount)
+    {
+        maxHealth += amount;
+        if (healthBar != null)
+            healthBar.maxValue = maxHealth;
+    }
+
     
     
 }
