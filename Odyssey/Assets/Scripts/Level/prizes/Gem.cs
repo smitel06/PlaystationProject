@@ -9,18 +9,40 @@ public class Gem : MonoBehaviour
     [SerializeField] GameObject parent;
     [SerializeField] GameObject achievement;
     bool shrink;
+    Prize prize;
+
+    private void OnEnable()
+    {
+        prize = parent.GetComponent<Prize>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerCurrencies>().gems++;
+            
             effect.Play();
             shrink = true;
             //achievement.SetActive(true);
             //achievement.GetComponent<Achievement>().setText("Acquired: Gem");
-
-            Destroy(parent, 1.5f);
+            
+            //spawn door prizes
+            if(prize.middlePrize)
+            {
+                collision.gameObject.GetComponent<PlayerCurrencies>().gems++;
+                prize.doorPrize1.SpawnPrize();
+                if(prize.doorPrize2 != null)
+                {
+                    prize.doorPrize1.SpawnPrize();
+                }
+            }
+            else
+            {
+                prize.nextRoomPrize.prizeType = 0;
+                
+            }
+            //tell the parent that this is now null
+            Destroy(gameObject, 1.5f);
         }
     }
 

@@ -15,6 +15,7 @@ public class RoomTransitions : MonoBehaviour
     public float transitionSpeed;
     public bool merchantRoomUnlocked;
     [SerializeField] Room merchantRoom;
+    
 
     private void Start()
     {

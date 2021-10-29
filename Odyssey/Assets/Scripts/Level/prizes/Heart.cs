@@ -10,16 +10,38 @@ public class Heart : MonoBehaviour
     [SerializeField] int healthIncrease;
     [SerializeField] GameObject achievement;
     bool shrink;
+    Prize prize;
+
+    private void OnEnable()
+    {
+        prize = parent.GetComponent<Prize>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Health>().changeMaxValue(healthIncrease);
+            
             effect.Play();
             shrink = true;
             //achievement.SetActive(true);
             //achievement.GetComponent<Achievement>().setText("Acquired: Heart");
-            Destroy(parent, 1.5f);
+
+            //spawn door prizes
+            if (prize.middlePrize)
+            {
+                collision.gameObject.GetComponent<Health>().changeMaxValue(healthIncrease);
+                prize.doorPrize1.SpawnPrize();
+                if (prize.doorPrize2 != null)
+                {
+                    prize.doorPrize1.SpawnPrize();
+                }
+            }
+            else
+            {
+                prize.nextRoomPrize.prizeType = 2;
+            }
+
+            Destroy(gameObject, 1.5f);
         }
     }
 

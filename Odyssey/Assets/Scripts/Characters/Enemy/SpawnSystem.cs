@@ -58,7 +58,7 @@ public class SpawnSystem : MonoBehaviour
             spawnPointIndex = 0;   
             SpawnEnemies();
         }
-        else if(waveCounter == numberOfWaves)
+        else if(waveCounter == numberOfWaves && enemies.Count == 0)
         {
             finished = true;
         }

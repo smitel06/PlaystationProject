@@ -9,17 +9,41 @@ public class Key : MonoBehaviour
     [SerializeField] GameObject parent;
     [SerializeField] GameObject achievement;
     bool shrink;
+    Prize prize;
+
+    private void OnEnable()
+    {
+        prize = parent.GetComponent<Prize>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerCurrencies>().keys++;
+            
             effect.Play();
             shrink = true;
             //achievement.SetActive(true);
             //achievement.GetComponent<Achievement>().setText("Acquired: Key");
 
-            Destroy(parent, 1.5f);
+            //spawn door prizes
+            if (prize.middlePrize)
+            {
+                collision.gameObject.GetComponent<PlayerCurrencies>().keys++;
+                prize.doorPrize1.SpawnPrize();
+                if (prize.doorPrize2 != null)
+                {
+                    prize.doorPrize1.SpawnPrize();
+                }
+            }
+            else
+            {
+                prize.nextRoomPrize.prizeType = 1;
+                
+            }
+            //tell the parent that this is now null
+
+            Destroy(gameObject, 1.5f);
         }
     }
 

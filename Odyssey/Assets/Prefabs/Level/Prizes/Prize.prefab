@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 199661959786754943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -112.76637, y: -80.69164, z: 142.50223}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.033333335, y: 0.033333335, z: 0.033333335}
   m_Children:
   - {fileID: 5653094443431955266}
   - {fileID: 5429042615042592176}
@@ -50,7 +50,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 176f5a615c561d64695d195e46bff934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prizeType: 0
+  middlePrize: 1
+  doorPrizes: []
+  prizeType: 3
   gem: {fileID: 4987740837129441784}
   key: {fileID: 8144300794526622974}
   heart: {fileID: 490462553443440875}
@@ -116,6 +118,7 @@ MonoBehaviour:
   rotationSpeed: 25
   parent: {fileID: 199661959786754943}
   achievement: {fileID: 0}
+  roomTransitions: {fileID: 0}
 --- !u!135 &3502099105724695312
 SphereCollider:
   m_ObjectHideFlags: 0

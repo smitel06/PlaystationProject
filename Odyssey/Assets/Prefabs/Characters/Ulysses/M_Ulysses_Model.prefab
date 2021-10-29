@@ -3334,6 +3334,7 @@ GameObject:
   - component: {fileID: 6226256385056342680}
   - component: {fileID: 1579548986295838576}
   - component: {fileID: 6993084362485635847}
+  - component: {fileID: 829750063415759213}
   m_Layer: 8
   m_Name: M_Ulysses_Model
   m_TagString: Player
@@ -3418,6 +3419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6f9a3381341b6459bc45df107cee80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screenBlocker: {fileID: 0}
+  transitionSpeed: 0
   weaponCollider: {fileID: 2356534597464884185}
   dead: 0
   aimspot: {fileID: 2339349517696372312}
@@ -3464,6 +3467,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a51b148459796b4ca5edfe02e382e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 0
+--- !u!114 &829750063415759213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8686415976426999372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d2f9aff0ae4e243aa3ee767dab7a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: 0
+  gems: 0
+  keys: 0
 --- !u!1 &8800981891546126952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3641,14 +3660,14 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 49c4eb8611df61e4485f5bf150e4f12d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 49c4eb8611df61e4485f5bf150e4f12d, type: 3}
---- !u!4 &543450653438467275 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 49c4eb8611df61e4485f5bf150e4f12d, type: 3}
-  m_PrefabInstance: {fileID: 295320352}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &919132149449688689 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 49c4eb8611df61e4485f5bf150e4f12d, type: 3}
+  m_PrefabInstance: {fileID: 295320352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &543450653438467275 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 49c4eb8611df61e4485f5bf150e4f12d, type: 3}
   m_PrefabInstance: {fileID: 295320352}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3538000890116486419

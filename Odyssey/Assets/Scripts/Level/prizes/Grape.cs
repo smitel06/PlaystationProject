@@ -10,6 +10,12 @@ public class Grape : MonoBehaviour
     [SerializeField] GameObject achievement;
     [SerializeField] RoomTransitions roomTransitions;
     bool shrink;
+    Prize prize;
+
+    private void OnEnable()
+    {
+        prize = parent.GetComponent<Prize>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -20,7 +26,9 @@ public class Grape : MonoBehaviour
             //achievement.SetActive(true);
             //achievement.GetComponent<Achievement>().setText("Unlocked: Merchant");
 
-            Destroy(parent, 1.5f);
+            
+
+            Destroy(gameObject, 1.5f);
         }
     }
 

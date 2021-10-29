@@ -4,11 +4,25 @@ using UnityEngine;
 
 public class Prize : MonoBehaviour
 {
-    private void Start()
+    public bool middlePrize;
+    bool prizeChosen;
+    public Prize doorPrize1;
+    public Prize doorPrize2 = null;
+
+    private void OnEnable()
     {
-        //0 = gem, 1 = key, 2 = heart, 3 = grapes, 4 = buffs, 5 = coins
-        prizeType = Random.Range(0, 6);
-        SpawnPrize();
+        
+        //0 = gem, 1 = key, 2 = heart, 3 = coins, 4 = buffs, 5 = grapes
+        //middle prize won't have grapes
+        if (!middlePrize)
+        {
+            prizeType = Random.Range(0, 6);
+        }
+        else
+        {
+            prizeType = Random.Range(0, 5);
+        }
+
     }
 
     public int prizeType;
@@ -18,37 +32,57 @@ public class Prize : MonoBehaviour
     [SerializeField] GameObject grapes;
     [SerializeField] GameObject coin;
     [SerializeField] GameObject buff;
-
-    private void SpawnPrize()
+    GameObject selectedPrize;
+    public Prize nextRoomPrize;
+    public void SpawnPrize()
     {
-        
-
+        //select prize type and push to selected prize so we can manage
         if(prizeType == 0)
         {
-            gem.SetActive(true);
+            selectedPrize = gem;
         }
         else if(prizeType == 1)
         {
-            key.SetActive(true);
+            selectedPrize = key;
         }
         else if (prizeType == 2)
         {
-            heart.SetActive(true);
+            selectedPrize = heart;
         }
         else if (prizeType == 3)
         {
-            grapes.SetActive(true);
+            selectedPrize = coin;
         }
         else if (prizeType == 4)
         {
-            buff.SetActive(true);
+            selectedPrize = buff;
         }
         else if (prizeType == 5)
         {
-            coin.SetActive(true);
+            selectedPrize = grapes;
         }
+
+        selectedPrize.SetActive(true);
+        prizeChosen = true;
     }
 
-    
+    private void Update()
+    {
+        if(prizeChosen)
+        {
+            //if selected prize equals null spawn next prizes
+            if(selectedPrize == null)
+            {
+                if(middlePrize)
+                {
+                    //spawn next prizes
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
+    }
 }
 

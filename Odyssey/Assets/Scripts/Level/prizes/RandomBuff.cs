@@ -9,17 +9,39 @@ public class RandomBuff : MonoBehaviour
     [SerializeField] GameObject parent;
     [SerializeField] GameObject achievement;
     bool shrink;
+    Prize prize;
+
+    private void OnEnable()
+    {
+        prize = parent.GetComponent<Prize>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            
+
             effect.Play();
             shrink = true;
             //achievement.SetActive(true);
-            //achievement.GetComponent<Achievement>().setText("Acquired: RandomBuff");
+            //achievement.GetComponent<Achievement>().setText("Acquired: Buff");
 
-            Destroy(parent, 1.5f);
+            //spawn door prizes
+            if (prize.middlePrize)
+            {
+
+                prize.doorPrize1.SpawnPrize();
+                if (prize.doorPrize2 != null)
+                {
+                    prize.doorPrize1.SpawnPrize();
+                }
+            }
+            else
+            {
+                prize.nextRoomPrize.prizeType = Random.Range(0, 5);
+            }
+            //tell the parent that this is now null
+            Destroy(gameObject, 1.5f);
         }
     }
 
