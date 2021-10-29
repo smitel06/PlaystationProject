@@ -6,18 +6,22 @@ public class Prize : MonoBehaviour
 {
     private void Start()
     {
+        //0 = gem, 1 = key, 2 = heart, 3 = grapes, 4 = buffs, 5 = coins
+        prizeType = Random.Range(0, 6);
         SpawnPrize();
     }
 
-    int prizeType;
+    public int prizeType;
     [SerializeField] GameObject gem;
     [SerializeField] GameObject key;
     [SerializeField] GameObject heart;
+    [SerializeField] GameObject grapes;
+    [SerializeField] GameObject coin;
     [SerializeField] GameObject buff;
+
     private void SpawnPrize()
     {
-        //0 = gem, 1 = key
-        prizeType = 2;//Random.Range(0, 4);
+        
 
         if(prizeType == 0)
         {
@@ -33,7 +37,15 @@ public class Prize : MonoBehaviour
         }
         else if (prizeType == 3)
         {
+            grapes.SetActive(true);
+        }
+        else if (prizeType == 4)
+        {
             buff.SetActive(true);
+        }
+        else if (prizeType == 5)
+        {
+            coin.SetActive(true);
         }
     }
 

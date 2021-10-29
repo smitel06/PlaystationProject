@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class RandomBuff : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] ParticleSystem effect;
+    [SerializeField] float rotationSpeed;
+    [SerializeField] GameObject parent;
+    [SerializeField] GameObject achievement;
+    bool shrink;
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.tag == "Player")
+        {
+            
+            effect.Play();
+            shrink = true;
+            //achievement.SetActive(true);
+            //achievement.GetComponent<Achievement>().setText("Acquired: RandomBuff");
+
+            Destroy(parent, 1.5f);
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Rotate the object around its local y axis so it appears to be spinning
+        transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
+
+        //when collecting prize shrink
+        if (shrink && transform.localScale.x >= 0.3f)
+        {
+            transform.localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+        }
     }
 }

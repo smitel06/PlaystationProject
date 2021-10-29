@@ -8,6 +8,7 @@ public class Gem : MonoBehaviour
     [SerializeField] float rotationSpeed;
     [SerializeField] GameObject parent;
     [SerializeField] GameObject achievement;
+    bool shrink;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -15,9 +16,9 @@ public class Gem : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerCurrencies>().gems++;
             effect.Play();
-
-            achievement.SetActive(true);
-            achievement.GetComponent<Achievement>().setText("Acquired: Gem");
+            shrink = true;
+            //achievement.SetActive(true);
+            //achievement.GetComponent<Achievement>().setText("Acquired: Gem");
 
             Destroy(parent, 1.5f);
         }
@@ -27,5 +28,11 @@ public class Gem : MonoBehaviour
     {
         // Rotate the object around its local y axis so it appears to be spinning
         transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
+
+        //when collecting prize shrink
+        if (shrink && transform.localScale.x >= 0.3f)
+        {
+            transform.localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+        }
     }
 }

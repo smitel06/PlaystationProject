@@ -13,7 +13,8 @@ public class RoomTransitions : MonoBehaviour
     bool transitionScreenOut;
     bool transitionScreenIn;
     public float transitionSpeed;
-    
+    public bool merchantRoomUnlocked;
+    [SerializeField] Room merchantRoom;
 
     private void Start()
     {
@@ -34,9 +35,14 @@ public class RoomTransitions : MonoBehaviour
         //on true transition to next room with index +1
         if (rooms[currentRoomIndex].transition)
         {
-            
             transitionScreenOut = true;
             rooms[currentRoomIndex].transition = false;
+        }
+        else if(merchantRoom.transition)
+        {
+            merchantRoomUnlocked = false;
+            transitionScreenOut = true;
+            merchantRoom.transition = false;
         }
 
         Transition();
@@ -64,7 +70,10 @@ public class RoomTransitions : MonoBehaviour
 
         if(screenBlocker.color.a >= 1)
         {
-            currentRoomIndex++;
+            if(!merchantRoomUnlocked)
+            {
+                currentRoomIndex++;
+            }
             transitionScreenIn = true;
             transitionScreenOut = false;
         }
@@ -72,8 +81,17 @@ public class RoomTransitions : MonoBehaviour
 
     private void ScreenTransitionIn()
     {
-        player.position = rooms[currentRoomIndex].entry.position;
-        player.rotation = rooms[currentRoomIndex].entry.localRotation;
+        if (!merchantRoomUnlocked)
+        {
+            player.position = rooms[currentRoomIndex].entry.position;
+            player.rotation = rooms[currentRoomIndex].entry.localRotation;
+        }
+        
+        if(merchantRoomUnlocked)
+        {
+            player.position = merchantRoom.entry.position;
+            player.rotation = merchantRoom.entry.localRotation;
+        }
 
         imageColor.a -= transitionSpeed * Time.deltaTime;
         screenBlocker.color = imageColor;
@@ -82,8 +100,9 @@ public class RoomTransitions : MonoBehaviour
         {
             transitionScreenIn = false;
             imageColor.a = 0;
-            
         }
+
+        
     }
 
 }
