@@ -14,6 +14,7 @@ public class RandomBuff : MonoBehaviour
     private void OnEnable()
     {
         prize = parent.GetComponent<Prize>();
+        achievement = prize.achievement;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -23,8 +24,8 @@ public class RandomBuff : MonoBehaviour
 
             effect.Play();
             shrink = true;
-            //achievement.SetActive(true);
-            //achievement.GetComponent<Achievement>().setText("Acquired: Buff");
+            achievement.SetActive(true);
+            achievement.GetComponent<Achievement>().setText("Acquired: Buff");
 
             //spawn door prizes
             if (prize.middlePrize)

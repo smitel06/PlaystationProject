@@ -14,6 +14,7 @@ public class Gem : MonoBehaviour
     private void OnEnable()
     {
         prize = parent.GetComponent<Prize>();
+        achievement = prize.achievement;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -23,8 +24,8 @@ public class Gem : MonoBehaviour
             
             effect.Play();
             shrink = true;
-            //achievement.SetActive(true);
-            //achievement.GetComponent<Achievement>().setText("Acquired: Gem");
+            achievement.SetActive(true);
+            achievement.GetComponent<Achievement>().setText("Acquired: Gem");
             
             //spawn door prizes
             if(prize.middlePrize)

@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\FX\ParticleManager.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsWeapon.cs" />
     <Compile Include="Assets\Scripts\FX\Particle.cs" />
+    <Compile Include="Assets\Scripts\Level\DoorScript.cs" />
     <Compile Include="Assets\Scripts\Traps\FaceTrap.cs" />
     <Compile Include="Assets\TestingFolder\Core\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\ShardExplosion.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets\Scripts\Level\prizes\RandomBuff.cs" />
     <Compile Include="Assets\Scripts\UI\Menus\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\SpawnPoint.cs" />
+    <Compile Include="Assets\Scripts\Level\prizes\BuffManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Sorceror\Projectile.cs" />
     <Compile Include="Assets\Scripts\Level\prizes\Heart.cs" />
@@ -104,8 +106,8 @@
     <Compile Include="Assets\Scripts\Characters\Player\PlayerCurrencies.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
-    <Compile Include="Assets\Scripts\Level\prizes\BuffManager.cs" />
-    <Compile Include="Assets\Scripts\Level\DoorScript.cs" />
+    <Compile Include="Assets\Scripts\Core\ScreenResolution.cs" />
+    <Compile Include="Assets\Scripts\UI\HUD\FadeText.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\VS_InstancedIndirect.cginc" />

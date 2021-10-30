@@ -15,6 +15,7 @@ public class Heart : MonoBehaviour
     private void OnEnable()
     {
         prize = parent.GetComponent<Prize>();
+        achievement = prize.achievement;
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -23,8 +24,8 @@ public class Heart : MonoBehaviour
             
             effect.Play();
             shrink = true;
-            //achievement.SetActive(true);
-            //achievement.GetComponent<Achievement>().setText("Acquired: Heart");
+            achievement.SetActive(true);
+            achievement.GetComponent<Achievement>().setText("Acquired: Heart");
 
             //spawn door prizes
             if (prize.middlePrize)

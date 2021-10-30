@@ -8,6 +8,7 @@ public class Prize : MonoBehaviour
     bool prizeChosen;
     public Prize doorPrize1;
     public Prize doorPrize2 = null;
+    public GameObject achievement;
 
     private void Start()
     {

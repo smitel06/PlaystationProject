@@ -10,10 +10,13 @@ public class Coin : MonoBehaviour
     [SerializeField] GameObject achievement;
     bool shrink;
     Prize prize;
+    
 
     private void OnEnable()
     {
+        
         prize = parent.GetComponent<Prize>();
+        achievement = prize.achievement;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -23,8 +26,8 @@ public class Coin : MonoBehaviour
             
             effect.Play();
             shrink = true;
-            //achievement.SetActive(true);
-            //achievement.GetComponent<Achievement>().setText("Acquired: Coins");
+            achievement.SetActive(true);
+            achievement.GetComponent<Achievement>().setText("Acquired: Coins");
 
             //spawn door prizes
             if (prize.middlePrize)

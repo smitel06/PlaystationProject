@@ -11,11 +11,20 @@ public class FadeImage : MonoBehaviour
     bool transitionScreenDark;
     bool transitionScreenTransparent;
     public float transitionSpeed;
+    [SerializeField] float fadeInTimer;
+    [SerializeField] float fadeOutTimer;
     [SerializeField] float timeTillFadeIn;
     [SerializeField] float timeTillFadeOut;
 
+    private void OnEnable()
+    {
+        fadeInTimer = timeTillFadeIn;
+        fadeOutTimer = timeTillFadeOut;
+        transitionScreenTransparent = false;
+    }
     private void Start()
     {
+        
         //get the image
         image = GetComponent<Image>();
         //set color to image color
@@ -25,13 +34,13 @@ public class FadeImage : MonoBehaviour
     private void Update()
     {
         //check timer if zero start transitioning
-        if(timeTillFadeIn <= 0 && !transitionScreenDark && !transitionScreenTransparent)
+        if(fadeInTimer <= 0 && !transitionScreenDark && !transitionScreenTransparent)
         {
             transitionScreenDark = true;
         }
         else
         {
-            timeTillFadeIn -= Time.deltaTime; 
+            fadeInTimer -= Time.deltaTime; 
         }
 
         Transition();
@@ -45,13 +54,13 @@ public class FadeImage : MonoBehaviour
             ScreenTransitionDark();
         }
         
-        if (transitionScreenTransparent && timeTillFadeOut <= 0)
+        if (transitionScreenTransparent && fadeOutTimer <= 0)
         {
             ScreenTransitionTransparent();
         }
         else if(transitionScreenTransparent)
         {
-            timeTillFadeOut -= Time.deltaTime;
+            fadeOutTimer -= Time.deltaTime;
         }
 
     }
@@ -77,8 +86,7 @@ public class FadeImage : MonoBehaviour
 
         if (image.color.a <= 0)
         {
-            imageColor.a = 0;
-            
+         
         }
     }
 
