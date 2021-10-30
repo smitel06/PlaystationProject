@@ -29,8 +29,11 @@ public class RandomBuff : MonoBehaviour
             //spawn door prizes
             if (prize.middlePrize)
             {
-
-                prize.doorPrize1.SpawnPrize();
+                if(prize.doorPrize1 != null)
+                {
+                    prize.doorPrize1.SpawnPrize();
+                }
+                
                 if (prize.doorPrize2 != null)
                 {
                     prize.doorPrize1.SpawnPrize();
@@ -38,10 +41,10 @@ public class RandomBuff : MonoBehaviour
             }
             else
             {
-                prize.nextRoomPrize.prizeType = Random.Range(0, 5);
+                prize.nextRoomPrize.prizeType = 4;
             }
             //tell the parent that this is now null
-            Destroy(gameObject, 1.5f);
+            Destroy(parent, 1.5f);
         }
     }
 

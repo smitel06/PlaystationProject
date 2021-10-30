@@ -30,7 +30,11 @@ public class Heart : MonoBehaviour
             if (prize.middlePrize)
             {
                 collision.gameObject.GetComponent<Health>().changeMaxValue(healthIncrease);
-                prize.doorPrize1.SpawnPrize();
+                if(prize.doorPrize1 != null)
+                {
+                    prize.doorPrize1.SpawnPrize();
+                }
+                
                 if (prize.doorPrize2 != null)
                 {
                     prize.doorPrize1.SpawnPrize();
@@ -41,7 +45,7 @@ public class Heart : MonoBehaviour
                 prize.nextRoomPrize.prizeType = 2;
             }
 
-            Destroy(gameObject, 1.5f);
+            Destroy(parent, 1.5f);
         }
     }
 

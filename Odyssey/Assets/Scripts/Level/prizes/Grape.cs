@@ -28,7 +28,7 @@ public class Grape : MonoBehaviour
 
             
 
-            Destroy(gameObject, 1.5f);
+            Destroy(parent, 1.5f);
         }
     }
 

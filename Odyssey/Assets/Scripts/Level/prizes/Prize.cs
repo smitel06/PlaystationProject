@@ -9,9 +9,9 @@ public class Prize : MonoBehaviour
     public Prize doorPrize1;
     public Prize doorPrize2 = null;
 
-    private void OnEnable()
+    private void Start()
     {
-        
+
         //0 = gem, 1 = key, 2 = heart, 3 = coins, 4 = buffs, 5 = grapes
         //middle prize won't have grapes
         if (!middlePrize)
@@ -22,6 +22,8 @@ public class Prize : MonoBehaviour
         {
             prizeType = Random.Range(0, 5);
         }
+
+
 
     }
 
@@ -68,21 +70,7 @@ public class Prize : MonoBehaviour
 
     private void Update()
     {
-        if(prizeChosen)
-        {
-            //if selected prize equals null spawn next prizes
-            if(selectedPrize == null)
-            {
-                if(middlePrize)
-                {
-                    //spawn next prizes
-                }
-                else
-                {
-                    Destroy(gameObject);
-                }
-            }
-        }
+        
     }
 }
 

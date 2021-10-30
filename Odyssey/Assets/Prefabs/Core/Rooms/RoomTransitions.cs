@@ -39,7 +39,8 @@ public class RoomTransitions : MonoBehaviour
             transitionScreenOut = true;
             rooms[currentRoomIndex].transition = false;
         }
-        else if(merchantRoom.transition)
+        
+        if(merchantRoom.transition)
         {
             merchantRoomUnlocked = false;
             transitionScreenOut = true;

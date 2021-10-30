@@ -30,7 +30,11 @@ public class Coin : MonoBehaviour
             if (prize.middlePrize)
             {
                 collision.gameObject.GetComponent<PlayerCurrencies>().coins += 25;
-                prize.doorPrize1.SpawnPrize();
+                if (prize.doorPrize1 != null)
+                {
+                    prize.doorPrize1.SpawnPrize();
+                }
+
                 if (prize.doorPrize2 != null)
                 {
                     prize.doorPrize1.SpawnPrize();

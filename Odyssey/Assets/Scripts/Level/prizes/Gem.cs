@@ -30,8 +30,12 @@ public class Gem : MonoBehaviour
             if(prize.middlePrize)
             {
                 collision.gameObject.GetComponent<PlayerCurrencies>().gems++;
-                prize.doorPrize1.SpawnPrize();
-                if(prize.doorPrize2 != null)
+                if (prize.doorPrize1 != null)
+                {
+                    prize.doorPrize1.SpawnPrize();
+                }
+
+                if (prize.doorPrize2 != null)
                 {
                     prize.doorPrize1.SpawnPrize();
                 }
@@ -41,8 +45,8 @@ public class Gem : MonoBehaviour
                 prize.nextRoomPrize.prizeType = 0;
                 
             }
-            //tell the parent that this is now null
-            Destroy(gameObject, 1.5f);
+            
+            Destroy(parent, 1.5f);
         }
     }
 
