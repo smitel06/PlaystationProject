@@ -11,6 +11,8 @@ public class PlayerRestart : MonoBehaviour
     bool startTimer;
     float timer;
     [SerializeField] float movementSpeed;
+    [SerializeField] FollowCamera followCamera;
+    [SerializeField] SmoothFollowCamera smoothFollowCamera;
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -24,6 +26,8 @@ public class PlayerRestart : MonoBehaviour
     {
         if(transform.position.y <= 0.52)
         {
+            followCamera.enabled = false;
+            smoothFollowCamera.enabled = true;
             animator.SetTrigger("HitGround");
             startTimer = true;
         }

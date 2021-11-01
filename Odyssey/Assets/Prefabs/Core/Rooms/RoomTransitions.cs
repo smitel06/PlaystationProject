@@ -15,7 +15,9 @@ public class RoomTransitions : MonoBehaviour
     public float transitionSpeed;
     public bool merchantRoomUnlocked;
     [SerializeField] Room merchantRoom;
-    
+    [SerializeField] FollowCamera followCamera;
+    [SerializeField] SmoothFollowCamera smoothFollowCamera;
+
 
     private void Start()
     {
@@ -87,10 +89,15 @@ public class RoomTransitions : MonoBehaviour
         {
             player.position = rooms[currentRoomIndex].entry.position;
             player.rotation = rooms[currentRoomIndex].entry.localRotation;
+            followCamera.enabled = true;
+            smoothFollowCamera.enabled = false;
+
         }
         
         if(merchantRoomUnlocked)
         {
+            followCamera.enabled = true;
+            smoothFollowCamera.enabled = false;
             player.position = merchantRoom.entry.position;
             player.rotation = merchantRoom.entry.localRotation;
         }
@@ -100,6 +107,8 @@ public class RoomTransitions : MonoBehaviour
 
         if (screenBlocker.color.a <= 0)
         {
+            followCamera.enabled = false;
+            smoothFollowCamera.enabled = true;
             transitionScreenIn = false;
             imageColor.a = 0;
         }

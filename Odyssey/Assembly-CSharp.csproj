@@ -62,11 +62,13 @@
     <Compile Include="Assets\Prefabs\Characters\Enemies\Sorceror\Location\Sorceror_Slot.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\Shard.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullActivator.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsController.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\FX\ParticleManager.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsWeapon.cs" />
     <Compile Include="Assets\Scripts\FX\Particle.cs" />
+    <Compile Include="Assets\Scripts\Characters\Player\DeathScene.cs" />
     <Compile Include="Assets\Scripts\Level\DoorScript.cs" />
     <Compile Include="Assets\Scripts\Traps\FaceTrap.cs" />
     <Compile Include="Assets\TestingFolder\Core\FollowCamera.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="Assets\Scripts\Level\prizes\Gem.cs" />
     <Compile Include="Assets\Scripts\Level\prizes\Grape.cs" />
     <Compile Include="Assets\Scripts\Level\prizes\Key.cs" />
+    <Compile Include="Assets\Scripts\Level\hudSwap.cs" />
     <Compile Include="Assets\Scripts\Traps\SpikeTrap.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\DamagePopUp.cs" />
     <Compile Include="Assets\Scripts\UI\HUD\FadeImage.cs" />
@@ -104,13 +107,12 @@
     <Compile Include="Assets\Scripts\Level\prizes\Heart.cs" />
     <Compile Include="Assets\Scripts\UI\Menus\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Core\GameAssets.cs" />
-    <Compile Include="Assets\Scripts\Core\ScreenResolution.cs" />
+    <Compile Include="Assets\Scripts\Camera\ScreenResolution.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerCurrencies.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
-    <Compile Include="Assets\Scripts\Characters\Player\DeathScene.cs" />
-    <Compile Include="Assets\Scripts\Level\hudSwap.cs" />
-    <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullActivator.cs" />
+    <Compile Include="Assets\Scripts\Camera\SmoothFollowCamera.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraTarget.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\VS_InstancedIndirect.cginc" />

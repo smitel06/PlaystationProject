@@ -200,6 +200,7 @@ public class PlayerController : MonoBehaviour
             {
                 Vector3 beforeDashPosition = transform.position;
                 transform.position += input * dashDistance;
+                
             }
         }   
     }

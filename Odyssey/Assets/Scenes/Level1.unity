@@ -1531,6 +1531,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1830582659, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: timeTillFadeIn
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830582659, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: timeTillFadeOut
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 65165101098058573, guid: 0437df02d859fee40917c7404d499d46, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3247,6 +3255,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718231945}
   m_CullTransparentMesh: 0
+--- !u!1 &729803463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5673047852851919296, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+  m_PrefabInstance: {fileID: 8485767057484796365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &729803465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729803463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec9874d1d3e21b4fa8cd26fe76311f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothFollowCamera: {fileID: 1943876038}
+  target: {fileID: 229511684}
+  minDistanceTillSwap: 9
 --- !u!114 &768241260 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 768241260, guid: 0437df02d859fee40917c7404d499d46, type: 3}
@@ -6843,6 +6871,14 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.06343152
       objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.9349361
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.6178344
+      objectReference: {fileID: 0}
     - target: {fileID: 1579548986295838576, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: healthBar
       value: 
@@ -6851,6 +6887,14 @@ PrefabInstance:
       propertyPath: movementSpeed
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 6993084362485635847, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: followCamera
+      value: 
+      objectReference: {fileID: 1943876039}
+    - target: {fileID: 6993084362485635847, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: smoothFollowCamera
+      value: 
+      objectReference: {fileID: 1943876038}
     - target: {fileID: 8342788439766586614, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.7
@@ -8259,6 +8303,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 229511684}
+    - target: {fileID: 7465018205280490420, guid: 5732aceca9790454f834ca387c69592e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7989071483304144036, guid: 5732aceca9790454f834ca387c69592e, type: 3}
       propertyPath: m_Name
       value: FollowCamera
@@ -8288,6 +8336,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f79899ff48c8fa499d891b9fcbb9bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1943876038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943876036}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3fdb9cdd4d6ed4688661d3484d62ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 229511684}
+  maxDistanceFromTarget: 8
+--- !u!114 &1943876039 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7465018205280490420, guid: 5732aceca9790454f834ca387c69592e, type: 3}
+  m_PrefabInstance: {fileID: 1943876035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943876036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc066264f605ca42afa65d831792603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1953522298
@@ -9590,6 +9663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rooms
       objectReference: {fileID: 0}
+    - target: {fileID: 3124480606209387745, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3340220635201137240, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -9618,6 +9695,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.018
       objectReference: {fileID: 0}
+    - target: {fileID: 4142524014124338738, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.965
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311505345798018514, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4415544560735646340, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: spawnSystem
       value: 
@@ -9637,6 +9722,10 @@ PrefabInstance:
     - target: {fileID: 6392150388150029054, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: m_RootOrder
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686256665241851513, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8235176412423545604, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9726,6 +9815,14 @@ PrefabInstance:
       propertyPath: merchantRoom
       value: 
       objectReference: {fileID: 5225488727368377161}
+    - target: {fileID: 8442489391306092266, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: followCamera
+      value: 
+      objectReference: {fileID: 1943876039}
+    - target: {fileID: 8442489391306092266, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: smoothFollowCamera
+      value: 
+      objectReference: {fileID: 1943876038}
     - target: {fileID: 8719789097368911755, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -9762,6 +9859,10 @@ PrefabInstance:
       propertyPath: achievement
       value: 
       objectReference: {fileID: 278204791}
+    - target: {fileID: 9144758433924888141, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9188882373774313526, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: m_IsActive
       value: 1
