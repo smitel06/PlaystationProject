@@ -66,6 +66,8 @@ public class SkullController : MonoBehaviour
             CooldownAttack();
             CanAttack();
         }
+
+        
     }
 
     private void CanAttack()

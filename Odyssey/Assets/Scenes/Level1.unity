@@ -1523,9 +1523,53 @@ PrefabInstance:
       propertyPath: m_fontColorGradient.topRight.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1773979770, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773979772, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 65165101098058573, guid: 0437df02d859fee40917c7404d499d46, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145676045332760143, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: timeTillFadeOut
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145676045332760143, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: timeTillFadeIn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3297066300220860040, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: fadeOutTimer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3297066300220860040, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: timeTillFadeIn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3297066300220860040, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: timeTillFadeOut
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477006985430632336, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: fadeOutTimer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477006985430632336, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: timeTillFadeIn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477006985430632336, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: timeTillFadeOut
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477006985430632336, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: transitionSpeed
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3706232094161981974, guid: 0437df02d859fee40917c7404d499d46, type: 3}
       propertyPath: m_colorMode
@@ -1678,6 +1722,18 @@ PrefabInstance:
     - target: {fileID: 7657787362772664164, guid: 0437df02d859fee40917c7404d499d46, type: 3}
       propertyPath: m_fontColorGradient.topRight.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469283358810713200, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: fadeOutTimer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469283358810713200, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: timeTillFadeIn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469283358810713200, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+      propertyPath: timeTillFadeOut
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0437df02d859fee40917c7404d499d46, type: 3}
@@ -2285,6 +2341,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &521182014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 199531462640771810, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+  m_PrefabInstance: {fileID: 401785157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &538872108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3186,17 +3247,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718231945}
   m_CullTransparentMesh: 0
---- !u!114 &763472484 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 763472484, guid: 0437df02d859fee40917c7404d499d46, type: 3}
-  m_PrefabInstance: {fileID: 401785157}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &768241260 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 768241260, guid: 0437df02d859fee40917c7404d499d46, type: 3}
@@ -3208,6 +3258,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &795122289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1631944592285621481, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+  m_PrefabInstance: {fileID: 401785157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &814834531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8139326741511388910, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+  m_PrefabInstance: {fileID: 401785157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &827904037
 GameObject:
   m_ObjectHideFlags: 0
@@ -5238,6 +5298,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202605505}
   m_CullTransparentMesh: 0
+--- !u!1 &1230804873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1773979770, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+  m_PrefabInstance: {fileID: 401785157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1230804877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230804873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84a2c3a75475624d8e5fecc8901a4b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  transitionSpeed: 0.6
+  timeTillFadeIn: 0.5
+  timeTillFadeOut: 2
 --- !u!1 &1239971905
 GameObject:
   m_ObjectHideFlags: 0
@@ -5408,6 +5489,11 @@ BoxCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6760139050248267470, guid: 5732aceca9790454f834ca387c69592e, type: 3}
   m_PrefabInstance: {fileID: 1943876035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1278013099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 951924833, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+  m_PrefabInstance: {fileID: 401785157}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1280603325
 GameObject:
@@ -6189,6 +6275,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1494660112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 346070599, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+  m_PrefabInstance: {fileID: 401785157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1494660114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494660112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 749340e42e3a4be48b0ad46cb7c2e3d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 814834531}
+  bloodOverlay: {fileID: 1972074859}
+  banner: {fileID: 1278013099}
 --- !u!114 &1538961284 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4496934815565054637, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
@@ -6708,11 +6814,15 @@ PrefabInstance:
     - target: {fileID: 636792057, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: screenBlocker
       value: 
-      objectReference: {fileID: 763472484}
+      objectReference: {fileID: 0}
     - target: {fileID: 636792057, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: transitionSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 636792057, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: deathHud
+      value: 
+      objectReference: {fileID: 1494660112}
     - target: {fileID: 636792060, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
@@ -7943,6 +8053,25 @@ PrefabInstance:
       objectReference: {fileID: 259144319}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+--- !u!1 &1928427871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4682097191751412480, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+  m_PrefabInstance: {fileID: 8485767057484796365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1928427875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928427871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca083e9ee1db7d42ba261868e3b64f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room0hud: {fileID: 795122289}
+  room1hud: {fileID: 521182014}
 --- !u!1 &1938674934
 GameObject:
   m_ObjectHideFlags: 0
@@ -8206,70 +8335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4531ff2a79e8c8c4e9a70e7d5b874e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolModeInt: 0
-  erosionTypeInt: 0
-  generatorTypeInt: 0
-  isBrushOn: 0
-  isBrushHidden: 0
-  isBrushPainting: 0
-  brushPosition: {x: 0, y: 0, z: 0}
-  brushSize: 50
-  brushOpacity: 1
-  brushSoftness: 0.5
-  neighbourhoodInt: 0
-  useDifferenceMaps: 1
-  thermalIterations: 25
-  thermalMinSlope: 1
-  thermalFalloff: 0.5
-  hydraulicTypeInt: 0
-  hydraulicIterations: 25
-  hydraulicMaxSlope: 60
-  hydraulicFalloff: 0.5
-  hydraulicRainfall: 0.01
-  hydraulicEvaporation: 0.5
-  hydraulicSedimentSolubility: 0.01
-  hydraulicSedimentSaturation: 0.1
-  hydraulicVelocityRainfall: 0.01
-  hydraulicVelocityEvaporation: 0.5
-  hydraulicVelocitySedimentSolubility: 0.01
-  hydraulicVelocitySedimentSaturation: 0.1
-  hydraulicVelocity: 20
-  hydraulicMomentum: 1
-  hydraulicEntropy: 0
-  hydraulicDowncutting: 0.1
-  tidalIterations: 25
-  tidalSeaLevel: 50
-  tidalRangeAmount: 5
-  tidalCliffLimit: 60
-  windIterations: 25
-  windDirection: 0
-  windForce: 0.5
-  windLift: 0.01
-  windGravity: 0.5
-  windCapacity: 0.01
-  windEntropy: 0.1
-  windSmoothing: 0.25
-  terrainLayers: []
-  slopeBlendMinAngle: 60
-  slopeBlendMaxAngle: 75
-  heightBlendPoints: []
-  gradientStyles: []
-  voronoiTypeInt: 0
-  voronoiCells: 16
-  voronoiFeatures: 1
-  voronoiScale: 1
-  voronoiBlend: 1
-  diamondSquareDelta: 0.5
-  diamondSquareBlend: 1
-  perlinFrequency: 4
-  perlinAmplitude: 1
-  perlinOctaves: 8
-  perlinBlend: 1
-  smoothBlend: 1
-  smoothIterations: 0
-  normaliseMin: 0
-  normaliseMax: 1
-  normaliseBlend: 1
 --- !u!154 &1953522301
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -8314,6 +8379,11 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!1 &1972074859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1644783913630024212, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+  m_PrefabInstance: {fileID: 401785157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2001249585
 GameObject:
   m_ObjectHideFlags: 0
@@ -9534,7 +9604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3963535623068056659, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3963535623068056659, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: m_LocalScale.x

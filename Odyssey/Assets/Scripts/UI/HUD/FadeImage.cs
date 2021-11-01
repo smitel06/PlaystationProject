@@ -11,8 +11,8 @@ public class FadeImage : MonoBehaviour
     bool transitionScreenDark;
     bool transitionScreenTransparent;
     public float transitionSpeed;
-    [SerializeField] float fadeInTimer;
-    [SerializeField] float fadeOutTimer;
+    float fadeInTimer;
+    float fadeOutTimer;
     [SerializeField] float timeTillFadeIn;
     [SerializeField] float timeTillFadeOut;
 

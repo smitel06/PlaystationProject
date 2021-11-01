@@ -35,6 +35,7 @@ GameObject:
   - component: {fileID: 1949138982}
   - component: {fileID: 1949138983}
   - component: {fileID: 4264855915357297197}
+  - component: {fileID: 594201201961926589}
   m_Layer: 0
   m_Name: M_Skull_Model
   m_TagString: Enemy
@@ -95,7 +96,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2218520066643872978}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b12552bffa51537479b088bb1f6183b9, type: 3}
   m_Name: 
@@ -104,14 +105,13 @@ MonoBehaviour:
   wanderTimer: 5
   animator: {fileID: 982754783769855437}
   aimSpot: {fileID: 0}
-  moveSpeed: 30
+  moveSpeed: 32
   attackMode: 1
   cooldown: 0
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 1.8
   fragmented_skull: {fileID: 1299479732363478437}
   skull: {fileID: 4640169817105505573}
   healthbar: {fileID: 6458701726532390442}
-  deathExplosion: {fileID: 0}
 --- !u!195 &2218520066643872973
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -180,6 +180,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 1.48, z: 0}
+--- !u!114 &594201201961926589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218520066643872978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9338f12de7695842beb0d17b4a73d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!95 &982754783769855437
 Animator:
   serializedVersion: 3

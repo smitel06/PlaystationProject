@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 using UnityEngine.UI;
 
 
@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     //use this script to control the player through input
 
     //death transition stuff
-    [SerializeField] Image screenBlocker;
+    [SerializeField] GameObject deathHud;
     Color imageColor;
     public float transitionSpeed;
 
@@ -87,12 +87,12 @@ public class PlayerController : MonoBehaviour
     {
         if (health.currentHealth <= 0)
         {
+            //turn on root transform for deaths
+            animator.applyRootMotion = true;
             deathExplosion.Play();
             //check health if below zero you die
             dead = true;
 
-            //turn on root transform for deaths
-            animator.applyRootMotion = true;
 
             //stop moving you are dead
             rb.velocity = new Vector3(0, 0, 0);
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
             
 
             animator.SetTrigger("Dead");
-            ScreenTransitionDeath();
+            deathHud.SetActive(true);
         }
     }
 
@@ -247,21 +247,6 @@ public class PlayerController : MonoBehaviour
         bloodSplatter.Stop();
     }
 
-    //on death
-    private void ScreenTransitionDeath()
-    {
-        //will save what we need here before death using character skills save
-
-
-        imageColor.a += transitionSpeed * Time.deltaTime;
-        screenBlocker.color = imageColor;
-
-        if (screenBlocker.color.a >= 1)
-        {
-            //restart game
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-
-        }
-    }
+    
+    
 }
