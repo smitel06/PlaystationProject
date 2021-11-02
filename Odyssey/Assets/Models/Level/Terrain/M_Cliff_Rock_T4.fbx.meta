@@ -3,7 +3,12 @@ guid: 1da996c742dac284bb426d8c367ced2a
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Cliff_Rock_T1_1
+    second: {fileID: 2100000, guid: 7163f7fcf39e7304bae2ee3be9c6b2b0, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
