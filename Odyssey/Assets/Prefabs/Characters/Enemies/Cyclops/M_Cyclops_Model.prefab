@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 2190400259377783458}
   - component: {fileID: 8516414716761401375}
   - component: {fileID: 2096805504}
+  - component: {fileID: 5736129193698699570}
   m_Layer: 0
   m_Name: M_Cyclops_Model
   m_TagString: Enemy
@@ -366,6 +367,19 @@ CapsuleCollider:
   m_Height: 0.04
   m_Direction: 1
   m_Center: {x: 0, y: 0.01, z: 0}
+--- !u!114 &5736129193698699570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402499187725953193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a619c5bd078c3ab4c9039c6363b321a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &2137211180886366142
 GameObject:
   m_ObjectHideFlags: 0
@@ -4038,13 +4052,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccc51ab23b3532d4f959d05bc42516c8, type: 3}
---- !u!4 &2965703868954272077 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ccc51ab23b3532d4f959d05bc42516c8, type: 3}
-  m_PrefabInstance: {fileID: 3360514945630865062}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2477995022926298103 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ccc51ab23b3532d4f959d05bc42516c8, type: 3}
+  m_PrefabInstance: {fileID: 3360514945630865062}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2965703868954272077 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ccc51ab23b3532d4f959d05bc42516c8, type: 3}
   m_PrefabInstance: {fileID: 3360514945630865062}
   m_PrefabAsset: {fileID: 0}

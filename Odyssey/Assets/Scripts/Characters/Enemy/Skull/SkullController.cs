@@ -34,8 +34,10 @@ public class SkullController : MonoBehaviour
     [SerializeField] GameObject fragmented_skull;
     [SerializeField] GameObject skull;
     [SerializeField] GameObject healthbar;
-    
-    
+    bool coinDropped;
+
+
+
     private void Awake()
     {
         //set wander timer
@@ -102,6 +104,7 @@ public class SkullController : MonoBehaviour
             fragmented_skull.SetActive(true);
             healthbar.SetActive(false);
             skull.SetActive(false);
+            dropCoin();
             Destroy(gameObject, 3);
         }
     }
@@ -194,8 +197,21 @@ public class SkullController : MonoBehaviour
         }
     }
 
-    public void TakeDamage()
+    private void dropCoin()
     {
-        GetComponent<Animator>().SetTrigger("Damaged");
+        if (!coinDropped)
+        {
+            foreach (Collider c in GetComponents<Collider>())
+            {
+                c.enabled = false;
+            }
+     
+            Debug.Log("SKULLCOIN");
+            GameObject coin = Instantiate(GameAssets.i.coinDrop, new Vector3(transform.position.x, 1, transform.position.z), Quaternion.identity) as GameObject;
+            coin.GetComponent<CoinDrop>().SetRandomRange(1, 5);
+            coinDropped = true;
+        }
     }
+
+    
 }

@@ -8,8 +8,9 @@ public class ShardExplosion : MonoBehaviour
     public float power = 10.0F;
     public Rigidbody[] rigidbodies;
     
+    
 
-    void Start()
+    void Awake()
     {
 
         rigidbodies = GetComponentsInChildren<Rigidbody>();
@@ -19,7 +20,29 @@ public class ShardExplosion : MonoBehaviour
         {
             rb.AddExplosionForce(power, explosionPos, radius, 3.0F);
         }
-
+        dropCoin();
         Destroy(gameObject, 1.5f);
+    }
+
+    private void dropCoin()
+    {
+        foreach (Collider c in GetComponents<Collider>())
+        {
+            c.enabled = false;
+        }
+
+        GameObject coin = Instantiate(GameAssets.i.coinDrop, new Vector3(transform.position.x, 1, transform.position.z), Quaternion.identity) as GameObject;
+        //checks to see which random range to apply
+        if(GetComponent<SorcerorController>() != null)
+        {
+            coin.GetComponent<CoinDrop>().SetRandomRange(5, 15);
+        }
+        else
+            coin.GetComponent<CoinDrop>().SetRandomRange(10, 20);
+    }
+
+    private void OnDestroy()
+    {
+        
     }
 }

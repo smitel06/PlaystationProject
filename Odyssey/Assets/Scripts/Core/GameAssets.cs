@@ -25,4 +25,7 @@ public class GameAssets : MonoBehaviour
     public GameObject enemySkull;
     public GameObject enemyCyclops;
     public GameObject enemySorceror;
+
+    //coin prefab drop
+    public GameObject coinDrop;
 }

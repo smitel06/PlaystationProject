@@ -94,6 +94,8 @@
     <Compile Include="Assets\Scripts\FX\Shaders\Dissolve.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\Health.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerWeapon.cs" />
+    <Compile Include="Assets\Scripts\Camera\SmoothFollowCamera.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraTarget.cs" />
     <Compile Include="Assets\Scripts\UI\HUD\FadeText.cs" />
     <Compile Include="Assets\Scripts\UI\Menus\MenuButtonController.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
@@ -111,8 +113,9 @@
     <Compile Include="Assets\Scripts\Characters\Player\PlayerCurrencies.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
-    <Compile Include="Assets\Scripts\Camera\SmoothFollowCamera.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraTarget.cs" />
+    <Compile Include="Assets\Scripts\Level\prizes\CoinDrop.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsActivator.cs" />
+    <Compile Include="Assets\Scripts\Level\Objects\VaseObject.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\VS_InstancedIndirect.cginc" />

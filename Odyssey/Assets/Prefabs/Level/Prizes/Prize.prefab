@@ -53,6 +53,7 @@ MonoBehaviour:
   middlePrize: 1
   doorPrize1: {fileID: 0}
   doorPrize2: {fileID: 0}
+  achievement: {fileID: 0}
   prizeType: 3
   gem: {fileID: 4987740837129441784}
   key: {fileID: 8144300794526622974}
@@ -332,7 +333,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5409099170955965009}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.045
@@ -350,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 2985186992297808125}
-  rotationSpeed: 25
+  rotationSpeed: 150
   parent: {fileID: 199661959786754943}
   achievement: {fileID: 0}
 --- !u!135 &7250672977888703456
@@ -754,6 +755,18 @@ PrefabInstance:
     - target: {fileID: 4691974665310119113, guid: 48b96d6ee03195a42bbf6fcff33a6953, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691974665310119113, guid: 48b96d6ee03195a42bbf6fcff33a6953, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691974665310119113, guid: 48b96d6ee03195a42bbf6fcff33a6953, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691974665310119113, guid: 48b96d6ee03195a42bbf6fcff33a6953, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5356731271420673651, guid: 48b96d6ee03195a42bbf6fcff33a6953, type: 3}
       propertyPath: m_Name

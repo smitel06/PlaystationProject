@@ -695,8 +695,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 0}
   transitionSpeed: 1
-  fadeInTimer: 2
-  fadeOutTimer: 10
+  timeTillFadeIn: 0
+  timeTillFadeOut: 0
 --- !u!1 &1479755579
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d91e0b2afb522e4685ef041f7d263b3, type: 2}
   m_sharedMaterial: {fileID: -76323199135216122, guid: 0d91e0b2afb522e4685ef041f7d263b3, type: 2}
@@ -1543,8 +1543,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 0}
   transitionSpeed: 1
-  fadeInTimer: 2
-  fadeOutTimer: 10
+  timeTillFadeIn: 0
+  timeTillFadeOut: 0
 --- !u!1 &1855102357515885157
 GameObject:
   m_ObjectHideFlags: 0
@@ -3425,8 +3425,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   transitionSpeed: 1
-  fadeInTimer: 0
-  fadeOutTimer: 0
   timeTillFadeIn: 3
   timeTillFadeOut: 3
 --- !u!1 &6499607776815865691
@@ -3921,8 +3919,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 0}
   transitionSpeed: 1
-  fadeInTimer: 0
-  fadeOutTimer: 0
+  timeTillFadeIn: 0
+  timeTillFadeOut: 0
 --- !u!1 &8139326741511388910
 GameObject:
   m_ObjectHideFlags: 0
@@ -4013,8 +4011,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 0}
   transitionSpeed: 1
-  fadeInTimer: 2
-  fadeOutTimer: 10
+  timeTillFadeIn: 0
+  timeTillFadeOut: 0
 --- !u!1 &8497564261592601710
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,8 +4251,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 0}
   transitionSpeed: 0.6
-  fadeInTimer: 0
-  fadeOutTimer: 0
+  timeTillFadeIn: 0
+  timeTillFadeOut: 0
 --- !u!1 &8867076120290308426
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 public class SmoothFollowCamera : MonoBehaviour
 {
     public Transform target;
-    float maxSmoothSpeed = 0.85f;
+    float maxSmoothSpeed = 0.75f;
     float smoothSpeed;
     float distanceFromTarget;
     [SerializeField] float maxDistanceFromTarget;
@@ -18,10 +18,7 @@ public class SmoothFollowCamera : MonoBehaviour
         {
             normalizedPercentage = 1;
         }
-        if(distanceFromTarget < 7f)
-        {
-            normalizedPercentage = 0.1f;
-        }
+        
         
     }
     private void LateUpdate()

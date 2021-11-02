@@ -73,13 +73,14 @@ public class CyclopsController : MonoBehaviour
             dead = true;
         }
 
-        if (dead && deathTimer >= 2.0f && !deathDone)
+        if (dead && deathTimer >= 0.5f && !deathDone)
         {
             deathExplosion.Play();
             healthbar.SetActive(false);
             weapon.SetActive(false);
             shardBody.SetActive(true);
             Body.SetActive(false);
+            
             Destroy(gameObject, 2.0f);
             deathDone = true;
         }
@@ -88,6 +89,7 @@ public class CyclopsController : MonoBehaviour
         
     }
 
+    
     private void UpdateAgent()
     {
         

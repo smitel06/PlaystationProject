@@ -7,7 +7,7 @@ public class Coin : MonoBehaviour
     [SerializeField] ParticleSystem effect;
     [SerializeField] float rotationSpeed;
     [SerializeField] GameObject parent;
-    [SerializeField] GameObject achievement;
+    
     bool shrink;
     Prize prize;
     
@@ -16,23 +16,22 @@ public class Coin : MonoBehaviour
     {
         
         prize = parent.GetComponent<Prize>();
-        achievement = prize.achievement;
+        
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             
             effect.Play();
             shrink = true;
-            achievement.SetActive(true);
-            achievement.GetComponent<Achievement>().setText("Acquired: Coins");
+            
 
             //spawn door prizes
             if (prize.middlePrize)
             {
-                collision.gameObject.GetComponent<PlayerCurrencies>().coins += 25;
+                collision.gameObject.GetComponent<PlayerCurrencies>().setCoins(50);
                 if (prize.doorPrize1 != null)
                 {
                     prize.doorPrize1.SpawnPrize();

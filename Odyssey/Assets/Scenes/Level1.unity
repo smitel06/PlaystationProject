@@ -2919,6 +2919,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 652453376}
   m_CullTransparentMesh: 1
+--- !u!114 &666035728 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7657787362772664164, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+  m_PrefabInstance: {fileID: 401785157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &704010551
 GameObject:
   m_ObjectHideFlags: 0
@@ -6879,6 +6890,18 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.y
       value: 0.6178344
       objectReference: {fileID: 0}
+    - target: {fileID: 829750063415759213, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: gemValueText
+      value: 
+      objectReference: {fileID: 666035728}
+    - target: {fileID: 829750063415759213, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: coinValueText
+      value: 
+      objectReference: {fileID: 1758507570}
+    - target: {fileID: 829750063415759213, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: keyValueText
+      value: 
+      objectReference: {fileID: 1833117915}
     - target: {fileID: 1579548986295838576, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: healthBar
       value: 
@@ -7388,6 +7411,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734423622}
   m_CullTransparentMesh: 1
+--- !u!114 &1758507570 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1479755581, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+  m_PrefabInstance: {fileID: 401785157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1823558274 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5102500823516263428, guid: 0437df02d859fee40917c7404d499d46, type: 3}
@@ -7543,6 +7577,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823574576}
   m_CullTransparentMesh: 0
+--- !u!114 &1833117915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3706232094161981974, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+  m_PrefabInstance: {fileID: 401785157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1834238599 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4496934815565054639, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
