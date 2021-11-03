@@ -78,6 +78,7 @@ public class CyclopsController : MonoBehaviour
         if (dead && deathTimer >= 0.5f && !deathDone)
         {
             deathExplosion.Play();
+            AudioManager.instance.Play("U_C_Death");
             healthbar.SetActive(false);
             weapon.SetActive(false);
             shardBody.SetActive(true);
@@ -100,6 +101,7 @@ public class CyclopsController : MonoBehaviour
         {
             agent.enabled = false;
             animator.applyRootMotion = true;
+            AudioManager.instance.Play("U_C_Attack2");
         }
         else
         {
@@ -167,6 +169,7 @@ public class CyclopsController : MonoBehaviour
     public void TakeDamage()
     {
         GetComponent<Animator>().SetTrigger("Damaged");
+        AudioManager.instance.Play("U_C_Impact");
     }
 
 

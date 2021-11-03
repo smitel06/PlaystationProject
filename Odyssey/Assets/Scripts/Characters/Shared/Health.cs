@@ -22,12 +22,11 @@ public class Health : MonoBehaviour
         if(GetComponent<Animator>() != null)
         {
             GetComponent<Animator>().SetTrigger("Damaged");
-                    
-            AudioManager.instance.Play("U_T_Impact1");
-           
+                              
         }
         currentHealth -= damage;
         DamagePopUp.Create(this.transform.position, damage);
+        AudioManager.instance.Play("U_Damage2");
     }
 
     void Update()

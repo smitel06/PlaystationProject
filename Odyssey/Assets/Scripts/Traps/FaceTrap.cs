@@ -32,6 +32,7 @@ public class FaceTrap : MonoBehaviour
     IEnumerator Activate(GameObject other)
     {
         ParticleEffect.SetActive(true);
+        AudioManager.instance.Play("U_TF_Attacks3");
         other.GetComponent<Health>().TakeDamage(flameDamage);
         yield return new WaitForSeconds(1.0f);
         animator.enabled = false;

@@ -102,6 +102,7 @@ public class SorcerorController : MonoBehaviour
         if (dead && deathTimer >= 2.0f && !deathDone)
         {
             explosion_fx.Play();
+            AudioManager.instance.Play("U_S_Death");
             weapon.SetActive(false);
             hood.SetActive(false);
             cloak.SetActive(false);
@@ -138,6 +139,7 @@ public class SorcerorController : MonoBehaviour
             {
                 Debug.Log("sorcerorAttack");
                 animator.SetTrigger("Attack");
+                AudioManager.instance.Play("U_S_Attack3");
                 attackFrequency = attackSpeed;
             }
         }

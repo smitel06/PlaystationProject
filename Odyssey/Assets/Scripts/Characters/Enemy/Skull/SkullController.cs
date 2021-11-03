@@ -102,6 +102,7 @@ public class SkullController : MonoBehaviour
             cooldown = false;
             //swap models
             fragmented_skull.SetActive(true);
+            AudioManager.instance.Play("U_SK_Death1");
             healthbar.SetActive(false);
             skull.SetActive(false);
             dropCoin();
