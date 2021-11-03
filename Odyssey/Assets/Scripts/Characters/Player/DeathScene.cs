@@ -17,7 +17,7 @@ public class DeathScene : MonoBehaviour
     }
     IEnumerator deathSequence()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
         //restart game
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

@@ -24,7 +24,7 @@ public class PlayerRestart : MonoBehaviour
 
     private void Update()
     {
-        if(transform.position.y <= 0.52)
+        if(transform.position.y < 0.55)
         {
             followCamera.enabled = false;
             smoothFollowCamera.enabled = true;

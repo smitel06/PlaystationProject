@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] ParticleSystem bloodSplatter;
     [SerializeField] ParticleSystem deathExplosion;
-
+    
     private void Start()
     {
         //setup the components we need
@@ -85,25 +85,48 @@ public class PlayerController : MonoBehaviour
 
     private void IsPlayerDead()
     {
-        if (health.currentHealth <= 0)
+        if(health.currentHealth <= 0)
         {
-            //turn on root transform for deaths
-            animator.applyRootMotion = true;
             deathExplosion.Play();
+        }
+
+        if (health.currentHealth <= 0 && !dead)
+        {
+            
             //check health if below zero you die
-            dead = true;
-
-
+            
             //stop moving you are dead
             rb.velocity = new Vector3(0, 0, 0);
             //each number corrosponds to a death animation
             randomDeath = Random.Range(0, 4);
             animator.SetInteger("RandomDeath", randomDeath);
-            
-
             animator.SetTrigger("Dead");
-            deathHud.SetActive(true);
+            
+            if (GetComponent<Buffs>().lifeBonus)
+            {
+                StartCoroutine(Revive());
+            }
+            else
+            {
+                deathHud.SetActive(true);
+            }
+
+            dead = true;
         }
+    }
+
+    IEnumerator Revive()
+    {
+        GetComponent<Buffs>().lifeBonus = false;
+        
+
+        yield return new WaitForSeconds(5f);
+        deathExplosion.Stop();
+        animator.SetTrigger("Revive");
+        health.currentHealth = health.maxHealth;
+        yield return new WaitForSeconds(2f);
+        dead = false;
+
     }
 
     private void checkAnimatorStates()

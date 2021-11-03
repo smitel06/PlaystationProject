@@ -6,19 +6,14 @@ using UnityEngine.UI;
 public class PurchaseItem : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    int coins;
+    [SerializeField] int coins;
     float distance;
     [SerializeField] float minDistance;
     [SerializeField] int cost;
     [SerializeField] GameObject popUp;
-    Buffs buffs;
     bool canBuy;
     
-    void Start()
-    {
-        coins = player.GetComponent<PlayerCurrencies>().coins;
-        buffs = player.GetComponent<Buffs>();
-    }
+    
 
     private void Update()
     {
@@ -26,6 +21,7 @@ public class PurchaseItem : MonoBehaviour
 
         if (distance < minDistance)
         {
+            coins = player.GetComponent<PlayerCurrencies>().coins;
             popUp.SetActive(true);
             canBuy = true;
         }
@@ -35,17 +31,28 @@ public class PurchaseItem : MonoBehaviour
             canBuy = false;
         }
 
-        if(canBuy && Input.GetAxis("Interact") > 0)
+        if(canBuy && Input.GetButtonDown("Interact"))
         {
             if(cost == 250)
             {
                 if(coins >= 250)
                 {
-                    if(!buffs.lifeBonus)
+                    if(!player.GetComponent<Buffs>().lifeBonus)
                     {
-                        buffs.lifeBonus = true;
+                        player.GetComponent<Buffs>().lifeBonus = true;
+                        
                         player.GetComponent<PlayerCurrencies>().setCoins(-250);
+                        popUp.SetActive(false);
+                        Destroy(gameObject);
                     }
+                }
+            }
+            else if (cost == 125)
+            {
+                if (coins >= 125)
+                {
+                    player.GetComponent<Health>().changeMaxValue(20);
+                    player.GetComponent<PlayerCurrencies>().setCoins(-125);
                 }
             }
         }

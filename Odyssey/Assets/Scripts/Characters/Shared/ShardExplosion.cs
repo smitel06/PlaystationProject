@@ -41,8 +41,5 @@ public class ShardExplosion : MonoBehaviour
             coin.GetComponent<CoinDrop>().SetRandomRange(10, 20);
     }
 
-    private void OnDestroy()
-    {
-        
-    }
+    
 }

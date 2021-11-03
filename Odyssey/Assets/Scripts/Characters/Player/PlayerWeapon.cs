@@ -6,10 +6,7 @@ public class PlayerWeapon : MonoBehaviour
 {
     [SerializeField] float damage;
     [SerializeField] GameObject player;
-    private void OnEnable()
-    {
-        
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {

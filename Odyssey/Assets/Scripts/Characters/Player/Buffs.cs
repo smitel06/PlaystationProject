@@ -5,4 +5,7 @@ using UnityEngine;
 public class Buffs : MonoBehaviour
 {
     public bool lifeBonus;
+    
+    
 }
+

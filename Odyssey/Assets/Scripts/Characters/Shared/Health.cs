@@ -37,7 +37,10 @@ public class Health : MonoBehaviour
     {
         maxHealth += amount;
         if (healthBar != null)
+        {
             healthBar.maxValue = maxHealth;
+            currentHealth = maxHealth;
+        }
     }
 
     

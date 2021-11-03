@@ -1396,7 +1396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 199531462640771810, guid: 0437df02d859fee40917c7404d499d46, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1145676045332760143, guid: 0437df02d859fee40917c7404d499d46, type: 3}
       propertyPath: timeTillFadeOut
@@ -1408,7 +1408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1631944592285621481, guid: 0437df02d859fee40917c7404d499d46, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3297066300220860040, guid: 0437df02d859fee40917c7404d499d46, type: 3}
       propertyPath: fadeOutTimer
@@ -6071,6 +6071,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 259144314}
+--- !u!1 &1404391843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1404391844}
+  - component: {fileID: 1404391845}
+  m_Layer: 0
+  m_Name: Purchase_popup (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1404391844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404391843}
+  m_LocalRotation: {x: -0, y: 0.35020745, z: -0, w: 0.93667215}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.8333331, y: 1.8333335, z: 1.8333331}
+  m_Children: []
+  m_Father: {fileID: 1731977408}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1404391845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404391843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9860516bde1b12a4e9580499a3e64379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1661259517}
+  coins: 0
+  minDistance: 3.5
+  cost: 125
+  popUp: {fileID: 2119798446}
 --- !u!1 &1431554295
 GameObject:
   m_ObjectHideFlags: 0
@@ -6915,7 +6963,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1574075211
 Transform:
   m_ObjectHideFlags: 0
@@ -6943,6 +6991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1661259517}
+  coins: 0
   minDistance: 3.5
   cost: 250
   popUp: {fileID: 2119798446}
@@ -7168,6 +7217,30 @@ PrefabInstance:
       propertyPath: deathHud
       value: 
       objectReference: {fileID: 1494660112}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0.000000029802322
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.19239597
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.3928512
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.06343152
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.9349361
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.6178344
+      objectReference: {fileID: 0}
     - target: {fileID: 829750063415759213, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: coinValueText
       value: 
@@ -7192,6 +7265,10 @@ PrefabInstance:
       propertyPath: smoothFollowCamera
       value: 
       objectReference: {fileID: 1943876038}
+    - target: {fileID: 7341195713871303113, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: lifeBonus
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8342788439766586614, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.7
@@ -8798,11 +8875,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9117153927881346137, guid: 5732aceca9790454f834ca387c69592e, type: 3}
       propertyPath: orthographic size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9117153927881346137, guid: 5732aceca9790454f834ca387c69592e, type: 3}
       propertyPath: near clip plane
-      value: -1025
+      value: -1500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5732aceca9790454f834ca387c69592e, type: 3}
@@ -9939,6 +10016,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 229511684}
+    - target: {fileID: 729803465, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: minDistanceTillSwap
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1928427875, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: room0hud
       value: 
@@ -10019,6 +10100,10 @@ PrefabInstance:
       propertyPath: smoothFollowCamera
       value: 
       objectReference: {fileID: 1943876038}
+    - target: {fileID: 8442489391306092266, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: merchantRoomUnlocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8796151570073109320, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: achievement
       value: 

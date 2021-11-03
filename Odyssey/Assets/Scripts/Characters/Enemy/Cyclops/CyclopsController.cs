@@ -55,6 +55,7 @@ public class CyclopsController : MonoBehaviour
     {
         if (target.GetComponent<PlayerController>().dead == false && !dead)
         {
+            animator.SetBool("Idle", false);
             //distance from player will be used in a few ways
             currentDistanceFromPlayer = Vector3.Distance(transform.position, target.transform.position);
 
@@ -64,8 +65,9 @@ public class CyclopsController : MonoBehaviour
         }
         else if(!dead)
         {
-            animator.SetTrigger("Idle");
+            animator.SetBool("Idle", true);
         }
+        
 
         if(health.currentHealth <= 0 && dead == false)
         {

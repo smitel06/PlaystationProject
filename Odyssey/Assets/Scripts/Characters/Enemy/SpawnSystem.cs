@@ -22,7 +22,6 @@ public class SpawnSystem : MonoBehaviour
         //fill the array with spawn points, enemies will be spawned here
         spawnPoints = this.GetComponentsInChildren<SpawnPoint>();
 
-        
         spawnPointIndex = 0;
 
         //spawn some enemies

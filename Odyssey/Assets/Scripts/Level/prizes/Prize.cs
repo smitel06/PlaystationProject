@@ -69,9 +69,6 @@ public class Prize : MonoBehaviour
         prizeChosen = true;
     }
 
-    private void Update()
-    {
-        
-    }
+    
 }
 
