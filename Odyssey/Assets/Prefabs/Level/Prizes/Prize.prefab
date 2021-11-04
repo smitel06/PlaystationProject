@@ -54,7 +54,7 @@ MonoBehaviour:
   doorPrize1: {fileID: 0}
   doorPrize2: {fileID: 0}
   achievement: {fileID: 0}
-  prizeType: 3
+  prizeType: 0
   gem: {fileID: 4987740837129441784}
   key: {fileID: 8144300794526622974}
   heart: {fileID: 490462553443440875}
@@ -353,7 +353,6 @@ MonoBehaviour:
   effect: {fileID: 2985186992297808125}
   rotationSpeed: 150
   parent: {fileID: 199661959786754943}
-  achievement: {fileID: 0}
 --- !u!135 &7250672977888703456
 SphereCollider:
   m_ObjectHideFlags: 0
