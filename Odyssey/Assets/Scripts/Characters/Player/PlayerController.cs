@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] ParticleSystem bloodSplatter;
     [SerializeField] ParticleSystem deathExplosion;
-    
+    bool reviving;
     private void Start()
     {
         //setup the components we need
@@ -85,40 +85,42 @@ public class PlayerController : MonoBehaviour
 
     private void IsPlayerDead()
     {
-        if(health.currentHealth <= 0)
+        if (health.currentHealth <= 0 )
         {
-            deathExplosion.Play();
-        }
 
-        if (health.currentHealth <= 0 && !dead)
-        {
-            
             //check health if below zero you die
-            
+            deathExplosion.Play();
+            dead = true;
             //stop moving you are dead
             rb.velocity = new Vector3(0, 0, 0);
             //each number corrosponds to a death animation
             randomDeath = Random.Range(0, 4);
             animator.SetInteger("RandomDeath", randomDeath);
-            animator.SetTrigger("Dead");
             
+            animator.SetLayerWeight(animator.GetLayerIndex("Base"), 1);
+            animator.SetLayerWeight(1, 0);
+            animator.SetLayerWeight(2, 0);
+
             if (GetComponent<Buffs>().lifeBonus)
             {
+                animator.SetTrigger("Dead");
                 StartCoroutine(Revive());
+                
             }
-            else
+            else if(!GetComponent<Buffs>().lifeBonus && !reviving)
             {
+                animator.SetTrigger("Dead");
                 deathHud.SetActive(true);
             }
 
-            dead = true;
+           
         }
     }
 
     IEnumerator Revive()
     {
+        reviving = true; 
         GetComponent<Buffs>().lifeBonus = false;
-        
 
         yield return new WaitForSeconds(5f);
         deathExplosion.Stop();
@@ -126,14 +128,14 @@ public class PlayerController : MonoBehaviour
         health.currentHealth = health.maxHealth;
         yield return new WaitForSeconds(2f);
         dead = false;
+        reviving = false;
 
     }
 
     private void checkAnimatorStates()
     {
         //checks what is currently playing on animator controller
-        if (animator.GetCurrentAnimatorStateInfo(2).IsName("hit1") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit2") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit1_continued")
-            || this.animator.GetCurrentAnimatorStateInfo(2).IsName("Block"))
+        if (animator.GetCurrentAnimatorStateInfo(2).IsName("hit1") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit2") || this.animator.GetCurrentAnimatorStateInfo(2).IsName("hit1_continued"))
         {
             animator.SetLayerWeight(animator.GetLayerIndex("Base"), 0);
             animator.SetLayerWeight(1, 1);

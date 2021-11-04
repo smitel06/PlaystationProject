@@ -41,7 +41,7 @@ public class PlayerCurrencies : MonoBehaviour
     private void Start()
     {
         //always start with no coins
-        setCoins(250);
+        setCoins(0);
         
     }
 
