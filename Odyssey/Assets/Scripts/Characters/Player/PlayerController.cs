@@ -37,6 +37,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] ParticleSystem bloodSplatter;
     [SerializeField] ParticleSystem deathExplosion;
     bool reviving;
+
+    public void damageSound()
+    {
+        //insert damage sound here
+    }
     private void Start()
     {
         //setup the components we need

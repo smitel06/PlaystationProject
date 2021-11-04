@@ -36,7 +36,10 @@ public class SkullController : MonoBehaviour
     [SerializeField] GameObject healthbar;
     bool coinDropped;
 
-
+    public void damageSound()
+    {
+        //insert damage sound here
+    }
 
     private void Awake()
     {

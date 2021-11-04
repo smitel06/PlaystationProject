@@ -37,6 +37,10 @@ public class CyclopsController : MonoBehaviour
     float deathTimer;
     bool deathDone;
 
+    public void damageSound()
+    {
+        //insert damage sound here
+    }
     void Awake()
     {
         target = GameObject.Find("Player");

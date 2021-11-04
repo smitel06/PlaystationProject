@@ -7,7 +7,7 @@ public class PlayerCurrencies : MonoBehaviour
 {
     public int coins;
     int oldCoinAmount;
-    [SerializeField]int lerpedCoins;
+    [SerializeField]float lerpedCoins;
     [SerializeField] TextMeshProUGUI coinValueText;
     public int gems;
     [SerializeField] TextMeshProUGUI gemValueText;
@@ -25,14 +25,14 @@ public class PlayerCurrencies : MonoBehaviour
                 coinValueText.text = lerpedCoins.ToString();
 
             }
-            
-            if(lerpedCoins > coins)
+            else if(lerpedCoins > coins)
             {
                 lerpedCoins -= 2;
                 coinValueText.text = lerpedCoins.ToString();
             }
 
-            if(lerpedCoins == coins)
+
+            if (lerpedCoins == coins)
             {
                 setCoinLerp = false;
             }
@@ -40,8 +40,7 @@ public class PlayerCurrencies : MonoBehaviour
     }
     private void Start()
     {
-        //always start with no coins
-        setCoins(0);
+        
         
     }
 

@@ -40,7 +40,10 @@ public class SorcerorController : MonoBehaviour
     [SerializeField] float attackFrequency;
     float attackSpeed;
 
-    
+    public void damageSound()
+    {
+        //insert damage sound here
+    }
     private void Start()
     {
         attackSpeed = attackFrequency;
