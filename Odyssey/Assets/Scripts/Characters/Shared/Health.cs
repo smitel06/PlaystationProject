@@ -27,26 +27,7 @@ public class Health : MonoBehaviour
         currentHealth -= damage;
         DamagePopUp.Create(this.transform.position, damage);
 
-        if (GetComponent<SkullController>() != null)
-        {
-            
-            GetComponent<SkullController>().damageSound();
-        }
-        else if (GetComponent<CyclopsController>() != null)
-        {
-            
-            GetComponent<CyclopsController>().damageSound();
-        }
-        else if (GetComponent<SorcerorController>() != null)
-        {
-            
-            GetComponent<SorcerorController>().damageSound();
-        }
-        else if (GetComponent<PlayerController>() != null)
-        {
-            
-            GetComponent<PlayerController>().damageSound();
-        }
+        GetComponent<CharacterSounds>().PlayImpactSound();
     }
 
     void Update()

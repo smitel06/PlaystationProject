@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
     {
         if (health.currentHealth <= 0 )
         {
-
+            GetComponent<CharacterSounds>().PlayDeathSound();
             //check health if below zero you die
             deathExplosion.Play();
             dead = true;
@@ -167,6 +167,7 @@ public class PlayerController : MonoBehaviour
 
             animator.SetTrigger("Attack");
             
+            
         }
         
 
@@ -237,6 +238,7 @@ public class PlayerController : MonoBehaviour
 
     void Hit()
     {
+        GetComponent<CharacterSounds>().PlayAttackSound();
         weaponCollider.enabled = true;
     }
 

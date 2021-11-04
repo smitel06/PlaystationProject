@@ -101,6 +101,7 @@
     <Compile Include="Assets\Scripts\Camera\CameraTarget.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsActivator.cs" />
     <Compile Include="Assets\Scripts\UI\HUD\FadeText.cs" />
+    <Compile Include="Assets\Scripts\Core\CollisionActivateGameObject.cs" />
     <Compile Include="Assets\Scripts\UI\Menus\MenuButtonController.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Prefabs\Core\Rooms\Room.cs" />
@@ -119,7 +120,7 @@
     <Compile Include="Assets\Scripts\Characters\Player\PlayerCurrencies.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
-    <Compile Include="Assets\Scripts\Core\CollisionActivateGameObject.cs" />
+    <Compile Include="Assets\Scripts\Characters\Shared\CharacterSounds.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\VS_InstancedIndirect.cginc" />

@@ -8156,6 +8156,7 @@ GameObject:
   - component: {fileID: 6993084362485635847}
   - component: {fileID: 829750063415759213}
   - component: {fileID: 7341195713871303113}
+  - component: {fileID: 4419110472546701834}
   m_Layer: 8
   m_Name: M_Ulysses_Model
   m_TagString: Player
@@ -8323,6 +8324,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeBonus: 0
+--- !u!114 &4419110472546701834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8686415976426999372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c541c93df4d3db4f819c66e9fbf0f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSound: //Insert name of attack sound here
+  impactSound: //Insert name of impact sound here
+  deathSound: //Insert name of death sound here
 --- !u!1 &8800981891546126952
 GameObject:
   m_ObjectHideFlags: 0
@@ -8501,14 +8517,14 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 49c4eb8611df61e4485f5bf150e4f12d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 49c4eb8611df61e4485f5bf150e4f12d, type: 3}
---- !u!1 &919132149449688689 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 49c4eb8611df61e4485f5bf150e4f12d, type: 3}
-  m_PrefabInstance: {fileID: 295320352}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &543450653438467275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 49c4eb8611df61e4485f5bf150e4f12d, type: 3}
+  m_PrefabInstance: {fileID: 295320352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &919132149449688689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 49c4eb8611df61e4485f5bf150e4f12d, type: 3}
   m_PrefabInstance: {fileID: 295320352}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3538000890116486419
@@ -8841,14 +8857,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4430919f14c50f84085d287cbcb2c30e, type: 3}
---- !u!4 &8462353313017111306 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4826957403153350, guid: 4430919f14c50f84085d287cbcb2c30e, type: 3}
-  m_PrefabInstance: {fileID: 8458173066329997516}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &8637544586903840830 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198104090543139058, guid: 4430919f14c50f84085d287cbcb2c30e, type: 3}
+  m_PrefabInstance: {fileID: 8458173066329997516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8462353313017111306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4826957403153350, guid: 4430919f14c50f84085d287cbcb2c30e, type: 3}
   m_PrefabInstance: {fileID: 8458173066329997516}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8998551811076393022

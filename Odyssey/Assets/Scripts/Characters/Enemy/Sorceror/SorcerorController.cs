@@ -40,10 +40,7 @@ public class SorcerorController : MonoBehaviour
     [SerializeField] float attackFrequency;
     float attackSpeed;
 
-    public void damageSound()
-    {
-        //insert damage sound here
-    }
+    
     private void Start()
     {
         attackSpeed = attackFrequency;
@@ -102,10 +99,11 @@ public class SorcerorController : MonoBehaviour
             dead = true;
         }
 
-        if (dead && deathTimer >= 2.0f && !deathDone)
+        if (dead && deathTimer >= 1.0f && !deathDone)
         {
+            GetComponent<CharacterSounds>().PlayDeathSound();
+
             explosion_fx.Play();
-            AudioManager.instance.Play("U_S_Death");
             weapon.SetActive(false);
             hood.SetActive(false);
             cloak.SetActive(false);
@@ -140,9 +138,9 @@ public class SorcerorController : MonoBehaviour
             //check for distances and test to see where the player is 
             if (Vector3.Distance(target.transform.position, transform.position) <= 10 && Vector3.Distance(target.transform.position, transform.position) >= 2)
             {
+                GetComponent<CharacterSounds>().PlayAttackSound();
                 Debug.Log("sorcerorAttack");
                 animator.SetTrigger("Attack");
-                AudioManager.instance.Play("U_S_Attack3");
                 attackFrequency = attackSpeed;
             }
         }

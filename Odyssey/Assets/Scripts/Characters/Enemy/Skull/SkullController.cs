@@ -36,10 +36,7 @@ public class SkullController : MonoBehaviour
     [SerializeField] GameObject healthbar;
     bool coinDropped;
 
-    public void damageSound()
-    {
-        //insert damage sound here
-    }
+    
 
     private void Awake()
     {
@@ -64,7 +61,6 @@ public class SkullController : MonoBehaviour
             if (attackMode)
             {
                 StartCoroutine("Attacking");
-
             }
 
 
@@ -98,7 +94,7 @@ public class SkullController : MonoBehaviour
     {
         if (health.currentHealth <= 0)
         {
-            
+            GetComponent<CharacterSounds>().PlayDeathSound();
             //turn off all bools
             attackMode = false;
             canAttack = false;
@@ -190,6 +186,7 @@ public class SkullController : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
+                GetComponent<CharacterSounds>().PlayAttackSound();
                 GetComponent<Collider>().enabled = false;
                 cooldownTimer = 0;
                 timeCanAttack = 0;

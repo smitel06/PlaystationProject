@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 1949138983}
   - component: {fileID: 4264855915357297197}
   - component: {fileID: 594201201961926589}
+  - component: {fileID: 452821829178784870}
   m_Layer: 0
   m_Name: M_Skull_Model
   m_TagString: Enemy
@@ -193,6 +194,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &452821829178784870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218520066643872978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c541c93df4d3db4f819c66e9fbf0f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSound: //Insert name of attack sound here
+  impactSound: //Insert name of impact sound here
+  deathSound: //Insert name of death sound here
 --- !u!95 &982754783769855437
 Animator:
   serializedVersion: 3

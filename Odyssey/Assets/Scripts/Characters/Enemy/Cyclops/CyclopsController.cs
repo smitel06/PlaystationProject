@@ -37,10 +37,7 @@ public class CyclopsController : MonoBehaviour
     float deathTimer;
     bool deathDone;
 
-    public void damageSound()
-    {
-        //insert damage sound here
-    }
+    
     void Awake()
     {
         target = GameObject.Find("Player");
@@ -75,6 +72,7 @@ public class CyclopsController : MonoBehaviour
 
         if(health.currentHealth <= 0 && dead == false)
         {
+            GetComponent<CharacterSounds>().PlayDeathSound();
             animator.SetTrigger("Dead");
             dead = true;
         }
@@ -105,7 +103,7 @@ public class CyclopsController : MonoBehaviour
         {
             agent.enabled = false;
             animator.applyRootMotion = true;
-            AudioManager.instance.Play("U_C_Attack2");
+            
         }
         else
         {
@@ -134,8 +132,8 @@ public class CyclopsController : MonoBehaviour
         if (currentDistanceFromPlayer <= attackRange && currentDistanceFromPlayer > 2.5 && AttackMode)
         {
             agent.enabled = false;
-            
             animator.SetBool("canAttack", true);
+            GetComponent<CharacterSounds>().PlayAttackSound();
         }
         else
         {
@@ -170,11 +168,7 @@ public class CyclopsController : MonoBehaviour
         weaponCollider.enabled = false;
     }
 
-    public void TakeDamage()
-    {
-        GetComponent<Animator>().SetTrigger("Damaged");
-        AudioManager.instance.Play("U_C_Impact");
-    }
+    
 
 
 }
