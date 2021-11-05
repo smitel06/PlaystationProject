@@ -15,6 +15,7 @@ public class CyclopsActivator : MonoBehaviour
         if (Vector3.Distance(target.transform.position, transform.position) < 10)
         {
             GetComponent < CyclopsController>().enabled = true;
+            GetComponent<CyclopsActivator>().enabled = false;
         }
     }
 }

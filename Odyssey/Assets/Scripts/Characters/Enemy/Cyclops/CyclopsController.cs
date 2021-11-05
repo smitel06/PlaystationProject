@@ -38,7 +38,7 @@ public class CyclopsController : MonoBehaviour
     bool deathDone;
 
     
-    void Awake()
+    void OnEnable()
     {
         target = GameObject.Find("Player");
         agent = GetComponent<NavMeshAgent>();

@@ -50,6 +50,7 @@ public class RoomTransitions : MonoBehaviour
         {
             rooms[i].roomIndex = i;
             rooms[i].nextRoomPrize = rooms[i + 1].middlePrize;
+            rooms[i].Setup();
             rooms[i].gameObject.SetActive(false);
         }
 
@@ -99,6 +100,7 @@ public class RoomTransitions : MonoBehaviour
         {
             if(!merchantRoomUnlocked)
             {
+                
                 currentRoomIndex++;
                 rooms[currentRoomIndex].gameObject.SetActive(true);
             }

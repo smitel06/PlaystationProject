@@ -12,16 +12,19 @@ public class Room : MonoBehaviour
     bool spawn;
     public Prize nextRoomPrize;
 
-    private void OnEnable()
+    public void Setup()
     {
         middlePrize.nextRoomPrize = nextRoomPrize;
     }
     private void Update()
     {
-        if(spawnSystem.finished && !spawn)
+        if (spawnSystem != null)
         {
-            spawn = true;
-            middlePrize.SpawnPrize();
+            if (spawnSystem.finished && !spawn)
+            {
+                spawn = true;
+                middlePrize.SpawnPrize();
+            }
         }
     }
 

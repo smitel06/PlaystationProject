@@ -33,16 +33,19 @@ public class Key : MonoBehaviour
                 collision.gameObject.GetComponent<PlayerCurrencies>().keys++;
                 if (prize.doorPrize1 != null)
                 {
+                    prize.doorPrize1.nextRoomPrize = prize.nextRoomPrize;
                     prize.doorPrize1.SpawnPrize();
                 }
 
                 if (prize.doorPrize2 != null)
                 {
+                    prize.doorPrize2.nextRoomPrize = prize.nextRoomPrize;
                     prize.doorPrize2.SpawnPrize();
                 }
 
                 if (prize.doorPrize3 != null)
                 {
+                    prize.doorPrize3.nextRoomPrize = prize.nextRoomPrize;
                     prize.doorPrize3.SpawnPrize();
                 }
             }

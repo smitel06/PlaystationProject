@@ -31,18 +31,21 @@ public class Heart : MonoBehaviour
             if (prize.middlePrize)
             {
                 collision.gameObject.GetComponent<Health>().changeMaxValue(healthIncrease);
-                if(prize.doorPrize1 != null)
+                if (prize.doorPrize1 != null)
                 {
+                    prize.doorPrize1.nextRoomPrize = prize.nextRoomPrize;
                     prize.doorPrize1.SpawnPrize();
                 }
-                
+
                 if (prize.doorPrize2 != null)
                 {
+                    prize.doorPrize2.nextRoomPrize = prize.nextRoomPrize;
                     prize.doorPrize2.SpawnPrize();
                 }
 
                 if (prize.doorPrize3 != null)
                 {
+                    prize.doorPrize3.nextRoomPrize = prize.nextRoomPrize;
                     prize.doorPrize3.SpawnPrize();
                 }
             }
