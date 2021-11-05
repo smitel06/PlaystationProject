@@ -12,6 +12,7 @@ public class SpawnSystem : MonoBehaviour
     int waveCounter;
     int spawnPointIndex;
     int randomEnemyType;
+    int randomEnemyType2;
     int numberOfWaves;
     GameObject cyclops;
     GameObject sorceror;
@@ -32,6 +33,20 @@ public class SpawnSystem : MonoBehaviour
             numberOfWaves = 2;
             randomEnemyType = Random.Range(1, 4);
         }
+        else if(room.roomIndex > 1 && room.roomIndex <= 7)
+        {
+            //Room 2 > 7 = two enemies(between 2 to 4 waves)
+            numberOfWaves = Random.Range(2, 5);
+            //set two enemies
+            randomEnemyType = Random.Range(1, 4);
+            randomEnemyType2 = Random.Range(1, 4);
+        }
+        else if(room.roomIndex > 8)
+        {
+            //Room 8 > 10 = 3 enemies(between 3 to 7 waves) or introducing harder enemies
+            numberOfWaves = Random.Range(3, 8);
+        }
+
 
     }
 
@@ -66,9 +81,26 @@ public class SpawnSystem : MonoBehaviour
 
     void SpawnEnemies()
     {
-        
+        if(room.roomIndex > 1 && room.roomIndex <= 7)
+        {
+            //pick a type before each wave
+            int randomPickType = Random.Range(0, 2);
+            if(randomPickType == 0)
+            {
+                //swap the ints over if there is a 0
+                int temp = randomEnemyType;
+                randomEnemyType = randomEnemyType2;
+                randomEnemyType2 = temp;
+            }
+        }
+        else if (room.roomIndex > 8)
+        {
+            //completely random for each wave
+            randomEnemyType = Random.Range(1, 4);
+        }
+
         //push enemies into wave
-        if(randomEnemyType == 1)
+        if (randomEnemyType == 1)
         {
             //push in two cyclops to wave
             enemies.Add(Instantiate(cyclops, spawnPoints[spawnPointIndex].transform.position, spawnPoints[spawnPointIndex].transform.localRotation));

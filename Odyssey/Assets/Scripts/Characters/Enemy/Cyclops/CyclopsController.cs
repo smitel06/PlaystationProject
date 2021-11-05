@@ -54,7 +54,7 @@ public class CyclopsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target.GetComponent<PlayerController>().dead == false && !dead)
+        if (!target.GetComponent<PlayerController>().dead && !dead)
         {
             animator.SetBool("Idle", false);
             //distance from player will be used in a few ways
@@ -64,7 +64,7 @@ public class CyclopsController : MonoBehaviour
             UpdateAnimator();
             UpdateAttacking();
         }
-        else if(!dead)
+        else if(!dead && target.GetComponent<PlayerController>().dead)
         {
             animator.SetBool("Idle", true);
         }

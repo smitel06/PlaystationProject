@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class Prize : MonoBehaviour
 {
+    public int prizeType;
+    [SerializeField] GameObject gem;
+    [SerializeField] GameObject key;
+    [SerializeField] GameObject heart;
+    [SerializeField] GameObject grapes;
+    [SerializeField] GameObject coin;
+    [SerializeField] GameObject buff;
+
+    public RoomTransitions roomTransitions;
+    GameObject selectedPrize;
+    public Prize nextRoomPrize;
     public bool middlePrize;
     bool prizeChosen;
     public Prize doorPrize1;
     public Prize doorPrize2 = null;
-    public GameObject achievement;
+    public Prize doorPrize3 = null;
+    public AchievementReferences achievementReferences;
+    
 
     private void Start()
     {
@@ -17,26 +30,17 @@ public class Prize : MonoBehaviour
         //middle prize won't have grapes
         if (!middlePrize)
         {
-            prizeType = Random.Range(0, 6);
+            prizeType = Random.Range(0, 5);
         }
         else
         {
-            prizeType = Random.Range(0, 5);
+            prizeType = Random.Range(0, 4);
         }
 
 
 
     }
 
-    public int prizeType;
-    [SerializeField] GameObject gem;
-    [SerializeField] GameObject key;
-    [SerializeField] GameObject heart;
-    [SerializeField] GameObject grapes;
-    [SerializeField] GameObject coin;
-    [SerializeField] GameObject buff;
-    GameObject selectedPrize;
-    public Prize nextRoomPrize;
     public void SpawnPrize()
     {
         //select prize type and push to selected prize so we can manage
@@ -58,11 +62,11 @@ public class Prize : MonoBehaviour
         }
         else if (prizeType == 4)
         {
-            selectedPrize = buff;
+            selectedPrize = grapes;
         }
         else if (prizeType == 5)
         {
-            selectedPrize = grapes;
+            selectedPrize = buff;
         }
 
         selectedPrize.SetActive(true);

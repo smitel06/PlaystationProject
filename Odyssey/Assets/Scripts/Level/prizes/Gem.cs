@@ -14,7 +14,7 @@ public class Gem : MonoBehaviour
     private void OnEnable()
     {
         prize = parent.GetComponent<Prize>();
-        achievement = prize.achievement;
+        achievement = prize.achievementReferences.DivineJewels;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -25,7 +25,7 @@ public class Gem : MonoBehaviour
             effect.Play();
             shrink = true;
             achievement.SetActive(true);
-            achievement.GetComponent<Achievement>().setText("Acquired: Gem");
+            
             
             //spawn door prizes
             if(prize.middlePrize)
@@ -38,7 +38,12 @@ public class Gem : MonoBehaviour
 
                 if (prize.doorPrize2 != null)
                 {
-                    prize.doorPrize1.SpawnPrize();
+                    prize.doorPrize2.SpawnPrize();
+                }
+
+                if (prize.doorPrize3 != null)
+                {
+                    prize.doorPrize3.SpawnPrize();
                 }
             }
             else

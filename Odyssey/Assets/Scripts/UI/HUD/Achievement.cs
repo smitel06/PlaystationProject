@@ -7,15 +7,24 @@ using TMPro;
 public class Achievement : MonoBehaviour
 {
     [SerializeField]float timer;
-    [SerializeField] TextMeshProUGUI textMesh;
-    [SerializeField] GameObject textObject;
-    [SerializeField] GameObject imageObject;
+
+    [SerializeField] GameObject achievementFX;
+    [SerializeField] GameObject achievementImage;
+    [SerializeField] GameObject achievementText;
+    [SerializeField] GameObject achievementTuto;
+    [SerializeField] GameObject tutoFrame;
+    [SerializeField] GameObject tutoText;
 
     private void OnEnable()
     {
         timer = 8;
-        textObject.SetActive(true);
-        imageObject.SetActive(true);
+        achievementFX.SetActive(true);
+        achievementImage.SetActive(true);
+        achievementText.SetActive(true);
+        achievementTuto.SetActive(true);
+        tutoFrame.SetActive(true);
+        tutoText.SetActive(true);
+
     }
 
     // Update is called once per frame
@@ -23,17 +32,17 @@ public class Achievement : MonoBehaviour
     {
         if (timer <= 0)
         {
-            textObject.SetActive(false);
-            imageObject.SetActive(false);
-            this.gameObject.SetActive(false);
-
+            achievementFX.SetActive(false);
+            achievementImage.SetActive(false);
+            achievementText.SetActive(false);
+            achievementTuto.SetActive(false);
+            tutoFrame.SetActive(false);
+            tutoText.SetActive(false);
+            gameObject.SetActive(false);
         }
         else
             timer -= Time.deltaTime;
     }
 
-    public void setText(string textToSet)
-    {
-        textMesh.text = textToSet;
-    }
+    
 }

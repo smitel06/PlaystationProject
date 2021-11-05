@@ -36,14 +36,22 @@ public class RoomTransitions : MonoBehaviour
         
         //setup rooms
         rooms = this.GetComponentsInChildren<Room>();
-        for(int i = 1; i < rooms.Length - 1; i++)
-        {
-            int randomIndex = Random.Range(1, rooms.Length - 1);
-            rooms[i].transform.SetSiblingIndex(randomIndex);
-            rooms[i] = null;
-        }
+        //for(int i = 1; i < rooms.Length - 1; i++)
+        //{
+        //    int randomIndex = Random.Range(1, rooms.Length - 1);
+        //    rooms[i].transform.SetSiblingIndex(randomIndex);
+        //    rooms[i] = null;
+        //}
 
-        rooms = this.GetComponentsInChildren<Room>();
+        //rooms = this.GetComponentsInChildren<Room>();
+
+        //setup next roomPrizes
+        for (int i = 1; i < rooms.Length - 1; i++)
+        {
+            rooms[i].roomIndex = i;
+            rooms[i].nextRoomPrize = rooms[i + 1].middlePrize;
+            rooms[i].gameObject.SetActive(false);
+        }
 
     }
 
@@ -92,6 +100,7 @@ public class RoomTransitions : MonoBehaviour
             if(!merchantRoomUnlocked)
             {
                 currentRoomIndex++;
+                rooms[currentRoomIndex].gameObject.SetActive(true);
             }
             transitionScreenIn = true;
             transitionScreenOut = false;

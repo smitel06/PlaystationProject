@@ -7,7 +7,7 @@ public class Coin : MonoBehaviour
     [SerializeField] ParticleSystem effect;
     [SerializeField] float rotationSpeed;
     [SerializeField] GameObject parent;
-    
+    GameObject achievement;
     bool shrink;
     Prize prize;
     
@@ -16,7 +16,7 @@ public class Coin : MonoBehaviour
     {
         
         prize = parent.GetComponent<Prize>();
-        
+        achievement = prize.achievementReferences.GoldenTicket;
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -26,7 +26,7 @@ public class Coin : MonoBehaviour
             
             effect.Play();
             shrink = true;
-            
+            achievement.SetActive(true);
 
             //spawn door prizes
             if (prize.middlePrize)
@@ -39,7 +39,12 @@ public class Coin : MonoBehaviour
 
                 if (prize.doorPrize2 != null)
                 {
-                    prize.doorPrize1.SpawnPrize();
+                    prize.doorPrize2.SpawnPrize();
+                }
+
+                if (prize.doorPrize3 != null)
+                {
+                    prize.doorPrize3.SpawnPrize();
                 }
             }
             else

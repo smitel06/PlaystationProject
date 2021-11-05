@@ -15,7 +15,8 @@ public class Grape : MonoBehaviour
     private void OnEnable()
     {
         prize = parent.GetComponent<Prize>();
-        achievement = prize.achievement;
+        achievement = prize.achievementReferences.ForbiddenFruit;
+        roomTransitions = prize.roomTransitions;
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -25,10 +26,7 @@ public class Grape : MonoBehaviour
             effect.Play();
             shrink = true;
             achievement.SetActive(true);
-            achievement.GetComponent<Achievement>().setText("Unlocked: Merchant");
-
-            
-
+            prize.nextRoomPrize.prizeType = Random.Range(0,5);
             Destroy(parent, 1.5f);
         }
     }

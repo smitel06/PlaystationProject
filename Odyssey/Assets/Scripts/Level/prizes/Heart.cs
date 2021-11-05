@@ -15,7 +15,7 @@ public class Heart : MonoBehaviour
     private void OnEnable()
     {
         prize = parent.GetComponent<Prize>();
-        achievement = prize.achievement;
+        achievement = prize.achievementReferences.lifeboost;
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -25,7 +25,7 @@ public class Heart : MonoBehaviour
             effect.Play();
             shrink = true;
             achievement.SetActive(true);
-            achievement.GetComponent<Achievement>().setText("Acquired: Heart");
+            
 
             //spawn door prizes
             if (prize.middlePrize)
@@ -38,7 +38,12 @@ public class Heart : MonoBehaviour
                 
                 if (prize.doorPrize2 != null)
                 {
-                    prize.doorPrize1.SpawnPrize();
+                    prize.doorPrize2.SpawnPrize();
+                }
+
+                if (prize.doorPrize3 != null)
+                {
+                    prize.doorPrize3.SpawnPrize();
                 }
             }
             else

@@ -37,13 +37,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] ParticleSystem bloodSplatter;
     [SerializeField] ParticleSystem deathExplosion;
     bool reviving;
-
+    [SerializeField] bool godMode;
     public void damageSound()
     {
         //insert damage sound here
     }
     private void Start()
     {
+        
         //setup the components we need
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
@@ -59,8 +60,13 @@ public class PlayerController : MonoBehaviour
         //collect health component from player
         health = GetComponent<Health>();
 
-        
-        
+        if (godMode)
+        {
+            health.changeMaxValue(99999);
+            health.currentHealth = 99999;
+            GetComponent<Damage>().currentDamage = 1000;
+        }
+
     }
 
     void FixedUpdate()
