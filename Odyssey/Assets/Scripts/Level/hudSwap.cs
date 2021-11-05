@@ -6,14 +6,26 @@ public class hudSwap : MonoBehaviour
 {
     [SerializeField] GameObject room0hud;
     [SerializeField] GameObject room1hud;
-    private void OnCollisionEnter(Collision collision)
+    float distance;
+    [SerializeField] float minDistance;
+    [SerializeField] GameObject player;
+    private void Update()
     {
-        if(collision.gameObject.tag == "Player")
-        {
 
-            StartCoroutine(swapHUD());
+
+        distance = Vector3.Distance(player.transform.position, transform.position);
+
+        if (distance < minDistance)
+        {
+            if (Input.GetButtonDown("Interact"))
+            {
+                StartCoroutine(swapHUD());
+            }
 
         }
+        
+
+        
     }
 
     IEnumerator swapHUD()

@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\FX\Shaders\Dissolve.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\Health.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerWeapon.cs" />
+    <Compile Include="Assets\Scripts\Level\prizes\AchievementReferences.cs" />
     <Compile Include="Assets\Scripts\Camera\SmoothFollowCamera.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraTarget.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsActivator.cs" />
@@ -121,7 +122,7 @@
     <Compile Include="Assets\Scripts\Characters\Player\PlayerCurrencies.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
-    <Compile Include="Assets\Scripts\Level\prizes\AchievementReferences.cs" />
+    <Compile Include="Assets\Scripts\Level\R1Transition.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Import\Fantasy Adventure Environment\Shaders\VS_InstancedIndirect.cginc" />

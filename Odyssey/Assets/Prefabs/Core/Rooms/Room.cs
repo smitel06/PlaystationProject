@@ -12,7 +12,7 @@ public class Room : MonoBehaviour
     bool spawn;
     public Prize nextRoomPrize;
 
-    private void Start()
+    private void OnEnable()
     {
         middlePrize.nextRoomPrize = nextRoomPrize;
     }
