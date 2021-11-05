@@ -1,19 +1,17 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.fae.runtime", "sc.fae.runtime.csproj", "{3691AB28-BF31-560A-BEDD-4271C5E0C507}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.stylizedwater2.runtime", "sc.stylizedwater2.runtime.csproj", "{829BA5C4-E351-9C39-C18B-E5F28EE437C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.stylizedwater2.editor", "sc.stylizedwater2.editor.csproj", "{CB0DEBEE-2DF1-4A3F-0B86-3AAFACFEC397}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{A75BBD33-517A-BA8E-4FF4-7FF8708A33F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.fae.editor", "sc.fae.editor.csproj", "{F5710FB4-23EB-1197-BE1F-64BCD83DDC5C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substance.EditorHelper", "Substance.EditorHelper.csproj", "{4A4BC229-8873-C060-D63C-8A4F3556E1CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substance.Platform", "Substance.Platform.csproj", "{B7A23DB7-3621-A233-1822-12FB75E03EDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{3B241CE0-F1FB-43DD-2332-4D2FFE9E5762}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3691AB28-BF31-560A-BEDD-4271C5E0C507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3691AB28-BF31-560A-BEDD-4271C5E0C507}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3691AB28-BF31-560A-BEDD-4271C5E0C507}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3691AB28-BF31-560A-BEDD-4271C5E0C507}.Release|Any CPU.Build.0 = Release|Any CPU
 		{829BA5C4-E351-9C39-C18B-E5F28EE437C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{829BA5C4-E351-9C39-C18B-E5F28EE437C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{829BA5C4-E351-9C39-C18B-E5F28EE437C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -37,10 +31,6 @@ Global
 		{A75BBD33-517A-BA8E-4FF4-7FF8708A33F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A75BBD33-517A-BA8E-4FF4-7FF8708A33F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A75BBD33-517A-BA8E-4FF4-7FF8708A33F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F5710FB4-23EB-1197-BE1F-64BCD83DDC5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5710FB4-23EB-1197-BE1F-64BCD83DDC5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5710FB4-23EB-1197-BE1F-64BCD83DDC5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5710FB4-23EB-1197-BE1F-64BCD83DDC5C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4A4BC229-8873-C060-D63C-8A4F3556E1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4A4BC229-8873-C060-D63C-8A4F3556E1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A4BC229-8873-C060-D63C-8A4F3556E1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,6 +39,10 @@ Global
 		{B7A23DB7-3621-A233-1822-12FB75E03EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A23DB7-3621-A233-1822-12FB75E03EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A23DB7-3621-A233-1822-12FB75E03EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B241CE0-F1FB-43DD-2332-4D2FFE9E5762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B241CE0-F1FB-43DD-2332-4D2FFE9E5762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B241CE0-F1FB-43DD-2332-4D2FFE9E5762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B241CE0-F1FB-43DD-2332-4D2FFE9E5762}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

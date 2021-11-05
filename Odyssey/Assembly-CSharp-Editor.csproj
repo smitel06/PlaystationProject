@@ -685,10 +685,6 @@
       <Project>{C8D38CE6-226D-9A94-1947-2387F9503822}</Project>
       <Name>sc.stylizedwater2.editor</Name>
     </ProjectReference>
-    <ProjectReference Include="sc.fae.runtime.csproj">
-      <Project>{76703386-DAE9-7484-4AFE-265989AA2561}</Project>
-      <Name>sc.fae.runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="sc.stylizedwater2.runtime.csproj">
       <Project>{A4B09043-664A-BB28-C8B7-5C878356EBE6}</Project>
       <Name>sc.stylizedwater2.runtime</Name>
@@ -696,10 +692,6 @@
     <ProjectReference Include="Substance.EditorHelper.csproj">
       <Project>{91C1E802-71A8-F947-FCF9-32A245D67D11}</Project>
       <Name>Substance.EditorHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="sc.fae.editor.csproj">
-      <Project>{2DC6C96D-7179-7B58-A290-760B026354C9}</Project>
-      <Name>sc.fae.editor</Name>
     </ProjectReference>
     <ProjectReference Include="Substance.Platform.csproj">
       <Project>{A2BE3B09-562D-C6D4-C440-AAE1D9264AFC}</Project>
