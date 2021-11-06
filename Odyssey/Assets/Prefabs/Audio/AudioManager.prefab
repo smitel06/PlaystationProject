@@ -254,15 +254,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: UI_Pause
-    clip: {fileID: 8300000, guid: 94b6cbee200388d488a6d98850bbc2f2, type: 3}
+  - name: U_SK_Attack3
+    clip: {fileID: 8300000, guid: fc1617b6fb512854dbb49bcd09d660eb, type: 3}
     audioMixerGroup: {fileID: -1428484594724709279, guid: b4e7c63247a26494082d32484780a783, type: 2}
     volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: UI_Pause
-    clip: {fileID: 8300000, guid: 94b6cbee200388d488a6d98850bbc2f2, type: 3}
+  - name: U_SK_Attack2
+    clip: {fileID: 8300000, guid: 51088b74ecf47f84999e96f763691039, type: 3}
     audioMixerGroup: {fileID: -1428484594724709279, guid: b4e7c63247a26494082d32484780a783, type: 2}
     volume: 0.5
     pitch: 1
@@ -299,7 +299,7 @@ MonoBehaviour:
   - name: U_Damage2
     clip: {fileID: 8300000, guid: 99e15b408ff26824ca51afada2846e2e, type: 3}
     audioMixerGroup: {fileID: -1428484594724709279, guid: b4e7c63247a26494082d32484780a783, type: 2}
-    volume: 0.15
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}

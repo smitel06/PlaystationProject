@@ -3789,7 +3789,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3664538577866878684}
   m_LocalRotation: {x: -0, y: -0.9848078, z: -0, w: 0.17364825}
-  m_LocalPosition: {x: 0.0597, y: 0.0868, z: 0.2337}
+  m_LocalPosition: {x: 0.073, y: 0.094, z: 0.229}
   m_LocalScale: {x: 0.033333324, y: 0.033333335, z: 0.033333324}
   m_Children: []
   m_Father: {fileID: 7585195153731919757}
@@ -11391,6 +11391,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room0hud: {fileID: 0}
   room1hud: {fileID: 0}
+  minDistance: 0
+  player: {fileID: 0}
 --- !u!1 &6703407631377052894
 GameObject:
   m_ObjectHideFlags: 0
@@ -11739,6 +11741,7 @@ MonoBehaviour:
   transition: 0
   spawnSystem: {fileID: 0}
   middlePrize: {fileID: 0}
+  nextRoomPrize: {fileID: 0}
 --- !u!1 &7069030565855593283
 GameObject:
   m_ObjectHideFlags: 0
