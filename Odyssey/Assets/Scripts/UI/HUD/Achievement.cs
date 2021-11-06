@@ -6,7 +6,8 @@ using TMPro;
 
 public class Achievement : MonoBehaviour
 {
-    [SerializeField]float timer;
+    float timer;
+    [SerializeField]float timerReset;
 
     [SerializeField] GameObject achievementFX;
     [SerializeField] GameObject achievementImage;
@@ -16,12 +17,17 @@ public class Achievement : MonoBehaviour
     [SerializeField] GameObject tutoText;
     GameObject player;
 
+    
     private void OnEnable()
     {
+        timer = timerReset;
         player = GameObject.Find("Player");
-        achievementFX.SetActive(true);
-        achievementImage.SetActive(true);
-        achievementText.SetActive(true);
+        if (achievementFX != null)
+            achievementFX.SetActive(true);
+        if (achievementImage != null)
+            achievementImage.SetActive(true);
+        if(achievementText != null)
+            achievementText.SetActive(true);
         achievementTuto.SetActive(true);
         tutoFrame.SetActive(true);
         tutoText.SetActive(true);
@@ -33,9 +39,12 @@ public class Achievement : MonoBehaviour
         if (timer <= 0)
         {
             player.GetComponent<PlayerController>().pausePlayer = false;
-            achievementFX.SetActive(false);
-            achievementImage.SetActive(false);
-            achievementText.SetActive(false);
+            if(achievementFX != null)
+                achievementFX.SetActive(false);
+            if (achievementImage != null)
+                achievementImage.SetActive(false);
+            if (achievementText != null)
+                achievementText.SetActive(false);
             achievementTuto.SetActive(false);
             tutoFrame.SetActive(false);
             tutoText.SetActive(false);

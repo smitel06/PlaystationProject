@@ -61,7 +61,7 @@ public class PurchaseItem : MonoBehaviour
                         
                         player.GetComponent<PlayerCurrencies>().setCoins(-250);
                         popUp.SetActive(false);
-                        Destroy(gameObject);
+                        Destroy(shopItem);
                     }
                 }
             }
@@ -72,6 +72,7 @@ public class PurchaseItem : MonoBehaviour
                     collectEffect.Play();
                     player.GetComponent<Health>().changeMaxValue(20);
                     player.GetComponent<PlayerCurrencies>().setCoins(-125);
+                    Destroy(shopItem); 
                 }
             }
         }

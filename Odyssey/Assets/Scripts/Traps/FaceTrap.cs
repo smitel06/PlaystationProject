@@ -5,10 +5,30 @@ using UnityEngine;
 public class FaceTrap : MonoBehaviour
 {
     Animator animator;
-    float flameDamage = 15f;
+    float flameDamage = 5f;
     bool off;
     [SerializeField] GameObject ParticleEffect;
-    
+    [SerializeField]float timer;
+    float startTimer;
+
+    private void Start()
+    {
+        startTimer = timer;
+    }
+    private void Update()
+    {
+        if(off)
+        {
+            timer -= Time.deltaTime;
+        }
+
+        if(timer <= 0)
+        {
+            off = false;
+            timer = startTimer;
+
+        }
+    }
 
     void OnEnable()
     {

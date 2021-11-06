@@ -50,11 +50,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 176f5a615c561d64695d195e46bff934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  middlePrize: 1
-  doorPrize1: {fileID: 0}
-  doorPrize2: {fileID: 0}
-  doorPrize3: {fileID: 0}
-  achievementReferences: {fileID: 0}
   prizeType: 0
   gem: {fileID: 4987740837129441784}
   key: {fileID: 8144300794526622974}
@@ -62,8 +57,17 @@ MonoBehaviour:
   grapes: {fileID: 4619573721145939722}
   coin: {fileID: 5409099170955965009}
   buff: {fileID: 8831397446935174493}
+  lotus: {fileID: 0}
   roomTransitions: {fileID: 0}
   nextRoomPrize: {fileID: 0}
+  middlePrize: 1
+  doorPrize1: {fileID: 0}
+  doorPrize2: {fileID: 0}
+  doorPrize3: {fileID: 0}
+  achievementReferences: {fileID: 0}
+  minDistance: 0
+  player: {fileID: 0}
+  popUp: {fileID: 0}
 --- !u!135 &1419165757092944978
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -759,15 +763,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4691974665310119113, guid: 48b96d6ee03195a42bbf6fcff33a6953, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4691974665310119113, guid: 48b96d6ee03195a42bbf6fcff33a6953, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4691974665310119113, guid: 48b96d6ee03195a42bbf6fcff33a6953, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5356731271420673651, guid: 48b96d6ee03195a42bbf6fcff33a6953, type: 3}
       propertyPath: m_Name

@@ -18,17 +18,15 @@ public class Grape : MonoBehaviour
         achievement = prize.achievementReferences.ForbiddenFruit;
         roomTransitions = prize.roomTransitions;
     }
-    private void OnCollisionEnter(Collision collision)
+    private void Collect()
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            roomTransitions.merchantRoomUnlocked = true;
-            effect.Play();
-            shrink = true;
-            achievement.SetActive(true);
-            prize.nextRoomPrize.prizeType = Random.Range(0,5);
-            Destroy(parent, 1.5f);
-        }
+        roomTransitions.merchantRoomUnlocked = true;
+        effect.Play();
+        shrink = true;
+        achievement.SetActive(true);
+        prize.nextRoomPrize.prizeType = Random.Range(0,4);
+        Destroy(parent, 1.5f);
+        
     }
 
     void Update()

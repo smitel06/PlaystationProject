@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class R1Transition : MonoBehaviour
 {
+    [SerializeField] GameObject room0hud;
+    [SerializeField] GameObject room1hud;
     [SerializeField] Room room;
     float distance;
     [SerializeField] float minDistance;
@@ -16,6 +18,8 @@ public class R1Transition : MonoBehaviour
         {
             if(Input.GetButtonDown("Interact"))
             {
+                room0hud.SetActive(false);
+                room1hud.SetActive(true);
                 room.transition = true;
             }
 

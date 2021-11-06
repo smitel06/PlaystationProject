@@ -6802,7 +6802,7 @@ PrefabInstance:
     - target: {fileID: 4496934815565054638, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
       propertyPath: m_TargetGraphic
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7105493144033495186}
     - target: {fileID: 4496934815565054638, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6955,6 +6955,20 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 5068707345759687156, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+      propertyPath: m_text
+      value: 'options
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068707345759687156, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068707345759687156, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8107348022764219771, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
       propertyPath: menuButtonController
       value: 
@@ -6965,6 +6979,17 @@ PrefabInstance:
       objectReference: {fileID: 6697866661284767270}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+--- !u!114 &7105493144033495186 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4496934815565054637, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+  m_PrefabInstance: {fileID: 6697866660428155455}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7105493144033495184 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4496934815565054639, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
@@ -7137,6 +7162,18 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 5068707345759687156, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+      propertyPath: m_text
+      value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068707345759687156, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068707345759687156, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8107348022764219771, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
       propertyPath: menuButtonController
       value: 
@@ -7147,6 +7184,11 @@ PrefabInstance:
       objectReference: {fileID: 6697866661284767270}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+--- !u!224 &7105493144123144663 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4496934815565054639, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+  m_PrefabInstance: {fileID: 6697866660478024568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7105493144123144661 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4496934815565054637, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
@@ -7158,11 +7200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &7105493144123144663 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4496934815565054639, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
-  m_PrefabInstance: {fileID: 6697866660478024568}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6697866660902805110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7348,11 +7385,6 @@ PrefabInstance:
       objectReference: {fileID: 6697866660694608877}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
---- !u!224 &7105493144633646297 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4496934815565054639, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
-  m_PrefabInstance: {fileID: 6697866660902805110}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7105493144633646299 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4496934815565054637, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
@@ -7364,6 +7396,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &7105493144633646297 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4496934815565054639, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+  m_PrefabInstance: {fileID: 6697866660902805110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6697866661635958087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7498,6 +7535,18 @@ PrefabInstance:
     - target: {fileID: 4496934816575435998, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
       propertyPath: m_fontSizeBase
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068707345759687156, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068707345759687156, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068707345759687156, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
+      propertyPath: m_text
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 8107348022764219771, guid: 9b765ae051bad194b9b2269bf7c4b806, type: 3}
       propertyPath: menuButtonController

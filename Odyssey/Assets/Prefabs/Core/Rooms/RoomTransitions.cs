@@ -103,6 +103,7 @@ public class RoomTransitions : MonoBehaviour
                 
                 currentRoomIndex++;
                 rooms[currentRoomIndex].gameObject.SetActive(true);
+                rooms[currentRoomIndex - 1].gameObject.SetActive(false);
             }
             transitionScreenIn = true;
             transitionScreenOut = false;

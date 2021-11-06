@@ -11,6 +11,7 @@ public class CollisionActivateGameObject : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             objectToActivate.SetActive(true);
+            collision.GetComponent<PlayerController>().pausePlayer = false;
         }    
     }
 }

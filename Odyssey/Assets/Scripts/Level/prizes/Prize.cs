@@ -27,7 +27,7 @@ public class Prize : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
-        minDistance = 3;
+        
         //0 = gem, 1 = key, 2 = heart, 3 = coins, 4 = buffs, 5 = grapes
         //middle prize won't have grapes
         if (!middlePrize)
@@ -84,25 +84,31 @@ public class Prize : MonoBehaviour
         ActivatePrize();
     }
 
+    bool finished;
     private void ActivatePrize()
     {
         distance = Vector3.Distance(player.transform.position, transform.position);
 
-        if (distance < minDistance)
+        if (selectedPrize != null)
         {
-            popUp.SetActive(true);
-
-            //now check for input
-            if (Input.GetButtonDown("Interact"))
+            if (distance < minDistance)
             {
-                player.GetComponent<PlayerController>().pausePlayer = true;
-                selectedPrize.SendMessage("Collect");
+                if(!finished)
+                    popUp.SetActive(true);
+
+                //now check for input
+                if (Input.GetButtonDown("Interact"))
+                {
+                    finished = true;
+                    popUp.SetActive(false);
+                    player.GetComponent<PlayerController>().pausePlayer = true;
+                    selectedPrize.SendMessage("Collect");
+                }
+            }
+            else
+            {
                 popUp.SetActive(false);
             }
-        }
-        else
-        {
-            popUp.SetActive(false);
         }
     }
 }

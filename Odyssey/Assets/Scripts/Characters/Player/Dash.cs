@@ -12,12 +12,14 @@ public class Dash : MonoBehaviour
     private bool dashing = false;
     private Vector3 dashBegin, dashEnd;
     Vector3 input;
+    
 
     //stuff for iso control
     Vector3 forward, right;
 
     private void Start()
     {
+        
         //set forward vector to camera
         forward = Camera.main.transform.forward;
         forward.y = 0;
@@ -75,4 +77,16 @@ public class Dash : MonoBehaviour
             dashFX.Stop();
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(dashing)
+        {
+            dashing = false;
+        }
+
+        
+    }
+
+
 }

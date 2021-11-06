@@ -27,7 +27,8 @@ public class Health : MonoBehaviour
         currentHealth -= damage;
         DamagePopUp.Create(this.transform.position, damage);
 
-        GetComponent<CharacterSounds>().PlayImpactSound();
+        if(GetComponent<CharacterSounds>() != null)
+            GetComponent<CharacterSounds>().PlayImpactSound();
     }
 
     void Update()
