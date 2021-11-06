@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
+    [SerializeField] GameObject player;
     [SerializeField] GameObject doorPrize;
     bool open;
     [SerializeField] float doorSpeed;

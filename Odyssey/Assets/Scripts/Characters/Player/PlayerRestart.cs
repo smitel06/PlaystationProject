@@ -44,6 +44,7 @@ public class PlayerRestart : MonoBehaviour
             animator.applyRootMotion = false;
             GetComponent<PlayerController>().enabled = true;
             GetComponent<PlayerRestart>().enabled = false;
+            GetComponent<Dash>().enabled = true;
         }
     }
     

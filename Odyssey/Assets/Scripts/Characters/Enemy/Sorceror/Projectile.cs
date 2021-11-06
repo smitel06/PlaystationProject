@@ -54,7 +54,7 @@ public class Projectile : MonoBehaviour
             GetComponent<Collider>().enabled = false;
         }
 
-        darkOrbParticle.Stop();
+        darkOrbParticle.gameObject.SetActive(false);
         
         moveParticle = false;
         
