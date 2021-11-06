@@ -11,6 +11,7 @@ public class Prize : MonoBehaviour
     [SerializeField] GameObject grapes;
     [SerializeField] GameObject coin;
     [SerializeField] GameObject buff;
+    public GameObject lotus;
 
     public RoomTransitions roomTransitions;
     GameObject selectedPrize;
@@ -25,7 +26,8 @@ public class Prize : MonoBehaviour
 
     private void Start()
     {
-
+        player = GameObject.Find("Player");
+        minDistance = 3;
         //0 = gem, 1 = key, 2 = heart, 3 = coins, 4 = buffs, 5 = grapes
         //middle prize won't have grapes
         if (!middlePrize)
@@ -73,6 +75,35 @@ public class Prize : MonoBehaviour
         prizeChosen = true;
     }
 
-    
+    float distance;
+    [SerializeField]float minDistance;
+    public GameObject player;
+    [SerializeField] GameObject popUp;
+    private void Update()
+    {
+        ActivatePrize();
+    }
+
+    private void ActivatePrize()
+    {
+        distance = Vector3.Distance(player.transform.position, transform.position);
+
+        if (distance < minDistance)
+        {
+            popUp.SetActive(true);
+
+            //now check for input
+            if (Input.GetButtonDown("Interact"))
+            {
+                player.GetComponent<PlayerController>().pausePlayer = true;
+                selectedPrize.SendMessage("Collect");
+                popUp.SetActive(false);
+            }
+        }
+        else
+        {
+            popUp.SetActive(false);
+        }
+    }
 }
 

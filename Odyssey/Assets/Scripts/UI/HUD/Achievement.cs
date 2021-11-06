@@ -14,17 +14,17 @@ public class Achievement : MonoBehaviour
     [SerializeField] GameObject achievementTuto;
     [SerializeField] GameObject tutoFrame;
     [SerializeField] GameObject tutoText;
+    GameObject player;
 
     private void OnEnable()
     {
-        timer = 8;
+        player = GameObject.Find("Player");
         achievementFX.SetActive(true);
         achievementImage.SetActive(true);
         achievementText.SetActive(true);
         achievementTuto.SetActive(true);
         tutoFrame.SetActive(true);
         tutoText.SetActive(true);
-
     }
 
     // Update is called once per frame
@@ -32,6 +32,7 @@ public class Achievement : MonoBehaviour
     {
         if (timer <= 0)
         {
+            player.GetComponent<PlayerController>().pausePlayer = false;
             achievementFX.SetActive(false);
             achievementImage.SetActive(false);
             achievementText.SetActive(false);
@@ -42,6 +43,8 @@ public class Achievement : MonoBehaviour
         }
         else
             timer -= Time.deltaTime;
+
+        
     }
 
     

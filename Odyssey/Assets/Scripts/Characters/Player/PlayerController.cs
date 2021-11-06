@@ -34,14 +34,19 @@ public class PlayerController : MonoBehaviour
     //references for other scripts
     public Transform aimspot;
 
+    
+
     [SerializeField] ParticleSystem bloodSplatter;
     [SerializeField] ParticleSystem deathExplosion;
     bool reviving;
     [SerializeField] bool godMode;
+    public bool pausePlayer;
     public void damageSound()
     {
         //insert damage sound here
     }
+
+   
     private void Start()
     {
         
@@ -65,13 +70,14 @@ public class PlayerController : MonoBehaviour
             health.changeMaxValue(99999);
             health.currentHealth = 99999;
             GetComponent<Damage>().currentDamage = 1000;
+            GetComponent<PlayerCurrencies>().setCoins(10000);
         }
 
     }
 
     void FixedUpdate()
     {
-        if (!dead)
+        if (!dead && !pausePlayer)
         {
             movePlayer();
             checkAnimatorStates();
@@ -88,7 +94,6 @@ public class PlayerController : MonoBehaviour
         if (!dead)
         {
             Attack();
-            dash();
         }
 
 
@@ -226,21 +231,7 @@ public class PlayerController : MonoBehaviour
 
     
 
-    void dash()
-    {
-        
-        if (Input.GetButtonDown("Dash"))
-        {
-            input = new Vector3(Input.GetAxis("HorizontalMovement"), 0, Input.GetAxis("VerticalMovement"));
-            float dashDistance = 3f;
-            if(!Physics.Raycast(transform.position, input, dashDistance))
-            {
-                Vector3 beforeDashPosition = transform.position;
-                transform.position += input * dashDistance;
-                
-            }
-        }   
-    }
+    
 
     void Hit()
     {

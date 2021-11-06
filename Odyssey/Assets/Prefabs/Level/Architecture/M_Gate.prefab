@@ -1779,6 +1779,10 @@ PrefabInstance:
       propertyPath: nextRoomPrize
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1139891271561217484, guid: 18346f847f329eb4ab064bba2588fb2b, type: 3}
+      propertyPath: lotus
+      value: 
+      objectReference: {fileID: 6095592595485757771}
     - target: {fileID: 3276081502903110778, guid: 18346f847f329eb4ab064bba2588fb2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00013333335
@@ -1936,6 +1940,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253a31b536108994db3b2acdbf36e926, type: 3}
+--- !u!1 &6095592595485757771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3243296430866961123, guid: 253a31b536108994db3b2acdbf36e926, type: 3}
+  m_PrefabInstance: {fileID: 8761020529628939176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6907454786440678385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2758824512977782873, guid: 253a31b536108994db3b2acdbf36e926, type: 3}

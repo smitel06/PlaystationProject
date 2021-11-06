@@ -12,11 +12,24 @@ public class PurchaseItem : MonoBehaviour
     [SerializeField] int cost;
     [SerializeField] GameObject popUp;
     bool canBuy;
+    [SerializeField] GameObject appleHUD;
+    [SerializeField] GameObject shopItem;
+    bool shrink;
+    [SerializeField] ParticleSystem collectEffect;
     
     
 
     private void Update()
     {
+        if (shrink && shopItem.transform.localScale.x >= 0.01f)
+        {
+            shopItem.transform.localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+        }
+        else if(shrink && shopItem.transform.localScale.x <= 0.01f)
+        {
+            shopItem.SetActive(false);
+        }
+
         distance = Vector3.Distance(player.transform.position, transform.position);
 
         if (distance < minDistance)
@@ -40,6 +53,11 @@ public class PurchaseItem : MonoBehaviour
                     if(!player.GetComponent<Buffs>().lifeBonus)
                     {
                         player.GetComponent<Buffs>().lifeBonus = true;
+                        appleHUD.SetActive(true);
+
+                        shrink = true;
+                        
+                        collectEffect.Play();
                         
                         player.GetComponent<PlayerCurrencies>().setCoins(-250);
                         popUp.SetActive(false);
@@ -51,6 +69,7 @@ public class PurchaseItem : MonoBehaviour
             {
                 if (coins >= 125)
                 {
+                    collectEffect.Play();
                     player.GetComponent<Health>().changeMaxValue(20);
                     player.GetComponent<PlayerCurrencies>().setCoins(-125);
                 }
