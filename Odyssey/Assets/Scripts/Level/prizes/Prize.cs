@@ -22,7 +22,7 @@ public class Prize : MonoBehaviour
     public Prize doorPrize2 = null;
     public Prize doorPrize3 = null;
     public AchievementReferences achievementReferences;
-    
+    bool canCollect;
 
     private void Start()
     {
@@ -75,8 +75,7 @@ public class Prize : MonoBehaviour
         prizeChosen = true;
     }
 
-    float distance;
-    [SerializeField]float minDistance;
+    
     public GameObject player;
     [SerializeField] GameObject popUp;
     private void Update()
@@ -87,11 +86,10 @@ public class Prize : MonoBehaviour
     bool finished;
     private void ActivatePrize()
     {
-        distance = Vector3.Distance(player.transform.position, transform.position);
 
         if (selectedPrize != null)
         {
-            if (distance < minDistance)
+            if (canCollect)
             {
                 if(!finished)
                     popUp.SetActive(true);
@@ -110,6 +108,18 @@ public class Prize : MonoBehaviour
                 popUp.SetActive(false);
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+            canCollect = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+            canCollect = false;
     }
 }
 
