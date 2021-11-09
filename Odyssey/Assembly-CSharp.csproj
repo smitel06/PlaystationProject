@@ -124,6 +124,10 @@
     <Compile Include="Assets\Scripts\Characters\Player\PlayerCurrencies.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaMovement.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaCombat.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaController.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaAnimatorController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
