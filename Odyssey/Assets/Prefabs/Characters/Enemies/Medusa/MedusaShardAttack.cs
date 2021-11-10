@@ -26,7 +26,7 @@ public class MedusaShardAttack : MonoBehaviour
 
 
     //animation event
-    void Hit()
+    void ShardHit()
     {
         controller.movement.canMove = false;
         shardParticle.Play();

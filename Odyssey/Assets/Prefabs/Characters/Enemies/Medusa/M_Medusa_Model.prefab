@@ -31,6 +31,19 @@ Transform:
   m_Father: {fileID: 5755662127158199812}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2518013503055696878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2189193326137130647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32bc5f4f5f374d847b736fef7fefe3cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
 --- !u!95 &2042255718
 Animator:
   serializedVersion: 3
@@ -173,10 +186,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11faae57d2d926f4c9a3a66b07c57b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
+  attackType: 2
   attackTimer: 4
-  moveTimer: 5
   shardAttack: {fileID: 4581015737188552887}
+  attack2Projectile: {fileID: 2990812991033589750, guid: ea64389fc8c80b6448e522bf47e2823e, type: 3}
+  attack3Projectile: {fileID: 0}
+  attack2Origin: {fileID: 2087237345294679550}
 --- !u!114 &5420251013925768291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +360,10 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198655734676305124, guid: 729014ca67ac73040acae7a3ae78a34f, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 198668820841647018, guid: 729014ca67ac73040acae7a3ae78a34f, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -467,6 +486,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 729014ca67ac73040acae7a3ae78a34f, type: 3}
+--- !u!1 &2189193326137130647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1812710422880096, guid: 729014ca67ac73040acae7a3ae78a34f, type: 3}
+  m_PrefabInstance: {fileID: 2190969460617716215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2191404905382616883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4094835203522244, guid: 729014ca67ac73040acae7a3ae78a34f, type: 3}
@@ -630,6 +654,11 @@ Transform:
 --- !u!4 &7587705324501365581 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5465940246521907071, guid: 3082a4e2e91675344b8aefb12b5a7dc9, type: 3}
+  m_PrefabInstance: {fileID: 2492208560626037810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2087237345294679550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4728426434207774260, guid: 3082a4e2e91675344b8aefb12b5a7dc9, type: 3}
   m_PrefabInstance: {fileID: 2492208560626037810}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8318203423580553562 stripped
