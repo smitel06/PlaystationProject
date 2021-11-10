@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Characters\Enemy\EnemyDeath.cs" />
     <Compile Include="Assets\Scripts\UI\Menus\MenuButton.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerRestart.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaShardAttack.cs" />
     <Compile Include="Assets\Scripts\Camera\Billboarding.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Sorceror\SorcerorController.cs" />
     <Compile Include="Assets\Scripts\Level\prizes\CoinDrop.cs" />
@@ -128,7 +129,6 @@
     <Compile Include="Assets\Scripts\Characters\Player\PlayerCurrencies.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
-    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaShardAttack.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

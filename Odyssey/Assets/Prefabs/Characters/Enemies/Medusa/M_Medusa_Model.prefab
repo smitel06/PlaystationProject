@@ -174,7 +174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackType: 0
-  attackTimer: 0
+  attackTimer: 4
+  moveTimer: 5
   shardAttack: {fileID: 4581015737188552887}
 --- !u!114 &5420251013925768291
 MonoBehaviour:

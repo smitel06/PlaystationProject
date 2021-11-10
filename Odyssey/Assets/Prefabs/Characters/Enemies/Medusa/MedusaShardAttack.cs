@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MedusaShardAttack : MonoBehaviour
 {
-    [SerializeField] ParticleSystem shardParticle;
+    public ParticleSystem shardParticle;
     MedusaController controller;
     public bool attack;
 
@@ -24,17 +24,11 @@ public class MedusaShardAttack : MonoBehaviour
         }
     }
 
-    private void OnParticleCollision(GameObject other)
-    {
-        if(other.gameObject.tag == "Player")
-        {
-            other.GetComponent<Health>().TakeDamage(10);
-        }
-    }
 
     //animation event
     void Hit()
     {
+        controller.movement.canMove = false;
         shardParticle.Play();
         attack = false;
     }
