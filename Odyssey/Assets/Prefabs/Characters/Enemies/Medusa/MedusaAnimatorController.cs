@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MedusaAnimatorController : MonoBehaviour
 {
-    Animator animator;
+    public Animator animator;
     private void Start()
     {
         animator = GetComponent<Animator>();

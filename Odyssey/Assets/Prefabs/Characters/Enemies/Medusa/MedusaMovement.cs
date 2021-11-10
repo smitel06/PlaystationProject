@@ -22,7 +22,12 @@ public class MedusaMovement : MonoBehaviour
     {
         if(canMove)
         {
+            agent.enabled = true;
             agent.SetDestination(target.position);
+        }
+        else
+        {
+            agent.enabled = false;
         }
     }
 }

@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Characters\Shared\Shard.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullActivator.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsController.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaController.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\CharacterSounds.cs" />
     <Compile Include="Assets\Scripts\FX\ParticleManager.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\FX\Particle.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\DeathScene.cs" />
     <Compile Include="Assets\Scripts\Level\DoorScript.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaAnimatorController.cs" />
     <Compile Include="Assets\Scripts\Traps\FaceTrap.cs" />
     <Compile Include="Assets\TestingFolder\Core\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\ShardExplosion.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Assets\Scripts\Level\prizes\Coin.cs" />
     <Compile Include="Assets\Scripts\Audio\Sound.cs" />
     <Compile Include="Assets\Scripts\Level\Objects\VaseObject.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaCombat.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\EnemyDeath.cs" />
     <Compile Include="Assets\Scripts\UI\Menus\MenuButton.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerRestart.cs" />
@@ -102,6 +105,7 @@
     <Compile Include="Assets\Scripts\Characters\Shared\Health.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerWeapon.cs" />
     <Compile Include="Assets\Scripts\Level\prizes\AchievementReferences.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaMovement.cs" />
     <Compile Include="Assets\Scripts\Camera\SmoothFollowCamera.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsActivator.cs" />
     <Compile Include="Assets\Scripts\UI\HUD\FadeText.cs" />
@@ -124,10 +128,7 @@
     <Compile Include="Assets\Scripts\Characters\Player\PlayerCurrencies.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
-    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaMovement.cs" />
-    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaCombat.cs" />
-    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaController.cs" />
-    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaAnimatorController.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\MedusaShardAttack.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

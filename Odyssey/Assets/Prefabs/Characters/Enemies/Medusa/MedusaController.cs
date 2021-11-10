@@ -6,15 +6,16 @@ public class MedusaController : MonoBehaviour
 {
     //the target
     public Transform player;
-    MedusaCombat combat;
-    MedusaMovement movement;
+    public MedusaCombat combat;
+    public MedusaMovement movement;
+    public MedusaAnimatorController animatorController;
 
     private void Start()
     {
         //set up variables
-        
         combat = GetComponent<MedusaCombat>();
         movement = GetComponent<MedusaMovement>();
-        movement.canMove = true;
+        animatorController = GetComponent<MedusaAnimatorController>();
+        //movement.canMove = true;
     }
 }
