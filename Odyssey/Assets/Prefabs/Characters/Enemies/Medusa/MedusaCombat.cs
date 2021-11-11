@@ -41,6 +41,8 @@ public class MedusaCombat : MonoBehaviour
             ShardAttack();
         if (attackType == 2)
             Attack2Projectile();
+        if (attackType == 3)
+            Attack3Projectile();
 
     }
 
@@ -81,6 +83,12 @@ public class MedusaCombat : MonoBehaviour
         {
             timerAttack -= Time.deltaTime;
         }
+    }
+
+    private void Attack3Projectile()
+    {
+        controller.movement.agent.updatePosition = false;
+        controller.animatorController.animator.SetTrigger("attack3");
     }
 
     public void Attack2Event()
