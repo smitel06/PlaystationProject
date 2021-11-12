@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
-
+    PlayerController controller;
     [SerializeField] ParticleSystem dashFX;
     public float dashTime = 0.2f;
     private float dashDistance = 5f;
@@ -19,7 +19,7 @@ public class Dash : MonoBehaviour
 
     private void Start()
     {
-        
+        controller = GetComponent<PlayerController>();
         //set forward vector to camera
         forward = Camera.main.transform.forward;
         forward.y = 0;
@@ -49,6 +49,7 @@ public class Dash : MonoBehaviour
                     currentDashTime = 0;
                     dashBegin = transform.position;
                     dashEnd = transform.position += input * dashDistance;
+                    GetComponent<Health>().enabled = false;
                 }
             }
         }
@@ -70,6 +71,7 @@ public class Dash : MonoBehaviour
                 // dash finished
                 transform.position = dashEnd;
                 dashing = false;
+                GetComponent<Health>().enabled = true;
             }
         }
         else

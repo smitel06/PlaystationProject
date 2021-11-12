@@ -18,8 +18,10 @@ public class R1Transition : MonoBehaviour
         {
             if(Input.GetButtonDown("Interact"))
             {
-                room0hud.SetActive(false);
-                room1hud.SetActive(true);
+                if(room0hud!=null)
+                    room0hud.SetActive(false);
+                if (room1hud != null)
+                    room1hud.SetActive(true);
                 room.transition = true;
             }
 

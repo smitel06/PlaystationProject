@@ -8189,7 +8189,7 @@ PrefabInstance:
       objectReference: {fileID: 1494660112}
     - target: {fileID: 636792057, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: godMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: m_AABB.m_Center.x
@@ -13644,6 +13644,10 @@ PrefabInstance:
       propertyPath: popUp
       value: 
       objectReference: {fileID: 128414844}
+    - target: {fileID: 6739658884327461295, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
+      propertyPath: minDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6769219316260526562, guid: dcf5935bcd55a684d88bddf33d7a76b7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
