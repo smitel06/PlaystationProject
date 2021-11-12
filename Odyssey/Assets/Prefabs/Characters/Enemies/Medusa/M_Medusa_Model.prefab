@@ -63,6 +63,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &3468770391568753204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8242112805115585664}
+  m_Layer: 0
+  m_Name: attack3Origin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8242112805115585664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3468770391568753204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0467, y: 0.1047, z: 0.1202}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8694901312060383729}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6326109287686417004
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,8 +220,9 @@ MonoBehaviour:
   attackTimer: 4
   shardAttack: {fileID: 4581015737188552887}
   attack2Projectile: {fileID: 2990812991033589750, guid: ea64389fc8c80b6448e522bf47e2823e, type: 3}
-  attack3Projectile: {fileID: 0}
+  attack3Projectile: {fileID: 2871071421082097736, guid: 40ca79bdb204e4243b55357cbda6a6a5, type: 3}
   attack2Origin: {fileID: 2087237345294679550}
+  attack3Origin: {fileID: 3468770391568753204}
 --- !u!114 &5420251013925768291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +690,11 @@ Transform:
 --- !u!1 &2087237345294679550 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4728426434207774260, guid: 3082a4e2e91675344b8aefb12b5a7dc9, type: 3}
+  m_PrefabInstance: {fileID: 2492208560626037810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8694901312060383729 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6502182839619065283, guid: 3082a4e2e91675344b8aefb12b5a7dc9, type: 3}
   m_PrefabInstance: {fileID: 2492208560626037810}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8318203423580553562 stripped

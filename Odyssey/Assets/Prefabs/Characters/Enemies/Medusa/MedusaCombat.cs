@@ -21,6 +21,7 @@ public class MedusaCombat : MonoBehaviour
     [SerializeField] Transform attack2Projectile;
     [SerializeField] Transform attack3Projectile;
     [SerializeField] GameObject attack2Origin;
+    [SerializeField] GameObject attack3Origin;
     Transform aimspot;
     int attack2Limit = 10;
    
@@ -87,7 +88,6 @@ public class MedusaCombat : MonoBehaviour
 
     private void Attack3Projectile()
     {
-        controller.movement.agent.updatePosition = false;
         controller.animatorController.animator.SetTrigger("attack3");
     }
 
@@ -97,6 +97,21 @@ public class MedusaCombat : MonoBehaviour
         Vector3 shootDirection = (aimspot.position - attack2Origin.transform.position).normalized;
         projectile_transform.GetComponent<ProjectileMedusa>().Setup(shootDirection, attack2Origin.transform.position, this.gameObject);
         timerAttack = 0.25f;
+    }
+
+    public void Charge()
+    {
+        controller.movement.canMove = false;
+        controller.animatorController.animator.enabled = false;
+        Transform projectile_transform = Instantiate(attack3Projectile, attack3Origin.transform.position, Quaternion.identity);
+        Vector3 shootDirection = (aimspot.position - attack2Origin.transform.position).normalized;
+        projectile_transform.GetComponent<BombMedusa>().Setup(shootDirection, attack2Origin.transform.position, this.gameObject);
+        timerAttack = 0.25f;
+    }
+
+    public void Shoot()
+    {
+
     }
 
 }
