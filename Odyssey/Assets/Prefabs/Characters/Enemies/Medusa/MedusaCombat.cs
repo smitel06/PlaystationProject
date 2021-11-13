@@ -95,7 +95,7 @@ public class MedusaCombat : MonoBehaviour
     {
         Transform projectile_transform = Instantiate(attack2Projectile, attack2Origin.transform.position, Quaternion.identity);
         Vector3 shootDirection = (aimspot.position - attack2Origin.transform.position).normalized;
-        projectile_transform.GetComponent<ProjectileMedusa>().Setup(shootDirection, attack2Origin.transform.position, this.gameObject);
+        projectile_transform.GetComponent<ProjectileSpells>().Setup(shootDirection, attack2Origin.transform.position, this.gameObject);
         timerAttack = 0.25f;
     }
 
