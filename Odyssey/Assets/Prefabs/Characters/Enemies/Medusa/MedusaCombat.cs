@@ -20,10 +20,18 @@ public class MedusaCombat : MonoBehaviour
     //projectile variables
     [SerializeField] Transform attack2Projectile;
     [SerializeField] Transform attack3Projectile;
+    [SerializeField] Transform attack4PowerDraw;
+    [SerializeField] Transform attack4PowerBeam;
+    //origin points
     [SerializeField] GameObject attack2Origin;
     [SerializeField] GameObject attack3Origin;
+    Transform bomb;
+    Transform powerCharge;
     Transform aimspot;
-    int attack2Limit = 10;
+    //bools
+    bool rotateBeam;
+    public float rotationSpeed;
+    
    
     
 
@@ -44,7 +52,27 @@ public class MedusaCombat : MonoBehaviour
             Attack2Projectile();
         if (attackType == 3)
             Attack3Projectile();
+        if (attackType == 4)
+            Attack4Beam();
 
+        
+
+    }
+
+    private void FixedUpdate()
+    {
+        if (rotateBeam)
+        {
+            // Determine which direction to rotate towards
+            Vector3 targetDirection = (controller.player.position - transform.position).normalized;
+
+            //create rotation we need
+            Quaternion lookRotation = Quaternion.LookRotation(targetDirection);
+          
+
+            //use slerp for a smooth rotation
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime);
+        }
     }
 
     private void ShardAttack()
@@ -88,30 +116,64 @@ public class MedusaCombat : MonoBehaviour
 
     private void Attack3Projectile()
     {
-        controller.animatorController.animator.SetTrigger("attack3");
+        if (distance <= 20f)
+        {
+            attackType = 0;
+            controller.animatorController.animator.SetTrigger("attack3");
+        }
+    }
+
+    private void Attack4Beam()
+    {
+        if (distance < 12)
+        {
+            attackType = 0;
+            controller.animatorController.animator.SetTrigger("attack4");
+            controller.movement.canMove = false;
+        }
     }
 
     public void Attack2Event()
     {
         Transform projectile_transform = Instantiate(attack2Projectile, attack2Origin.transform.position, Quaternion.identity);
         Vector3 shootDirection = (aimspot.position - attack2Origin.transform.position).normalized;
-        projectile_transform.GetComponent<ProjectileSpells>().Setup(shootDirection, attack2Origin.transform.position, this.gameObject);
+        projectile_transform.GetComponent<ProjectileMedusa>().Setup(shootDirection, attack2Origin.transform.position, this.gameObject);
         timerAttack = 0.25f;
     }
 
+    //attack 3 projectile charge up
     public void Charge()
     {
+        
         controller.movement.canMove = false;
         controller.animatorController.animator.enabled = false;
-        Transform projectile_transform = Instantiate(attack3Projectile, attack3Origin.transform.position, Quaternion.identity);
-        Vector3 shootDirection = (aimspot.position - attack2Origin.transform.position).normalized;
-        projectile_transform.GetComponent<BombMedusa>().Setup(shootDirection, attack2Origin.transform.position, this.gameObject);
+        bomb = Instantiate(attack3Projectile, attack3Origin.transform.position, Quaternion.identity);
+        Vector3 shootDirection = (aimspot.position - attack3Origin.transform.position).normalized;
+        bomb.GetComponent<BombMedusa>().Setup(shootDirection, attack3Origin.transform.position, this.gameObject, attack3Origin, controller.player.transform);
         timerAttack = 0.25f;
     }
 
+    //attack 3 projectile launch
     public void Shoot()
     {
-
+        controller.movement.canMove = true;
+        bomb.transform.SetParent(null);
+        
     }
 
+    //attack 4 power up
+    public void ChargeBeam()
+    {
+        
+    }
+
+    //shoot beam
+    public void Beam()
+    {
+        controller.animatorController.animator.enabled = false;
+        Transform beam_transform = Instantiate(attack4PowerBeam, attack2Origin.transform.position, Quaternion.identity);
+        beam_transform.SetParent(attack2Origin.transform);
+        transform.position = new Vector3(transform.position.x, -0.31f, transform.position.z);
+        rotateBeam = true;
+    }
 }

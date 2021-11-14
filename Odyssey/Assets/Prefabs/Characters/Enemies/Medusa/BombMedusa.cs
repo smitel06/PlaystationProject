@@ -14,14 +14,20 @@ public class BombMedusa : MonoBehaviour
     bool moveParticle = false;
     bool scaleParticle = true;
     [SerializeField] GameObject medusa;
+    Transform target;
+    
    
-    public void Setup(Vector3 shootDirection, Vector3 position, GameObject summoner)
+    public void Setup(Vector3 shootDirection, Vector3 position, GameObject summoner, GameObject parent, Transform target)
     {
+        this.target = target;
+        this.target.position += new Vector3(0, 0.5f, 0);
         timer = 3.5f;
         medusa = summoner;
+        transform.SetParent(parent.transform);
         transform.position = position;
         this.shootDirection = shootDirection;
         transform.eulerAngles = new Vector3(0, 0, GetAngleFromVectorFloat(shootDirection));
+        Destroy(gameObject, 10);
         
     }
 
@@ -41,7 +47,10 @@ public class BombMedusa : MonoBehaviour
 
         if (moveParticle)
         {
-            transform.position += shootDirection * moveSpeed * Time.deltaTime;
+            //transform.position += shootDirection * moveSpeed * Time.deltaTime;
+            transform.LookAt(target);
+            float step = moveSpeed * Time.deltaTime; // calculate distance to move
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
         }
 
         if (timer <= 0)
@@ -66,13 +75,13 @@ public class BombMedusa : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
 
-            other.GetComponent<Health>().TakeDamage(5);
+            other.GetComponent<Health>().TakeDamage(25);
             GetComponent<Collider>().enabled = false;
         }
 
         particle.gameObject.SetActive(false);
-
         moveParticle = false;
+        Destroy(gameObject);
 
     }
 }

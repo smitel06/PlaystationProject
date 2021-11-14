@@ -617,9 +617,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4433244302795141864, guid: 2732846503d10dc4f8352e0f22fe1ea6, type: 3}
-      propertyPath: attack2Projectile
+      propertyPath: attackType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433244302795141864, guid: 2732846503d10dc4f8352e0f22fe1ea6, type: 3}
+      propertyPath: attack4PowerBeam
       value: 
-      objectReference: {fileID: 239525892755074680, guid: d30f9e16ae45c6f4cb20b9fab8c132cf, type: 3}
+      objectReference: {fileID: 2429444825643052595, guid: 8567184eae7ab4c478a1e0268ba8531c, type: 3}
+    - target: {fileID: 4433244302795141864, guid: 2732846503d10dc4f8352e0f22fe1ea6, type: 3}
+      propertyPath: rotationSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5420251013925768291, guid: 2732846503d10dc4f8352e0f22fe1ea6, type: 3}
       propertyPath: player
       value: 
@@ -630,7 +638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5755662127158199812, guid: 2732846503d10dc4f8352e0f22fe1ea6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.426
+      value: -0.31
       objectReference: {fileID: 0}
     - target: {fileID: 5755662127158199812, guid: 2732846503d10dc4f8352e0f22fe1ea6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7850,6 +7858,10 @@ PrefabInstance:
     - target: {fileID: 7989071483304144036, guid: 5732aceca9790454f834ca387c69592e, type: 3}
       propertyPath: m_Name
       value: FollowCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117153927881346137, guid: 5732aceca9790454f834ca387c69592e, type: 3}
+      propertyPath: orthographic size
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5732aceca9790454f834ca387c69592e, type: 3}
