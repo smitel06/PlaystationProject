@@ -49,7 +49,7 @@ public class Dash : MonoBehaviour
                     currentDashTime = 0;
                     dashBegin = transform.position;
                     dashEnd = transform.position += input * dashDistance;
-                    GetComponent<Health>().enabled = false;
+                    
                 }
             }
         }
