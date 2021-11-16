@@ -28,6 +28,10 @@ public class DoorScript : MonoBehaviour
 
         if(open)
         {
+            foreach (Collider c in GetComponents<Collider>())
+            {
+                c.enabled = false;
+            }
             movePlayer();
         }
         

@@ -14,7 +14,8 @@ public class Room : MonoBehaviour
 
     public void Setup()
     {
-        middlePrize.nextRoomPrize = nextRoomPrize;
+        if(middlePrize != null)
+            middlePrize.nextRoomPrize = nextRoomPrize;
     }
     private void Update()
     {
@@ -23,7 +24,8 @@ public class Room : MonoBehaviour
             if (spawnSystem.finished && !spawn)
             {
                 spawn = true;
-                middlePrize.SpawnPrize();
+                if(middlePrize != null)
+                    middlePrize.SpawnPrize();
             }
         }
     }

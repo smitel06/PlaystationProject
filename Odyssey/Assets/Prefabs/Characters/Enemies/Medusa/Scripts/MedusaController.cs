@@ -9,6 +9,7 @@ public class MedusaController : MonoBehaviour
     public MedusaCombat combat;
     public MedusaMovement movement;
     public MedusaAnimatorController animatorController;
+    [SerializeField] Transform entry;
 
     private void Start()
     {
@@ -16,6 +17,8 @@ public class MedusaController : MonoBehaviour
         combat = GetComponent<MedusaCombat>();
         movement = GetComponent<MedusaMovement>();
         animatorController = GetComponent<MedusaAnimatorController>();
-        //movement.canMove = true;
+        
     }
+
+
 }

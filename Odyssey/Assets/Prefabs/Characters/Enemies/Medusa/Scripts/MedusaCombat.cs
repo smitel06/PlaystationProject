@@ -187,7 +187,7 @@ public class MedusaCombat : MonoBehaviour
 
     public void ShieldCharge()
     {
-        Transform shieldBlastObject = Instantiate(specialAttack1, shieldOrigin.transform.position, shieldOrigin.transform.localRotation);
+        Transform shieldBlastObject = Instantiate(specialAttack1, shieldOrigin.transform.position, Quaternion.identity);
         controller.animatorController.animator.enabled = false;
         shieldBlastObject.GetComponent<ShieldBlast>().controller = controller;
     }

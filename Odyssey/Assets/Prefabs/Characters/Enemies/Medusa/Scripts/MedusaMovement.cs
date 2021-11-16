@@ -14,7 +14,7 @@ public class MedusaMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         controller = GetComponent<MedusaController>();
         target = controller.player;
-        canMove = true;
+        
     }
 
     
