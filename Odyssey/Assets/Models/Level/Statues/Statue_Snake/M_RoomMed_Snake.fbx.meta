@@ -3,7 +3,37 @@ guid: 6e9cc6bf3834a0e4a833ffb8c4525a17
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_RoomMed_Snake_Body
+    second: {fileID: 2100000, guid: 3c076db660c7ed5419f061545b9dcda3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_RoomMed_Snake_Eyes1
+    second: {fileID: 2100000, guid: c0ced898bed3e9d4c9925110904dd199, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_RoomMed_Snake_Eyes2
+    second: {fileID: 2100000, guid: 135ab20cd0344f04c8772056b6bfa888, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_RoomMed_Snake_Fang
+    second: {fileID: 2100000, guid: 9d2f57f9b57e609409f72fa15ede8f5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_RoomMed_Snake_Sides
+    second: {fileID: 2100000, guid: 5bb69e6435446de4fa585267a42be549, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_RoomMed_Snake_Tongue
+    second: {fileID: 2100000, guid: c4c93d60362b2a14ea473791c9b6faff, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
