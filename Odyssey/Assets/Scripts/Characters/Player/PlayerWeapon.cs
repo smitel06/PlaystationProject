@@ -10,7 +10,7 @@ public class PlayerWeapon : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //knockback
+        
         if (other.gameObject.tag == "Enemy")
         {
             

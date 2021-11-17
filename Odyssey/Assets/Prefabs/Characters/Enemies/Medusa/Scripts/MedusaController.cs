@@ -12,6 +12,7 @@ public class MedusaController : MonoBehaviour
     [SerializeField] Transform entry;
     [SerializeField] GameObject medusaHUD;
     bool start;
+    bool dead;
 
     private void Start()
     {
@@ -30,6 +31,16 @@ public class MedusaController : MonoBehaviour
             StartBattleSequence();
             start = true;
         }
+
+        if(GetComponent<Health>().currentHealth <= 0 && !dead)
+        {
+            //you die medusas
+
+            animatorController.animator.SetTrigger("dead");
+            movement.canMove = false;
+            movement.enabled = false;
+            dead = true;
+        }
     }
 
     //Call this function when battle is starting
@@ -41,5 +52,8 @@ public class MedusaController : MonoBehaviour
 
     }
 
-
+    public void Dead()
+    {
+        animatorController.enabled = false;
+    }
 }
