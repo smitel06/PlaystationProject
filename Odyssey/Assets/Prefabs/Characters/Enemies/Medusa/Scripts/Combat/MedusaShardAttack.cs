@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MedusaShardAttack : MonoBehaviour
 {
-    public ParticleSystem shardParticle;
+    public GameObject shardParticle;
+    [SerializeField] GameObject particlePosition;
     MedusaController controller;
     public bool attack;
 
@@ -21,6 +22,7 @@ public class MedusaShardAttack : MonoBehaviour
         {
             //animation event to trigger attack
             controller.animatorController.animator.SetTrigger("shardAttack");
+            attack = false;
         }
     }
 
@@ -29,7 +31,8 @@ public class MedusaShardAttack : MonoBehaviour
     void ShardHit()
     {
         controller.movement.canMove = false;
-        shardParticle.Play();
+        Instantiate(shardParticle, particlePosition.transform.position, particlePosition.transform.rotation);
+        controller.movement.canMove = true;
         attack = false;
     }
 

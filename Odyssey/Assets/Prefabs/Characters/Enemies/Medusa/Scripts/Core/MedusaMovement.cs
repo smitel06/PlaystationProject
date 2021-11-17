@@ -31,4 +31,17 @@ public class MedusaMovement : MonoBehaviour
             agent.enabled = false;
         }
     }
+
+    public void LookAtTarget(float rotationSpeed)
+    {
+        // Determine which direction to rotate towards
+        Vector3 targetDirection = (controller.player.position - transform.position).normalized;
+        targetDirection.y = 0;
+        //create rotation we need
+        Quaternion lookRotation = Quaternion.LookRotation(targetDirection);
+        Debug.DrawRay(transform.position, targetDirection);
+
+        //use slerp for a smooth rotation
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime);
+    }
 }

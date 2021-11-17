@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MedusaCombat : MonoBehaviour
 {
@@ -32,8 +30,9 @@ public class MedusaCombat : MonoBehaviour
     Transform powerCharge;
     Transform aimspot;
     //bools
-    bool rotateBeam;
+    bool rotateAim;
     public float rotationSpeed;
+    public bool canShardAttack;
     
    
     
@@ -65,45 +64,30 @@ public class MedusaCombat : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rotateBeam)
+        if (rotateAim)
         {
-            // Determine which direction to rotate towards
-            Vector3 targetDirection = (controller.player.position - transform.position).normalized;
-            targetDirection.y = 0;
-            //create rotation we need
-            Quaternion lookRotation = Quaternion.LookRotation(targetDirection);
-            Debug.DrawRay(transform.position, targetDirection);
-
-            //use slerp for a smooth rotation
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime);
+            controller.movement.LookAtTarget(2f);
+            
         }
     }
 
     private void ShardAttack()
     {
-        ///set movement to if particle is playing
-        if (shardAttack.shardParticle.isPlaying)
-        {
-            controller.movement.canMove = false;
-        }
-        else
-        {
-            controller.movement.canMove = true;
-        }
-
         
-        if (distance <= attackRange && timerAttack <= 0 && !shardAttack.shardParticle.isPlaying)
+
+        if (distance <= attackRange && !canShardAttack)
         {
             controller.movement.canMove = false;
+            rotateAim = true;
+        }
+        else if(canShardAttack)
+        {
             shardAttack.attack = true;
-            timerAttack = attackTimer;
-
+            canShardAttack = false;
         }
         else
-        {
-            shardAttack.attack = false;
-            timerAttack -= Time.deltaTime;
-        }
+            controller.movement.canMove = true;
+
     }
 
     private void Attack2Projectile()
@@ -182,7 +166,7 @@ public class MedusaCombat : MonoBehaviour
         Transform beam_transform = Instantiate(attack4PowerBeam, beamOrigin.transform.position, beamOrigin.transform.localRotation);
         beam_transform.SetParent(beamOrigin.transform);
         transform.position = new Vector3(transform.position.x, -0.31f, transform.position.z);
-        rotateBeam = true;
+        rotateAim = true;
     }
 
     public void ShieldCharge()
@@ -191,4 +175,6 @@ public class MedusaCombat : MonoBehaviour
         controller.animatorController.animator.enabled = false;
         shieldBlastObject.GetComponent<ShieldBlast>().controller = controller;
     }
+
+    
 }
