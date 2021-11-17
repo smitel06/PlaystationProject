@@ -16,7 +16,7 @@ public class PlayerWeapon : MonoBehaviour
             
             damage = player.GetComponent<Damage>().currentDamage;
             other.GetComponent<Health>().TakeDamage(damage);
-            Debug.Log(other.GetComponent<Health>().currentHealth);
+            GetComponent<Collider>().enabled = false;
             
         }
     }

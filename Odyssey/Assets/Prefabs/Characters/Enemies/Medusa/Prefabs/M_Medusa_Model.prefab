@@ -265,7 +265,8 @@ GameObject:
   - component: {fileID: 6563236920419930892}
   - component: {fileID: 36833770056945596}
   - component: {fileID: 4581015737188552887}
-  - component: {fileID: 3145325922723115517}
+  - component: {fileID: 2330251699948462200}
+  - component: {fileID: 4212733550061462514}
   m_Layer: 12
   m_Name: M_Medusa_Model
   m_TagString: Enemy
@@ -317,12 +318,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 7755936810298137612}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 6.960685
+  m_Radius: 0.38
+  m_Speed: 15
   m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 2000
-  m_StoppingDistance: 10
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -342,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11faae57d2d926f4c9a3a66b07c57b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 5
+  attackType: 0
   attackTimer: 4
   shardAttack: {fileID: 4581015737188552887}
   attack2Projectile: {fileID: 2990812991033589750, guid: ea64389fc8c80b6448e522bf47e2823e, type: 3}
@@ -371,6 +372,8 @@ MonoBehaviour:
   combat: {fileID: 0}
   movement: {fileID: 0}
   animatorController: {fileID: 0}
+  entry: {fileID: 0}
+  medusaHUD: {fileID: 0}
 --- !u!114 &6563236920419930892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,7 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shardParticle: {fileID: 2064380683012314387}
   attack: 0
---- !u!114 &3145325922723115517
+--- !u!114 &2330251699948462200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,11 +424,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 7755936810298137612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 762faca1747123944b4a69b47363aee5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c5ebecb9f7cf0244a1642cd4a2be26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 5420251013925768291}
-  begin: 0
+  maxHealth: 5000
+  currentHealth: 5000
+  healthBar: {fileID: 0}
+--- !u!136 &4212733550061462514
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755936810298137612}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.5987082
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7993534, z: 0}
 --- !u!1001 &2190969460617716215
 PrefabInstance:
   m_ObjectHideFlags: 0

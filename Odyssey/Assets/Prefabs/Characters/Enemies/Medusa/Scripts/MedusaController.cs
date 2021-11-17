@@ -10,14 +10,35 @@ public class MedusaController : MonoBehaviour
     public MedusaMovement movement;
     public MedusaAnimatorController animatorController;
     [SerializeField] Transform entry;
+    [SerializeField] GameObject medusaHUD;
+    bool start;
 
     private void Start()
     {
         //set up variables
         combat = GetComponent<MedusaCombat>();
         movement = GetComponent<MedusaMovement>();
-        animatorController = GetComponent<MedusaAnimatorController>();
-        
+        animatorController = GetComponent<MedusaAnimatorController>(); 
+    }
+
+    //setup battle start when player is close enough
+
+    private void Update()
+    {
+        if(Vector3.Distance(player.transform.position, transform.position) <= 10 && !start)
+        {
+            StartBattleSequence();
+            start = true;
+        }
+    }
+
+    //Call this function when battle is starting
+    void StartBattleSequence()
+    {
+        medusaHUD.SetActive(true);
+        movement.canMove = true;
+        combat.attackType = 1;
+
     }
 
 

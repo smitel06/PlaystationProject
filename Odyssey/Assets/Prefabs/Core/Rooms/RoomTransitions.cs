@@ -36,7 +36,7 @@ public class RoomTransitions : MonoBehaviour
         
         //setup rooms
         rooms = this.GetComponentsInChildren<Room>();
-        for (int i = 1; i < rooms.Length - 1; i++)
+        for (int i = 1; i < rooms.Length - 2; i++)
         {
             int randomIndex = Random.Range(1, rooms.Length - 2);
             rooms[i].transform.SetSiblingIndex(randomIndex);
@@ -46,7 +46,7 @@ public class RoomTransitions : MonoBehaviour
         rooms = this.GetComponentsInChildren<Room>();
 
         //setup next roomPrizes
-        for (int i = 1; i < rooms.Length - 1; i++)
+        for (int i = 1; i < rooms.Length - 2; i++)
         {
             rooms[i].roomIndex = i;
             rooms[i].nextRoomPrize = rooms[i + 1].middlePrize;
