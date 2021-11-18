@@ -24,7 +24,7 @@ public class EnergyParticleCollision : MonoBehaviour
             if(hitCollider.gameObject.tag == "Player")
             {
                 hitCollider.GetComponent<Health>().TakeDamage(damage);
-                hitCollider.GetComponent<Rigidbody>().AddForce(hitCollider.gameObject.transform.position - transform.position * force, ForceMode.VelocityChange);
+                
                 Destroy(gameObject, 0.5f);
             }
         }

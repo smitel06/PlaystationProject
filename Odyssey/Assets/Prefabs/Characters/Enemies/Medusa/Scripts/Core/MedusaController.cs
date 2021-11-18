@@ -23,7 +23,6 @@ public class MedusaController : MonoBehaviour
     }
 
     //setup battle start when player is close enough
-
     private void Update()
     {
         if(Vector3.Distance(player.transform.position, transform.position) <= 10 && !start)
@@ -48,7 +47,7 @@ public class MedusaController : MonoBehaviour
     {
         medusaHUD.SetActive(true);
         movement.canMove = true;
-        combat.attackType = 1;
+        combat.attackType = 4;
 
     }
 

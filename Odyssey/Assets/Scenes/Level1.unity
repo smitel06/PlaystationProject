@@ -11290,6 +11290,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5509538666705682642, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: dashForce
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 6993084362485635847, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: followCamera
       value: 

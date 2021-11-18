@@ -86,8 +86,6 @@ public class Dash : MonoBehaviour
         {
             dashing = false;
         }
-
-        
     }
 
 

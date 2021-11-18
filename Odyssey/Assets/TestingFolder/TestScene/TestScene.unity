@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: dda47e2e41d7c814a9053d9e1b73f6e6, type: 2}
+--- !u!1 &13459324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 199531462640771810, guid: 0437df02d859fee40917c7404d499d46, type: 3}
+  m_PrefabInstance: {fileID: 5102500822507664351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &26829531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -620,6 +625,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 636792059}
+    - target: {fileID: 5420251013925768291, guid: 2732846503d10dc4f8352e0f22fe1ea6, type: 3}
+      propertyPath: medusaHUD
+      value: 
+      objectReference: {fileID: 13459324}
     - target: {fileID: 5755662127158199812, guid: 2732846503d10dc4f8352e0f22fe1ea6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.6575756
