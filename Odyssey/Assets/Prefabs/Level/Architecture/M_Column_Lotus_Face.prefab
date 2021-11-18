@@ -245,6 +245,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 46175347173818765}
     m_Modifications:
+    - target: {fileID: 799518614578531731, guid: 088e92bd67f6b3644810e0379f2a6d27, type: 3}
+      propertyPath: soundEffect
+      value: U_TF_Attacks3
+      objectReference: {fileID: 0}
     - target: {fileID: 8490809814872983116, guid: 088e92bd67f6b3644810e0379f2a6d27, type: 3}
       propertyPath: m_Name
       value: M_Trap_Face

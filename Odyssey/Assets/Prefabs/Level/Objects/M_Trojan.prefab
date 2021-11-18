@@ -349,6 +349,7 @@ GameObject:
   - component: {fileID: 7980993663582343396}
   - component: {fileID: 2854796132530217708}
   - component: {fileID: 5382556656833474749}
+  - component: {fileID: 1231142822}
   m_Layer: 0
   m_Name: M_Trojan
   m_TagString: Enemy
@@ -435,6 +436,21 @@ MonoBehaviour:
   minDistance: 0
   player: {fileID: 0}
   popUp: {fileID: 0}
+--- !u!114 &1231142822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4474222164792165234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c541c93df4d3db4f819c66e9fbf0f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSound: //Insert name of attack sound here
+  impactSound: U_T_Impact1
+  deathSound: //Insert name of death sound here
 --- !u!1 &5536869082431719534
 GameObject:
   m_ObjectHideFlags: 0

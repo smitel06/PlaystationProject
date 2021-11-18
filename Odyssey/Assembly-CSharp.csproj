@@ -66,9 +66,8 @@
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullActivator.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsController.cs" />
     <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\Scripts\Core\MedusaController.cs" />
-    <Compile Include="Assets\Spells Pack\Demo\Scripts\spells.cs" />
+    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\Scripts\Aimer.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerController.cs" />
-    <Compile Include="Assets\Spells Pack\Demo\Scripts\CreateProjectile.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\CharacterSounds.cs" />
     <Compile Include="Assets\Hovl Studio\AOE Magic spells Vol.1\Demo AOE skills\CameraHolder.cs" />
     <Compile Include="Assets\Scripts\FX\ParticleManager.cs" />
@@ -148,7 +147,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
-    <Compile Include="Assets\Spells Pack\Demo\Scripts\Demo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsActivator.cs" />
     <Compile Include="Assets\Scripts\UI\HUD\FadeText.cs" />
@@ -176,7 +174,8 @@
     <Compile Include="Assets\Scripts\Characters\Player\PlayerCurrencies.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
-    <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\Scripts\Aimer.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullExplode.cs" />
+    <Compile Include="Assets\Scripts\Audio\PlaySoundOnAwake.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -192,7 +191,6 @@
      <None Include="Assets\Hovl Studio\AOE Magic spells Vol.1\Demo AOE skills\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <None Include="Assets\Hovl Studio\AOE Magic spells Vol.1\Shaders\Lit_CenterGlow.shader" />
-     <None Include="Assets\Spells Pack\Demo\Environment\Shaders\Rock.shader" />
      <None Include="Assets\Import\Fantasy Skybox FREE\Readme.txt" />
      <None Include="Assets\Import\StylizedWater2\Shaders\Libraries\ForwardPass.hlsl" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
@@ -201,18 +199,15 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Import\StylizedWater2\Shaders\Libraries\Fog.hlsl" />
-     <None Include="Assets\Spells Pack\Demo\Environment\Shaders\Vegetation.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Import\StylizedWater2\Shaders\WaterTransparencyMask.shader" />
      <None Include="Assets\Allegorithmic\Plugins\Substance.Game.dll" />
      <None Include="Assets\Hovl Studio\AOE Magic spells Vol.1\Shaders\Distortion.shader" />
      <None Include="Assets\Particles\Nokdef_VFXPack\Shaders\UberShader_Alpha.shader" />
-     <None Include="Assets\Spells Pack\Demo\Environment\Shaders\GroundCover.shader" />
      <None Include="Assets\Hovl Studio\AOE Magic spells Vol.1\Shaders\Blend_CenterGlow.shader" />
      <None Include="Assets\Import\StylizedWater2\Shaders\StylizedWater2_Tessellation.shader" />
      <None Include="Assets\Hovl Studio\Render Pipelines support\Documentation.txt" />
      <None Include="Assets\Hovl Studio\AOE Magic spells Vol.1\Prefabs\Readme.txt" />
-     <None Include="Assets\Spells Pack\Demo\Environment\Shaders\Terrain.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Import\StylizedWater2\Shaders\Libraries\Caustics.hlsl" />
      <None Include="Assets\Import\StylizedWater2\Shaders\Libraries\Input.hlsl" />
@@ -229,7 +224,6 @@
      <None Include="Assets\Models\Level\Objects\Portals\Materials\PortalTransparencyMask.shader" />
      <None Include="Assets\Allegorithmic\Plugins\engine_build_info.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\Spells Pack\Documentation\Documentation.txt" />
      <None Include="Assets\Hovl Studio\AOE Magic spells Vol.1\Shaders\AddTrail.shader" />
      <None Include="Assets\Import\StylizedWater2\Shaders\Libraries\UnderwaterShading.hlsl" />
      <None Include="Assets\Skybox\Stylized Sky.shader" />

@@ -163,7 +163,7 @@ public class MedusaCombat : MonoBehaviour
     public void Beam()
     {
         controller.animatorController.animator.enabled = false;
-        Transform beam_transform = Instantiate(attack4PowerBeam, beamOrigin.transform.position, beamOrigin.transform.localRotation);
+        Transform beam_transform = Instantiate(attack4PowerBeam, beamOrigin.transform.position, transform.localRotation);
         beam_transform.SetParent(beamOrigin.transform);
         transform.position = new Vector3(transform.position.x, -0.31f, transform.position.z);
         rotateAim = true;

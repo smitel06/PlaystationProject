@@ -138,7 +138,7 @@ public class SorcerorController : MonoBehaviour
             //check for distances and test to see where the player is 
             if (Vector3.Distance(target.transform.position, transform.position) <= 10 && Vector3.Distance(target.transform.position, transform.position) >= 2)
             {
-                GetComponent<CharacterSounds>().PlayAttackSound();
+                
                 Debug.Log("sorcerorAttack");
                 animator.SetTrigger("Attack");
                 attackFrequency = attackSpeed;
@@ -161,6 +161,7 @@ public class SorcerorController : MonoBehaviour
     //shoots projectiles at player
     private void ShootProjectile()
     {
+        GetComponent<CharacterSounds>().PlayAttackSound();
         Transform projectile_transform = Instantiate(projectile, staffEndPoint.transform.position, Quaternion.identity);
         Vector3 shootDirection = (aimSpot.position - staffEndPoint.transform.position).normalized;
         projectile_transform.GetComponent<Projectile>().Setup(shootDirection, staffEndPoint.transform.position, this.gameObject);

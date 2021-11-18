@@ -166,7 +166,7 @@ MonoBehaviour:
   - name: U_Death1
     clip: {fileID: 8300000, guid: e0765114d217e9745a61df7f1583235b, type: 3}
     audioMixerGroup: {fileID: -1428484594724709279, guid: b4e7c63247a26494082d32484780a783, type: 2}
-    volume: 0.5
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -303,10 +303,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: U_Damage3
-    clip: {fileID: 8300000, guid: 2230a0ea4d9f5ae4cbd3e42ae4813f0f, type: 3}
+  - name: U_Death3
+    clip: {fileID: 8300000, guid: f68cb536850a72d4ba482875fcb54c49, type: 3}
     audioMixerGroup: {fileID: -1428484594724709279, guid: b4e7c63247a26494082d32484780a783, type: 2}
-    volume: 0.5
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}

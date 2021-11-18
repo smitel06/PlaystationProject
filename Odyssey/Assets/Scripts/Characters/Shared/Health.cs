@@ -29,6 +29,11 @@ public class Health : MonoBehaviour
 
         if(GetComponent<CharacterSounds>() != null)
             GetComponent<CharacterSounds>().PlayImpactSound();
+
+        if(GetComponent<SkullController>() != null)
+        {
+            GetComponent<SkullController>().materialSwap();
+        }
     }
 
     void Update()

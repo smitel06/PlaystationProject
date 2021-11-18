@@ -5,6 +5,12 @@ using UnityEngine.AI;
 
 public class SkullController : MonoBehaviour
 {
+    //materials
+    [SerializeField] Material mainMaterial;
+    [SerializeField] Material hurtMaterial;
+    [SerializeField] float timeBetweenMaterials;
+    [SerializeField] GameObject skullModel;
+
     //wandering function 
     public float wanderRadius;
     public float wanderTimer;
@@ -94,7 +100,7 @@ public class SkullController : MonoBehaviour
     {
         if (health.currentHealth <= 0)
         {
-            GetComponent<CharacterSounds>().PlayDeathSound();
+            
             //turn off all bools
             attackMode = false;
             canAttack = false;
@@ -162,6 +168,7 @@ public class SkullController : MonoBehaviour
         {
             agent.enabled = false;
             transform.LookAt(target.transform);
+            GetComponent<CharacterSounds>().PlayAttackSound();
             animator.SetTrigger("Attack");
             attackMode = false;
             shootDirection = (aimSpot.position - transform.position).normalized;
@@ -185,7 +192,7 @@ public class SkullController : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
-                GetComponent<CharacterSounds>().PlayAttackSound();
+                
                 GetComponent<Collider>().enabled = false;
                 cooldownTimer = 0;
                 timeCanAttack = 0;
@@ -213,5 +220,27 @@ public class SkullController : MonoBehaviour
         }
     }
 
+    public void materialSwap()
+    {
+        StartCoroutine(swapMaterials());
+    }
+
+    IEnumerator swapMaterials()
+    {
+        var materials = skullModel.GetComponent<MeshRenderer>().materials;
+        materials[0] = hurtMaterial;
+        // reassign the materials to the renderer
+        skullModel.GetComponent<MeshRenderer>().materials = materials;
+
+        yield return new WaitForSeconds(timeBetweenMaterials);
+
+        materials[0] = mainMaterial;
+
+        skullModel.GetComponent<MeshRenderer>().materials = materials;
+    }
+
     
+
+
+
 }

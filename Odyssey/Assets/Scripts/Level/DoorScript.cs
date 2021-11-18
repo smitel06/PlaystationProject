@@ -9,7 +9,8 @@ public class DoorScript : MonoBehaviour
     [SerializeField] RoomExit exit;
     public bool open;
     [SerializeField] float doorSpeed;
-
+    bool openingSound;
+    [SerializeField] string gateOpenSound;
     private void Start()
     {
         player = GameObject.Find("Player");
@@ -18,6 +19,12 @@ public class DoorScript : MonoBehaviour
     {
         if(doorPrize == null && transform.localPosition.y < 0.08)
         {
+            if (!openingSound)
+            {
+                AudioManager.instance.Play(gateOpenSound);
+                openingSound = true;
+            }
+
             player.GetComponent<PlayerController>().pausePlayer = true;
             transform.Translate(Vector3.up * Time.deltaTime * doorSpeed, Space.World);
         }

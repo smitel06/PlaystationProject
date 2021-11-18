@@ -10,6 +10,7 @@ public class FaceTrap : MonoBehaviour
     [SerializeField] GameObject ParticleEffect;
     [SerializeField]float timer;
     float startTimer;
+    [SerializeField] string soundEffect;
 
     private void Start()
     {
@@ -51,6 +52,7 @@ public class FaceTrap : MonoBehaviour
 
     IEnumerator Activate(GameObject other)
     {
+        AudioManager.instance.Play(soundEffect);
         ParticleEffect.SetActive(true);
         AudioManager.instance.Play("U_TF_Attacks3");
         other.GetComponent<Health>().TakeDamage(flameDamage);

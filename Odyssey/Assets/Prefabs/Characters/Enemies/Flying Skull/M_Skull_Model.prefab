@@ -19,6 +19,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &637137154407661310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299479732363478437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435a1b79ae9fe1646988c1a81e65a1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2218520066643872978
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5ebecb9f7cf0244a1642cd4a2be26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 75
+  maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 5314252648894846458}
 --- !u!114 &2218520066643872972
@@ -102,6 +114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12552bffa51537479b088bb1f6183b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMaterial: {fileID: 2100000, guid: 9a5dc2d988ff72a4c999cc3598cf3578, type: 2}
+  hurtMaterial: {fileID: 2100000, guid: 584dfb886e9ca0d45aa3581e1aa11690, type: 2}
+  timeBetweenMaterials: 0.25
+  skullModel: {fileID: 8005252491647326447}
   wanderRadius: 50
   wanderTimer: 5
   animator: {fileID: 982754783769855437}
@@ -207,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSound: U_SK_Attack2
-  impactSound: U_SK_Impact
+  impactSound: ///
   deathSound: U_SK_Death1
 --- !u!95 &982754783769855437
 Animator:
@@ -534,5 +550,10 @@ GameObject:
 --- !u!4 &5417515280251242399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b3c419ae9935516478e7f91cf7c05a79, type: 3}
+  m_PrefabInstance: {fileID: 5522635855016829044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8005252491647326447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2574940469862480027, guid: b3c419ae9935516478e7f91cf7c05a79, type: 3}
   m_PrefabInstance: {fileID: 5522635855016829044}
   m_PrefabAsset: {fileID: 0}

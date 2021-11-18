@@ -15,11 +15,13 @@ public class Achievement : MonoBehaviour
     [SerializeField] GameObject achievementTuto;
     [SerializeField] GameObject tutoFrame;
     [SerializeField] GameObject tutoText;
+    [SerializeField] string SoundEffect;
     GameObject player;
 
     
     private void OnEnable()
     {
+        AudioManager.instance.Play(SoundEffect);
         timer = timerReset;
         player = GameObject.Find("Player");
         if (achievementFX != null)

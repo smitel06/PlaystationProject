@@ -133,7 +133,7 @@ public class CyclopsController : MonoBehaviour
         {
             agent.enabled = false;
             animator.SetBool("canAttack", true);
-            GetComponent<CharacterSounds>().PlayAttackSound();
+            
         }
         else
         {
@@ -166,6 +166,11 @@ public class CyclopsController : MonoBehaviour
     void FinishedAttacking()
     {
         weaponCollider.enabled = false;
+    }
+
+    public void AttackSound()
+    {
+        GetComponent<CharacterSounds>().PlayAttackSound();
     }
 
     
