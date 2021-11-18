@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlaySoundOnAwake : MonoBehaviour
 {
     GameObject player;
+    [SerializeField] AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
