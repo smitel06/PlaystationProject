@@ -45,7 +45,13 @@ public class Coin : MonoBehaviour
         //spawn door prizes
         if (prize.middlePrize)
         {
-            prize.player.gameObject.GetComponent<PlayerCurrencies>().setCoins(50);
+            if (prize.player.GetComponent<playerBuffs>().moneyMaker)
+            {
+                prize.player.gameObject.GetComponent<PlayerCurrencies>().setCoins(100);
+            }
+            else
+                prize.player.gameObject.GetComponent<PlayerCurrencies>().setCoins(50);
+
             if (prize.doorPrize1 != null)
             {
                 prize.doorPrize1.nextRoomPrize = prize.nextRoomPrize;

@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\Shard.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullActivator.cs" />
+    <Compile Include="Assets\SineVFX\TopDownEffects\Resources\Scripts\PrefabSpawner.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsController.cs" />
     <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\Scripts\Core\MedusaController.cs" />
     <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\Scripts\Aimer.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\Characters\Player\Dash.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\FX\Particle.cs" />
+    <Compile Include="Assets\Prefabs\Buffs\Scripts\playerBuffs.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\DeathScene.cs" />
     <Compile Include="Assets\Scripts\Level\DoorScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -84,6 +86,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\Scripts\Core\MedusaAnimatorController.cs" />
     <Compile Include="Assets\Prefabs\Characters\Enemies\Medusa\Scripts\Combat\PowerBeam.cs" />
+    <Compile Include="Assets\SineVFX\TopDownEffects\Resources\Scripts\RampGeneratorTDE.cs" />
     <Compile Include="Assets\Scripts\Traps\FaceTrap.cs" />
     <Compile Include="Assets\TestingFolder\Core\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\ShardExplosion.cs" />
@@ -110,6 +113,7 @@
     <Compile Include="Assets\Scripts\Audio\PlaySoundOnAwake.cs" />
     <Compile Include="Assets\Scripts\Level\prizes\Key.cs" />
     <Compile Include="Assets\Scripts\Level\hudSwap.cs" />
+    <Compile Include="Assets\SineVFX\TopDownEffects\Resources\Scripts\SineCameraControllerTopDownEffects.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\Scripts\Traps\SpikeTrap.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\DamagePopUp.cs" />
@@ -134,6 +138,7 @@
     <Compile Include="Assets\Scripts\UI\HUD\HealthValue.cs" />
     <Compile Include="Assets\Scripts\FX\Shaders\Dissolve.cs" />
     <Compile Include="Assets\Scripts\Characters\Shared\Health.cs" />
+    <Compile Include="Assets\Prefabs\Buffs\Scripts\HUDBuff.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerWeapon.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Scripts\Level\prizes\AchievementReferences.cs" />
@@ -147,6 +152,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\SineVFX\TopDownEffects\Resources\Scripts\SineUIControllerTopDownEffects.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Cyclops\CyclopsActivator.cs" />
     <Compile Include="Assets\Scripts\UI\HUD\FadeText.cs" />
     <Compile Include="Assets\Scripts\Core\CollisionActivateGameObject.cs" />
@@ -173,12 +179,6 @@
     <Compile Include="Assets\Scripts\Characters\Player\PlayerCurrencies.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Skull\SkullController.cs" />
-    <Compile Include="Assets\Prefabs\Buffs\Scripts\HUDBuff.cs" />
-    <Compile Include="Assets\Prefabs\Buffs\Scripts\playerBuffs.cs" />
-    <Compile Include="Assets\SineVFX\TopDownEffects\Resources\Scripts\PrefabSpawner.cs" />
-    <Compile Include="Assets\SineVFX\TopDownEffects\Resources\Scripts\RampGeneratorTDE.cs" />
-    <Compile Include="Assets\SineVFX\TopDownEffects\Resources\Scripts\SineCameraControllerTopDownEffects.cs" />
-    <Compile Include="Assets\SineVFX\TopDownEffects\Resources\Scripts\SineUIControllerTopDownEffects.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -13,20 +13,18 @@ public class PlayerWeapon : MonoBehaviour
     private void Start()
     {
         playerBuffs = player.GetComponent<playerBuffs>();
-        damage = player.GetComponent<Damage>().currentDamage;
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        damage = player.GetComponent<Damage>().currentDamage;
         if (other.gameObject.tag == "Enemy")
         {
-            if (playerBuffs.massiveMomentum)
-            {
-                Debug.Log("got after damage increase");
-                float mMIncrease = player.GetComponent<Damage>().massiveMomentumIncrease;
-                damage += (int)mMIncrease;
-            }
+            Debug.Log("got after damage increase");
+            float mMIncrease = player.GetComponent<Damage>().massiveMomentumIncrease;
+            damage += (int)mMIncrease;
+            
 
             if (!playerBuffs.bloodLust)
             {
@@ -44,9 +42,16 @@ public class PlayerWeapon : MonoBehaviour
                 {
                     bloodCounter++;
                     damage = player.GetComponent<Damage>().currentDamage;
+                } 
+            }
+            if(playerBuffs.assassinsDagger)
+            {
+                int randomNum = Random.Range(0, 101);
+                if(randomNum <= 25)
+                {
+                    float percentageOfDamage = damage * 0.5f;
+                    damage = damage + (int)percentageOfDamage;
                 }
-
-                
             }
 
             other.GetComponent<Health>().TakeDamage(damage);

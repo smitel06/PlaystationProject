@@ -1108,30 +1108,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: m_AABB.m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: m_AABB.m_Center.y
-      value: 0.9349361
-      objectReference: {fileID: 0}
-    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: m_AABB.m_Center.z
-      value: -0.19239591
-      objectReference: {fileID: 0}
-    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: m_AABB.m_Extent.x
-      value: 0.39285097
-      objectReference: {fileID: 0}
-    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: m_AABB.m_Extent.y
-      value: 0.6178344
-      objectReference: {fileID: 0}
-    - target: {fileID: 2072453994, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: m_AABB.m_Extent.z
-      value: 0.06343149
-      objectReference: {fileID: 0}
     - target: {fileID: 829750063415759213, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: coinValueText
       value: 
@@ -1148,30 +1124,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1147537371}
-    - target: {fileID: 1579548986295838576, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: maxHealth
-      value: 999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419110472546701834, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: attackSound
-      value: //insert name of attack sound
-      objectReference: {fileID: 0}
-    - target: {fileID: 6722999946553906987, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: hardenedWarrior
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6722999946553906987, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: bloodLust
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6722999946553906987, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: lightningQuick
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6722999946553906987, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-      propertyPath: massiveMomentum
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6993084362485635847, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: followCamera
       value: 
@@ -6603,26 +6555,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7765494660413298149, guid: 1ec5be2d3d0155c4cbf1da97693edcf9, type: 3}
   m_PrefabInstance: {fileID: 969315271}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1856057131 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8686415976426999372, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
-  m_PrefabInstance: {fileID: 220636419}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1856057142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856057131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9f149849e17bc3429946464b541ee8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashFX: {fileID: 0}
-  dashTime: 0.1
-  lightningQ: 0
 --- !u!1001 &1859964265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7658,6 +7590,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4135262304857659938, guid: d4ff3b956aabace498a9a4a370dcd1de, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135262304857659938, guid: d4ff3b956aabace498a9a4a370dcd1de, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01d86e077e5596e4c8ab2328913d9497, type: 2}
     - target: {fileID: 8405997878663793226, guid: d4ff3b956aabace498a9a4a370dcd1de, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

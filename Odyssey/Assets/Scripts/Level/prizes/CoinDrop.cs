@@ -16,7 +16,14 @@ public class CoinDrop : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerCurrencies>().setCoins(randomCoinAmount);
+            if(other.gameObject.GetComponent<playerBuffs>().moneyMaker)
+            {
+                other.gameObject.GetComponent<PlayerCurrencies>().setCoins(randomCoinAmount * 2);
+            }
+            else
+                other.gameObject.GetComponent<PlayerCurrencies>().setCoins(randomCoinAmount);
+
+
             shrink = true;
         }
 

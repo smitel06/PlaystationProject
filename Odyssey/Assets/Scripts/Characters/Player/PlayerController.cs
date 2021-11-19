@@ -1,8 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-using UnityEngine.UI;
 
 
 public class PlayerController : MonoBehaviour
@@ -33,8 +30,6 @@ public class PlayerController : MonoBehaviour
 
     //references for other scripts
     public Transform aimspot;
-
-    
 
     [SerializeField] ParticleSystem bloodSplatter;
     [SerializeField] ParticleSystem deathExplosion;
@@ -171,10 +166,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Attack"))
         {
-            if (GetComponent<playerBuffs>().massiveMomentum)
-            {
-                GetComponent<Damage>().massiveMomentumIncrease = 0;
-            }
+            
 
             //layer weights control layers 
             animator.SetLayerWeight(animator.GetLayerIndex("Base"), 0);
@@ -189,6 +181,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public bool moving;
     //move the player according to controller input
     void movePlayer()
     {
@@ -212,17 +205,29 @@ public class PlayerController : MonoBehaviour
             
 
             //set velocity of the rigidbody this is what moves the character
-            rb.velocity = (heading * velocity);
+            if(GetComponent<playerBuffs>().fleetFoot)
+            {
+                rb.velocity = (heading * (velocity + (velocity * 0.4f)));
+            }
+            else
+            {
+                rb.velocity = (heading * velocity);
+            }
+
+                
+            
 
             //rotate player in movement direction
             if (inputMagnitude > 0.1)
             {
+                moving = true;
                 animator.SetTrigger("Moving");
                 rb.transform.rotation = Quaternion.LookRotation(heading, rb.transform.up);
                 animator.SetFloat("Blend", maxVelocity * inputMagnitude);
             }
             else
             {
+                moving = false;
                 animator.SetFloat("Blend", 0);
             }
         }
