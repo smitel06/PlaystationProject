@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerBeam : MonoBehaviour
 {
-    public float damage;
+    public int damage;
     [SerializeField] public static int hitCount;
     public int hitsTillDamage;
 

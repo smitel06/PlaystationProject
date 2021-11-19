@@ -14,7 +14,7 @@ public class DamagePopUp : MonoBehaviour
     private static int sortingOrder;
 
     //creates damagepopup
-    public static DamagePopUp Create(Vector3 position, float damageAmount)
+    public static DamagePopUp Create(Vector3 position, int damageAmount)
     {
         Transform damagePopupTransform = Instantiate(GameAssets.i.damagePopUpPrefab, position, Camera.main.transform.localRotation);
         DamagePopUp damagePopUp = damagePopupTransform.GetComponent<DamagePopUp>();
@@ -30,7 +30,7 @@ public class DamagePopUp : MonoBehaviour
         textMesh = transform.GetComponent<TextMeshPro>();
     }
 
-    public void Setup(float damageAmount)
+    public void Setup(int damageAmount)
     {
         
         textMesh.SetText(damageAmount.ToString());

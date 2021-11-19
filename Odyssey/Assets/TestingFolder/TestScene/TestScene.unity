@@ -1148,9 +1148,29 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1147537371}
+    - target: {fileID: 1579548986295838576, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: maxHealth
+      value: 999
+      objectReference: {fileID: 0}
     - target: {fileID: 4419110472546701834, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: attackSound
       value: //insert name of attack sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722999946553906987, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: hardenedWarrior
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722999946553906987, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: bloodLust
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722999946553906987, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: lightningQuick
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722999946553906987, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
+      propertyPath: massiveMomentum
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6993084362485635847, guid: 702bbdd0ceb772d4f8a2cd35c73068e2, type: 3}
       propertyPath: followCamera
@@ -1967,7 +1987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218520066643872978, guid: a31abcf0892f2044aac272cb4a2d5339, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6766894223396102586, guid: a31abcf0892f2044aac272cb4a2d5339, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2844,7 +2864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218520066643872978, guid: a31abcf0892f2044aac272cb4a2d5339, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6766894223396102586, guid: a31abcf0892f2044aac272cb4a2d5339, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3323,7 +3343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218520066643872978, guid: a31abcf0892f2044aac272cb4a2d5339, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6766894223396102586, guid: a31abcf0892f2044aac272cb4a2d5339, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4455,7 +4475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218520066643872978, guid: a31abcf0892f2044aac272cb4a2d5339, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6766894223396102586, guid: a31abcf0892f2044aac272cb4a2d5339, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4807,7 +4827,7 @@ Transform:
   - {fileID: 34051144}
   - {fileID: 680127046}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1381660973 stripped
 Transform:
@@ -6191,6 +6211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M_Sorcerer_Model
       objectReference: {fileID: 0}
+    - target: {fileID: 2092604780480016203, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4674523636573136759, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.67
@@ -6237,11 +6261,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9183879950030129240, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9183879950030129240, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd6ad5f0bd46b054087e103a3928154a, type: 3}
@@ -6598,6 +6622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashFX: {fileID: 0}
   dashTime: 0.1
+  lightningQ: 0
 --- !u!1001 &1859964265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6667,7 +6692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218520066643872978, guid: a31abcf0892f2044aac272cb4a2d5339, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6766894223396102586, guid: a31abcf0892f2044aac272cb4a2d5339, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7274,7 +7299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3834569634889914419, guid: 4c8fa2b8271069244860b55568cec9d3, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3834569634889914419, guid: 4c8fa2b8271069244860b55568cec9d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7653,6 +7678,10 @@ PrefabInstance:
     - target: {fileID: 2589797675075585196, guid: 5c0cbd2f1ed8d7d4c801c44f60026121, type: 3}
       propertyPath: m_Name
       value: M_Trap_Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589797675075585196, guid: 5c0cbd2f1ed8d7d4c801c44f60026121, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2934974693615279638, guid: 5c0cbd2f1ed8d7d4c801c44f60026121, type: 3}
       propertyPath: m_LocalPosition.x

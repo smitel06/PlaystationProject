@@ -171,6 +171,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Attack"))
         {
+            if (GetComponent<playerBuffs>().massiveMomentum)
+            {
+                GetComponent<Damage>().massiveMomentumIncrease = 0;
+            }
+
             //layer weights control layers 
             animator.SetLayerWeight(animator.GetLayerIndex("Base"), 0);
             animator.SetLayerWeight(1, 1);
@@ -242,6 +247,10 @@ public class PlayerController : MonoBehaviour
     void FinishedAttacking()
     {
         weaponCollider.enabled = false;
+        if (GetComponent<playerBuffs>().massiveMomentum)
+        {
+            GetComponent<Damage>().ResetDamage();
+        }
     }
 
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpikeTrap : MonoBehaviour
 {
     Animator animator;
-    float spikeDamage = 5f;
+    int spikeDamage = 5;
     bool cooldown;
 
     void OnEnable ()

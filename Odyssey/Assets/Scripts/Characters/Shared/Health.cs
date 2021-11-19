@@ -17,12 +17,27 @@ public class Health : MonoBehaviour
         if (healthBar != null)
             healthBar.maxValue = maxHealth;
     }
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         if(GetComponent<Animator>() != null)
         {
             GetComponent<Animator>().SetTrigger("Damaged");
                               
+        }
+
+        if (GetComponent<playerBuffs>() != null)
+        {
+            //check for hardened warrior 
+            if(GetComponent<playerBuffs>().hardenedWarrior)
+            {
+                damage = damage - (damage / 3);
+            }
+
+            if(GetComponent<Dash>().lightningQ)
+            {
+                damage = 0;
+                GetComponent<Dash>().lightningQ = false;
+            }
         }
         currentHealth -= damage;
         DamagePopUp.Create(this.transform.position, damage);
@@ -34,6 +49,8 @@ public class Health : MonoBehaviour
         {
             GetComponent<SkullController>().materialSwap();
         }
+
+        
     }
 
     void Update()

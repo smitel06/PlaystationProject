@@ -5,7 +5,7 @@ using UnityEngine;
 public class FaceTrap : MonoBehaviour
 {
     Animator animator;
-    float flameDamage = 5f;
+    int flameDamage = 5;
     bool off;
     [SerializeField] GameObject ParticleEffect;
     [SerializeField]float timer;

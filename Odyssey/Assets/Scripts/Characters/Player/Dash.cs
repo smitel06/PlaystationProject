@@ -10,6 +10,7 @@ public class Dash : MonoBehaviour
     private float dashDistance = 5f;
     private float currentDashTime = 0f;
     private bool dashing = false;
+    public bool lightningQ;
     private Vector3 dashBegin, dashEnd;
     Vector3 input;
     
@@ -44,6 +45,10 @@ public class Dash : MonoBehaviour
                 Debug.Log("Dash");
                 if (dashing == false)
                 {
+                    if(GetComponent<playerBuffs>().lightningQuick)
+                    {
+                        lightningQ = true;
+                    }
                     // dash starts
                     dashing = true;
                     currentDashTime = 0;

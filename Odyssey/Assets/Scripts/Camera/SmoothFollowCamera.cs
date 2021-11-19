@@ -10,6 +10,9 @@ public class SmoothFollowCamera : MonoBehaviour
     [SerializeField] float maxDistanceFromTarget;
     float normalizedPercentage;
 
+    
+
+    
     private void Update()
     {
         distanceFromTarget = Vector3.Distance(target.transform.position, transform.position);
@@ -18,6 +21,7 @@ public class SmoothFollowCamera : MonoBehaviour
         {
             normalizedPercentage = 1;
         }
+
         
         
     }
@@ -29,6 +33,6 @@ public class SmoothFollowCamera : MonoBehaviour
         transform.position = smoothPosition;
     }
 
-
+    
 
 }

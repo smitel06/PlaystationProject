@@ -8494,6 +8494,7 @@ GameObject:
   - component: {fileID: 829750063415759213}
   - component: {fileID: 7341195713871303113}
   - component: {fileID: 4419110472546701834}
+  - component: {fileID: 6722999946553906987}
   m_Layer: 8
   m_Name: M_Ulysses_Model
   m_TagString: Player
@@ -8693,6 +8694,19 @@ MonoBehaviour:
   attackSound: U_Damage2
   impactSound: U_Impact
   deathSound: U_Death3
+--- !u!114 &6722999946553906987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8686415976426999372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d9a26d4e9bd3d94e8d06b79cab1747e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hardenedWarrior: 0
 --- !u!1 &8800981891546126952
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnergyParticleCollision : MonoBehaviour
 {
-    public float damage;
+    public int damage;
     public float timer;
     public float force;
     [SerializeField] ShieldBlast shieldBlast;
