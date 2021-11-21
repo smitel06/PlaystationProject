@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 4581015737188552887}
   - component: {fileID: 2330251699948462200}
   - component: {fileID: 4212733550061462514}
+  - component: {fileID: 7761801826319909151}
   m_Layer: 0
   m_Name: M_Medusa_Model
   m_TagString: Enemy
@@ -427,6 +428,21 @@ CapsuleCollider:
   m_Height: 2.5987082
   m_Direction: 1
   m_Center: {x: 0, y: 0.7993534, z: 0}
+--- !u!114 &7761801826319909151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755936810298137612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c541c93df4d3db4f819c66e9fbf0f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSound: //Insert name of attack sound here
+  impactSound: //Insert name of impact sound here
+  deathSound: //Insert name of death sound here
 --- !u!1001 &2190969460617716215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1428,11 +1444,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5866666021909216657, guid: 3082a4e2e91675344b8aefb12b5a7dc9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3082a4e2e91675344b8aefb12b5a7dc9, type: 3}
---- !u!4 &8694901312060383729 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6502182839619065283, guid: 3082a4e2e91675344b8aefb12b5a7dc9, type: 3}
-  m_PrefabInstance: {fileID: 2492208560626037810}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2087237345294679550 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4728426434207774260, guid: 3082a4e2e91675344b8aefb12b5a7dc9, type: 3}
@@ -1451,6 +1462,11 @@ Transform:
 --- !u!4 &2674191525804512217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3082a4e2e91675344b8aefb12b5a7dc9, type: 3}
+  m_PrefabInstance: {fileID: 2492208560626037810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8694901312060383729 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6502182839619065283, guid: 3082a4e2e91675344b8aefb12b5a7dc9, type: 3}
   m_PrefabInstance: {fileID: 2492208560626037810}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8318203423580553562 stripped

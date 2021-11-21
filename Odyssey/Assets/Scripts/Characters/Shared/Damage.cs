@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    //for massive momentum
-    [SerializeField] ParticleSystem massiveMomentumFX;
+    
 
     [SerializeField] int baseDamage;
     public int currentDamage;
@@ -31,7 +30,7 @@ public class Damage : MonoBehaviour
                 if (GetComponent<PlayerController>().moving)
                 {
                     massiveMomentumIncrease += Time.deltaTime;
-                    massiveMomentumFX.startLifetime = massiveMomentumIncrease;
+
                 }
                 else
                     ResetDamage();
@@ -47,6 +46,6 @@ public class Damage : MonoBehaviour
     {
         currentDamage = currentDamageHolder;
         massiveMomentumIncrease = 0;
-        massiveMomentumFX.startLifetime = 1;
+        
     }
 }

@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     Health health;
     public bool dead;
     int randomDeath;
+    bool died;
 
     //references for other scripts
     public Transform aimspot;
@@ -96,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     private void IsPlayerDead()
     {
-        if (health.currentHealth <= 0 )
+        if (health.currentHealth <= 0  && !died)
         {
             GetComponent<CharacterSounds>().PlayDeathSound();
             //check health if below zero you die
@@ -124,6 +125,7 @@ public class PlayerController : MonoBehaviour
                 deathHud.SetActive(true);
             }
 
+            died = true;
            
         }
     }
@@ -138,6 +140,7 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("Revive");
         health.currentHealth = health.maxHealth;
         yield return new WaitForSeconds(2f);
+        died = false;
         dead = false;
         reviving = false;
 

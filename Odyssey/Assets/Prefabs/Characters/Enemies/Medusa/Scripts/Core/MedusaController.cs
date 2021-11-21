@@ -34,8 +34,11 @@ public class MedusaController : MonoBehaviour
         if(GetComponent<Health>().currentHealth <= 0 && !dead)
         {
             //you die medusas
-
+            animatorController.animator.enabled = true;
+            
+            GetComponent<CharacterSounds>().PlayDeathSound();
             animatorController.animator.SetTrigger("dead");
+            combat.enabled = false;
             movement.canMove = false;
             movement.enabled = false;
             dead = true;

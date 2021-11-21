@@ -4,32 +4,35 @@ using UnityEngine;
 
 public class VaseObject : MonoBehaviour
 {
-    [SerializeField] Animator anim;
-    int randomCoinAmount;
-    int randomDrop;
-    [SerializeField] ParticleSystem coinburst;
+    [SerializeField] GameObject smashedVase;
+    [SerializeField] ParticleSystem coins;
+    [SerializeField] ParticleSystem sparkles;
+    int randomCoinChance;
 
-    private void OnEnable()
-    {
-        randomDrop = 1; // Random.Range(1, 5);
-        randomCoinAmount = Random.Range(20, 35);
-    }
-    private void OnTriggerEnter(Collider other)
+    
+
+    void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "PlayerWeapon")
         {
-            anim.enabled = true;
+            randomCoinChance = Random.Range(0, 4);
+            if(randomCoinChance == 2)
+            {
+                int randomCoin = Random.Range(5 , 15);
+                other.gameObject.GetComponent<PlayerWeapon>().player.GetComponent<PlayerCurrencies>().setCoins(randomCoin);
+                coins.Play();
+                sparkles.Play();
+                AudioManager.instance.Play("U_O_VaseCoin1");
+            }
+
+            
+            GetComponent<MeshRenderer>().enabled = false;
+            smashedVase.SetActive(true);
+            AudioManager.instance.Play("U_O_VaseBreak2");
             foreach (Collider c in GetComponents<Collider>())
             {
                 c.enabled = false;
             }
-
-            if (randomDrop < 2)
-            {
-                coinburst.Play();
-                other.gameObject.GetComponent<PlayerWeapon>().player.GetComponent<PlayerCurrencies>().setCoins(randomCoinAmount);
-            }
-
         }
     }
 

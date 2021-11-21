@@ -26,6 +26,7 @@ public class PlayerRestart : MonoBehaviour
     {
         if(transform.position.y < 0.55)
         {
+            
             followCamera.enabled = false;
             smoothFollowCamera.enabled = true;
             animator.SetTrigger("HitGround");
@@ -47,6 +48,12 @@ public class PlayerRestart : MonoBehaviour
             GetComponent<Dash>().enabled = true;
         }
     }
-    
+
+    public void ImpactSound()
+    {
+        AudioManager.instance.Play("U_Falling4");
+    }
+
+
 
 }
