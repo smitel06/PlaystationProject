@@ -6,15 +6,16 @@ public class DoorScript : MonoBehaviour
 {
     [SerializeField] GameObject player;
     [SerializeField] GameObject doorPrize;
-    [SerializeField] RoomExit exit;
+    [SerializeField] GameObject exit;
+    [SerializeField] Room room;
     public bool open;
+    bool move;
     [SerializeField] float doorSpeed;
     bool openingSound;
     [SerializeField] string gateOpenSound;
-    private void Start()
-    {
-        player = GameObject.Find("Player");
-    }
+    
+
+    
     private void Update()
     {
         if(doorPrize == null && transform.localPosition.y < 0.08)
@@ -33,15 +34,22 @@ public class DoorScript : MonoBehaviour
             open = true;
         }
 
-        if(open)
+        if(open && !move)
         {
-            foreach (Collider c in GetComponents<Collider>())
-            {
-                c.enabled = false;
-            }
-            movePlayer();
+            StartCoroutine(transitionRooms());
+            move = true;
         }
         
+    }
+
+    IEnumerator transitionRooms()
+    {
+        movePlayer();
+        yield return new WaitForSeconds(1);
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        player.GetComponent<Animator>().SetFloat("Blend", 0);
+        room.transition = true;
+
     }
 
     void movePlayer()
@@ -52,7 +60,7 @@ public class DoorScript : MonoBehaviour
         //player to look at exit
         Vector3 direction = (exit.transform.position - player.transform.position).normalized;
         player.transform.LookAt(exit.gameObject.transform);
-        rb.velocity = direction * 5.737815f;
+        rb.velocity = player.transform.forward * 5.737815f;
         player.GetComponent<Animator>().SetFloat("Blend", 5.737815f);
 
     }

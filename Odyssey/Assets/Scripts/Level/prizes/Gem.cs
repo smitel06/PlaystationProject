@@ -43,6 +43,7 @@ public class Gem : MonoBehaviour
         if (prize.middlePrize)
         {
             prize.player.gameObject.GetComponent<PlayerCurrencies>().gems++;
+
             if (prize.doorPrize1 != null)
             {
                 prize.doorPrize1.nextRoomPrize = prize.nextRoomPrize;

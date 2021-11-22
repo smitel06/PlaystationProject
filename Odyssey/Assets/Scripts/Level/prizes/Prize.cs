@@ -48,6 +48,7 @@ public class Prize : MonoBehaviour
         //select prize type and push to selected prize so we can manage
         if(prizeType == 0)
         {
+            
             selectedPrize = gem;
         }
         else if(prizeType == 1)
@@ -101,6 +102,7 @@ public class Prize : MonoBehaviour
                     popUp.SetActive(false);
                     player.GetComponent<PlayerController>().pausePlayer = true;
                     selectedPrize.SendMessage("Collect");
+                    Destroy(lotus);
                 }
             }
             else

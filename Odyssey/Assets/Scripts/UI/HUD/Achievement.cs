@@ -24,6 +24,8 @@ public class Achievement : MonoBehaviour
         AudioManager.instance.Play(SoundEffect);
         timer = timerReset;
         player = GameObject.Find("Player");
+        player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        player.GetComponent<Animator>().SetFloat("Blend", 0);
         if (achievementFX != null)
             achievementFX.SetActive(true);
         if (achievementImage != null)
